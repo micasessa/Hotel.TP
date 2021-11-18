@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ProyectoHotel.WinForms")]
+[assembly: AssemblyTitle("Tp.Hotel.Libreria")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ProyectoHotel.WinForms")]
+[assembly: AssemblyProduct("Tp.Hotel.Libreria")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("2eaf5d4f-492e-4087-8077-ce8fcf5b4bdd")]
+[assembly: Guid("4e6b9487-eda1-4dad-82d5-68b6e379c346")]
 
 // Version information for an assembly consists of the following four values:
 //

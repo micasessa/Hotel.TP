@@ -8,13 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProyectoHotel.WinForms
+namespace Tp.Hotel.WinForms
 {
-    public partial class Form1 : Form
+    public partial class FrmClientes : Form
     {
-        public Form1()
+        public FrmClientes()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblApellido_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
