@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProyectoHotel.WinForms
+namespace Tp.Hotel.WinForms
 {
     static class Program
     {

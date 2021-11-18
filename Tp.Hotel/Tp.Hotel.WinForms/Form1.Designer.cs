@@ -1,5 +1,5 @@
 ﻿
-namespace ProyectoHotel.WinForms
+namespace Tp.Hotel.WinForms
 {
     partial class Form1
     {
