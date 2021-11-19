@@ -37,9 +37,9 @@ namespace Tp.Hotel.WinForms
             this._lblDireccion = new System.Windows.Forms.Label();
             this._lblNombre = new System.Windows.Forms.Label();
             this._btnVolver = new System.Windows.Forms.Button();
-            this._btnAgregar = new System.Windows.Forms.Button();
-            this._btnMostrar = new System.Windows.Forms.Button();
-            this._btnLimpiar = new System.Windows.Forms.Button();
+            this._btnAgregarHabitacion = new System.Windows.Forms.Button();
+            this._btnMostrarHabitacion = new System.Windows.Forms.Button();
+            this._btnLimpiarHabitacion = new System.Windows.Forms.Button();
             this._txtIdHotel = new System.Windows.Forms.TextBox();
             this._txtNombre = new System.Windows.Forms.TextBox();
             this._txtDireccion = new System.Windows.Forms.TextBox();
@@ -59,9 +59,9 @@ namespace Tp.Hotel.WinForms
             this.panel1.Controls.Add(this._txtDireccion);
             this.panel1.Controls.Add(this._txtNombre);
             this.panel1.Controls.Add(this._txtIdHotel);
-            this.panel1.Controls.Add(this._btnLimpiar);
-            this.panel1.Controls.Add(this._btnMostrar);
-            this.panel1.Controls.Add(this._btnAgregar);
+            this.panel1.Controls.Add(this._btnLimpiarHabitacion);
+            this.panel1.Controls.Add(this._btnMostrarHabitacion);
+            this.panel1.Controls.Add(this._btnAgregarHabitacion);
             this.panel1.Controls.Add(this._btnVolver);
             this.panel1.Controls.Add(this._lblNombre);
             this.panel1.Controls.Add(this._lblDireccion);
@@ -132,32 +132,32 @@ namespace Tp.Hotel.WinForms
             this._btnVolver.Text = "Volver";
             this._btnVolver.UseVisualStyleBackColor = true;
             // 
-            // _btnAgregar
+            // _btnAgregarHabitacion
             // 
-            this._btnAgregar.Location = new System.Drawing.Point(60, 314);
-            this._btnAgregar.Name = "_btnAgregar";
-            this._btnAgregar.Size = new System.Drawing.Size(134, 34);
-            this._btnAgregar.TabIndex = 6;
-            this._btnAgregar.Text = "Agregar";
-            this._btnAgregar.UseVisualStyleBackColor = true;
+            this._btnAgregarHabitacion.Location = new System.Drawing.Point(60, 314);
+            this._btnAgregarHabitacion.Name = "_btnAgregarHabitacion";
+            this._btnAgregarHabitacion.Size = new System.Drawing.Size(134, 34);
+            this._btnAgregarHabitacion.TabIndex = 6;
+            this._btnAgregarHabitacion.Text = "Agregar";
+            this._btnAgregarHabitacion.UseVisualStyleBackColor = true;
             // 
-            // _btnMostrar
+            // _btnMostrarHabitacion
             // 
-            this._btnMostrar.Location = new System.Drawing.Point(239, 314);
-            this._btnMostrar.Name = "_btnMostrar";
-            this._btnMostrar.Size = new System.Drawing.Size(134, 34);
-            this._btnMostrar.TabIndex = 7;
-            this._btnMostrar.Text = "Mostrar";
-            this._btnMostrar.UseVisualStyleBackColor = true;
+            this._btnMostrarHabitacion.Location = new System.Drawing.Point(239, 314);
+            this._btnMostrarHabitacion.Name = "_btnMostrarHabitacion";
+            this._btnMostrarHabitacion.Size = new System.Drawing.Size(134, 34);
+            this._btnMostrarHabitacion.TabIndex = 7;
+            this._btnMostrarHabitacion.Text = "Mostrar";
+            this._btnMostrarHabitacion.UseVisualStyleBackColor = true;
             // 
-            // _btnLimpiar
+            // _btnLimpiarHabitacion
             // 
-            this._btnLimpiar.Location = new System.Drawing.Point(539, 406);
-            this._btnLimpiar.Name = "_btnLimpiar";
-            this._btnLimpiar.Size = new System.Drawing.Size(159, 34);
-            this._btnLimpiar.TabIndex = 8;
-            this._btnLimpiar.Text = "Limpiar";
-            this._btnLimpiar.UseVisualStyleBackColor = true;
+            this._btnLimpiarHabitacion.Location = new System.Drawing.Point(539, 406);
+            this._btnLimpiarHabitacion.Name = "_btnLimpiarHabitacion";
+            this._btnLimpiarHabitacion.Size = new System.Drawing.Size(159, 34);
+            this._btnLimpiarHabitacion.TabIndex = 8;
+            this._btnLimpiarHabitacion.Text = "Limpiar";
+            this._btnLimpiarHabitacion.UseVisualStyleBackColor = true;
             // 
             // _txtIdHotel
             // 
@@ -223,9 +223,9 @@ namespace Tp.Hotel.WinForms
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button _btnLimpiar;
-        private System.Windows.Forms.Button _btnMostrar;
-        private System.Windows.Forms.Button _btnAgregar;
+        private System.Windows.Forms.Button _btnLimpiarHabitacion;
+        private System.Windows.Forms.Button _btnMostrarHabitacion;
+        private System.Windows.Forms.Button _btnAgregarHabitacion;
         private System.Windows.Forms.Button _btnVolver;
         private System.Windows.Forms.Label _lblNombre;
         private System.Windows.Forms.Label _lblDireccion;
