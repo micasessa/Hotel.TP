@@ -1,0 +1,6 @@
+C:\Users\Romina\Source\Repos\poppin-animation\EjerciciosCAI\Tp.Hotel\Tp.Hotel.Libreria\bin\Debug\Tp.Hotel.Libreria.dll
+C:\Users\Romina\Source\Repos\poppin-animation\EjerciciosCAI\Tp.Hotel\Tp.Hotel.Libreria\bin\Debug\Tp.Hotel.Libreria.pdb
+C:\Users\Romina\Source\Repos\poppin-animation\EjerciciosCAI\Tp.Hotel\Tp.Hotel.Libreria\obj\Debug\Tp.Hotel.Libreria.csproj.AssemblyReference.cache
+C:\Users\Romina\Source\Repos\poppin-animation\EjerciciosCAI\Tp.Hotel\Tp.Hotel.Libreria\obj\Debug\Tp.Hotel.Libreria.csproj.CoreCompileInputs.cache
+C:\Users\Romina\Source\Repos\poppin-animation\EjerciciosCAI\Tp.Hotel\Tp.Hotel.Libreria\obj\Debug\Tp.Hotel.Libreria.dll
+C:\Users\Romina\Source\Repos\poppin-animation\EjerciciosCAI\Tp.Hotel\Tp.Hotel.Libreria\obj\Debug\Tp.Hotel.Libreria.pdb
