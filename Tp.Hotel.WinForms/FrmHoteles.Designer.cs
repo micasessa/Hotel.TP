@@ -30,6 +30,12 @@ namespace Tp.Hotel.WinForms
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this._btnRegargar = new System.Windows.Forms.Button();
+            this.cmbHoteles = new System.Windows.Forms.ComboBox();
+            this.lblFiltrar = new System.Windows.Forms.Label();
+            this.lblDatosHotel = new System.Windows.Forms.Label();
+            this.lblHoteles = new System.Windows.Forms.Label();
+            this._lstHoteles = new System.Windows.Forms.ListBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this._cmbAmenities = new System.Windows.Forms.ComboBox();
             this._cmbEstrellas = new System.Windows.Forms.ComboBox();
@@ -44,12 +50,6 @@ namespace Tp.Hotel.WinForms
             this._lblEstrellas = new System.Windows.Forms.Label();
             this._lblAmenities = new System.Windows.Forms.Label();
             this._lblIdHotel = new System.Windows.Forms.Label();
-            this._lstHoteles = new System.Windows.Forms.ListBox();
-            this.lblHoteles = new System.Windows.Forms.Label();
-            this.lblDatosHotel = new System.Windows.Forms.Label();
-            this.lblFiltrar = new System.Windows.Forms.Label();
-            this.cmbHoteles = new System.Windows.Forms.ComboBox();
-            this._btnRegargar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -82,6 +82,68 @@ namespace Tp.Hotel.WinForms
             this.panel1.Size = new System.Drawing.Size(1111, 662);
             this.panel1.TabIndex = 0;
             // 
+            // _btnRegargar
+            // 
+            this._btnRegargar.BackColor = System.Drawing.Color.PaleTurquoise;
+            this._btnRegargar.Location = new System.Drawing.Point(47, 432);
+            this._btnRegargar.Name = "_btnRegargar";
+            this._btnRegargar.Size = new System.Drawing.Size(134, 34);
+            this._btnRegargar.TabIndex = 10;
+            this._btnRegargar.Text = "Recargar";
+            this._btnRegargar.UseVisualStyleBackColor = false;
+            // 
+            // cmbHoteles
+            // 
+            this.cmbHoteles.FormattingEnabled = true;
+            this.cmbHoteles.Location = new System.Drawing.Point(125, 88);
+            this.cmbHoteles.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmbHoteles.Name = "cmbHoteles";
+            this.cmbHoteles.Size = new System.Drawing.Size(289, 28);
+            this.cmbHoteles.TabIndex = 8;
+            // 
+            // lblFiltrar
+            // 
+            this.lblFiltrar.AutoSize = true;
+            this.lblFiltrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFiltrar.Location = new System.Drawing.Point(42, 84);
+            this.lblFiltrar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFiltrar.Name = "lblFiltrar";
+            this.lblFiltrar.Size = new System.Drawing.Size(75, 29);
+            this.lblFiltrar.TabIndex = 21;
+            this.lblFiltrar.Text = "Filtrar";
+            // 
+            // lblDatosHotel
+            // 
+            this.lblDatosHotel.AutoSize = true;
+            this.lblDatosHotel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDatosHotel.Location = new System.Drawing.Point(574, 84);
+            this.lblDatosHotel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDatosHotel.Name = "lblDatosHotel";
+            this.lblDatosHotel.Size = new System.Drawing.Size(178, 29);
+            this.lblDatosHotel.TabIndex = 20;
+            this.lblDatosHotel.Text = "Datos del Hotel";
+            // 
+            // lblHoteles
+            // 
+            this.lblHoteles.AutoSize = true;
+            this.lblHoteles.BackColor = System.Drawing.Color.PowderBlue;
+            this.lblHoteles.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHoteles.Location = new System.Drawing.Point(40, 13);
+            this.lblHoteles.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblHoteles.Name = "lblHoteles";
+            this.lblHoteles.Size = new System.Drawing.Size(131, 37);
+            this.lblHoteles.TabIndex = 21;
+            this.lblHoteles.Text = "Hoteles";
+            // 
+            // _lstHoteles
+            // 
+            this._lstHoteles.FormattingEnabled = true;
+            this._lstHoteles.ItemHeight = 20;
+            this._lstHoteles.Location = new System.Drawing.Point(47, 127);
+            this._lstHoteles.Name = "_lstHoteles";
+            this._lstHoteles.Size = new System.Drawing.Size(367, 284);
+            this._lstHoteles.TabIndex = 9;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
@@ -96,7 +158,7 @@ namespace Tp.Hotel.WinForms
             this._cmbAmenities.Location = new System.Drawing.Point(645, 374);
             this._cmbAmenities.Name = "_cmbAmenities";
             this._cmbAmenities.Size = new System.Drawing.Size(162, 28);
-            this._cmbAmenities.TabIndex = 13;
+            this._cmbAmenities.TabIndex = 5;
             // 
             // _cmbEstrellas
             // 
@@ -104,28 +166,28 @@ namespace Tp.Hotel.WinForms
             this._cmbEstrellas.Location = new System.Drawing.Point(645, 314);
             this._cmbEstrellas.Name = "_cmbEstrellas";
             this._cmbEstrellas.Size = new System.Drawing.Size(162, 28);
-            this._cmbEstrellas.TabIndex = 12;
+            this._cmbEstrellas.TabIndex = 4;
             // 
             // _txtDireccion
             // 
             this._txtDireccion.Location = new System.Drawing.Point(645, 261);
             this._txtDireccion.Name = "_txtDireccion";
             this._txtDireccion.Size = new System.Drawing.Size(162, 26);
-            this._txtDireccion.TabIndex = 11;
+            this._txtDireccion.TabIndex = 3;
             // 
             // _txtNombre
             // 
             this._txtNombre.Location = new System.Drawing.Point(645, 205);
             this._txtNombre.Name = "_txtNombre";
             this._txtNombre.Size = new System.Drawing.Size(162, 26);
-            this._txtNombre.TabIndex = 10;
+            this._txtNombre.TabIndex = 2;
             // 
             // _txtIdHotel
             // 
             this._txtIdHotel.Location = new System.Drawing.Point(645, 156);
             this._txtIdHotel.Name = "_txtIdHotel";
             this._txtIdHotel.Size = new System.Drawing.Size(162, 26);
-            this._txtIdHotel.TabIndex = 9;
+            this._txtIdHotel.TabIndex = 1;
             // 
             // _btnLimpiarHabitacion
             // 
@@ -133,7 +195,7 @@ namespace Tp.Hotel.WinForms
             this._btnLimpiarHabitacion.Location = new System.Drawing.Point(519, 432);
             this._btnLimpiarHabitacion.Name = "_btnLimpiarHabitacion";
             this._btnLimpiarHabitacion.Size = new System.Drawing.Size(134, 34);
-            this._btnLimpiarHabitacion.TabIndex = 8;
+            this._btnLimpiarHabitacion.TabIndex = 6;
             this._btnLimpiarHabitacion.Text = "Limpiar";
             this._btnLimpiarHabitacion.UseVisualStyleBackColor = false;
             // 
@@ -143,7 +205,7 @@ namespace Tp.Hotel.WinForms
             this._btnGuardarHabitacion.Location = new System.Drawing.Point(673, 432);
             this._btnGuardarHabitacion.Name = "_btnGuardarHabitacion";
             this._btnGuardarHabitacion.Size = new System.Drawing.Size(134, 34);
-            this._btnGuardarHabitacion.TabIndex = 6;
+            this._btnGuardarHabitacion.TabIndex = 7;
             this._btnGuardarHabitacion.Text = "Guardar";
             this._btnGuardarHabitacion.UseVisualStyleBackColor = false;
             // 
@@ -153,7 +215,7 @@ namespace Tp.Hotel.WinForms
             this._btnVolver.Location = new System.Drawing.Point(280, 432);
             this._btnVolver.Name = "_btnVolver";
             this._btnVolver.Size = new System.Drawing.Size(134, 34);
-            this._btnVolver.TabIndex = 5;
+            this._btnVolver.TabIndex = 11;
             this._btnVolver.Text = "Volver";
             this._btnVolver.UseVisualStyleBackColor = false;
             // 
@@ -206,68 +268,6 @@ namespace Tp.Hotel.WinForms
             this._lblIdHotel.Size = new System.Drawing.Size(78, 25);
             this._lblIdHotel.TabIndex = 0;
             this._lblIdHotel.Text = "Id Hotel";
-            // 
-            // _lstHoteles
-            // 
-            this._lstHoteles.FormattingEnabled = true;
-            this._lstHoteles.ItemHeight = 20;
-            this._lstHoteles.Location = new System.Drawing.Point(47, 127);
-            this._lstHoteles.Name = "_lstHoteles";
-            this._lstHoteles.Size = new System.Drawing.Size(367, 284);
-            this._lstHoteles.TabIndex = 14;
-            // 
-            // lblHoteles
-            // 
-            this.lblHoteles.AutoSize = true;
-            this.lblHoteles.BackColor = System.Drawing.Color.PowderBlue;
-            this.lblHoteles.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHoteles.Location = new System.Drawing.Point(40, 13);
-            this.lblHoteles.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblHoteles.Name = "lblHoteles";
-            this.lblHoteles.Size = new System.Drawing.Size(131, 37);
-            this.lblHoteles.TabIndex = 15;
-            this.lblHoteles.Text = "Hoteles";
-            // 
-            // lblDatosHotel
-            // 
-            this.lblDatosHotel.AutoSize = true;
-            this.lblDatosHotel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDatosHotel.Location = new System.Drawing.Point(574, 84);
-            this.lblDatosHotel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDatosHotel.Name = "lblDatosHotel";
-            this.lblDatosHotel.Size = new System.Drawing.Size(178, 29);
-            this.lblDatosHotel.TabIndex = 16;
-            this.lblDatosHotel.Text = "Datos del Hotel";
-            // 
-            // lblFiltrar
-            // 
-            this.lblFiltrar.AutoSize = true;
-            this.lblFiltrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFiltrar.Location = new System.Drawing.Point(42, 84);
-            this.lblFiltrar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblFiltrar.Name = "lblFiltrar";
-            this.lblFiltrar.Size = new System.Drawing.Size(75, 29);
-            this.lblFiltrar.TabIndex = 21;
-            this.lblFiltrar.Text = "Filtrar";
-            // 
-            // cmbHoteles
-            // 
-            this.cmbHoteles.FormattingEnabled = true;
-            this.cmbHoteles.Location = new System.Drawing.Point(125, 88);
-            this.cmbHoteles.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cmbHoteles.Name = "cmbHoteles";
-            this.cmbHoteles.Size = new System.Drawing.Size(289, 28);
-            this.cmbHoteles.TabIndex = 22;
-            // 
-            // _btnRegargar
-            // 
-            this._btnRegargar.BackColor = System.Drawing.Color.PaleTurquoise;
-            this._btnRegargar.Location = new System.Drawing.Point(47, 432);
-            this._btnRegargar.Name = "_btnRegargar";
-            this._btnRegargar.Size = new System.Drawing.Size(134, 34);
-            this._btnRegargar.TabIndex = 23;
-            this._btnRegargar.Text = "Recargar";
-            this._btnRegargar.UseVisualStyleBackColor = false;
             // 
             // FrmHoteles
             // 
