@@ -64,6 +64,12 @@
     <Compile Include="FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmHoteles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHoteles.Designer.cs">
+      <DependentUpon>FrmHoteles.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FrmReserva.cs">
@@ -74,6 +80,12 @@
     </Compile>
     <EmbeddedResource Include="FrmClientes.resx">
       <DependentUpon>FrmClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHabitacion.resx">
+      <DependentUpon>FrmHabitacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHoteles.resx">
+      <DependentUpon>FrmHoteles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
