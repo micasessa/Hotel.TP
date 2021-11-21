@@ -123,6 +123,9 @@
     <EmbeddedResource Include="FrmReserva.resx">
       <DependentUpon>FrmReserva.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReporteHabitaciones.resx">
+      <DependentUpon>ReporteHabitaciones.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
