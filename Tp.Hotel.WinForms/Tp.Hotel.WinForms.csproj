@@ -81,6 +81,24 @@
     <Compile Include="FrmReserva.Designer.cs">
       <DependentUpon>FrmReserva.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReporteHabitaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteHabitaciones.Designer.cs">
+      <DependentUpon>ReporteHabitaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteHuespedes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteHuespedes.Designer.cs">
+      <DependentUpon>ReporteHuespedes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteReservas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteReservas.Designer.cs">
+      <DependentUpon>ReporteReservas.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FrmClientes.resx">
       <DependentUpon>FrmClientes.cs</DependentUpon>
     </EmbeddedResource>
