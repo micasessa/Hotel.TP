@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tp.Hotel.Negocio
+namespace Tp.Hotel.AccesoDatos
 {
-    public class Class1
+    class ReservaMapper
     {
     }
 }
