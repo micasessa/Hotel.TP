@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -102,6 +105,7 @@
     <EmbeddedResource Include="FrmReserva.resx">
       <DependentUpon>FrmReserva.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -119,10 +123,6 @@
     <ProjectReference Include="..\Tp.Hotel.Entidades\Tp.Hotel.Entidades.csproj">
       <Project>{89f3f0fc-6ba5-4bea-8238-c72238f8eea5}</Project>
       <Name>Tp.Hotel.Entidades</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Tp.Hotel.Libreria\Tp.Hotel.Libreria.csproj">
-      <Project>{4e6b9487-eda1-4dad-82d5-68b6e379c346}</Project>
-      <Name>Tp.Hotel.Libreria</Name>
     </ProjectReference>
     <ProjectReference Include="..\Tp.Hotel.Negocio\Tp.Hotel.Negocio.csproj">
       <Project>{96e1156e-375a-4659-a4c1-becfa9bf9bdf}</Project>
