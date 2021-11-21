@@ -1,2 +1,6 @@
 C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.Entidades\obj\Debug\Tp.Hotel.Entidades.csproj.AssemblyReference.cache
 C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.Entidades\obj\Debug\Tp.Hotel.Entidades.csproj.CoreCompileInputs.cache
+C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.Entidades\bin\Debug\Tp.Hotel.Entidades.dll
+C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.Entidades\bin\Debug\Tp.Hotel.Entidades.pdb
+C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.Entidades\obj\Debug\Tp.Hotel.Entidades.dll
+C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.Entidades\obj\Debug\Tp.Hotel.Entidades.pdb

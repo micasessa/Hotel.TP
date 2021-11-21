@@ -1,7 +1,7 @@
 ﻿
 namespace Tp.Hotel.WinForms
 {
-    partial class lblReserva
+    partial class FrmReserva
     {
         /// <summary>
         /// Required designer variable.

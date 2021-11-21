@@ -11,11 +11,12 @@ using Newtonsoft.Json;
 
 namespace Tp.Hotel.WinForms
 {
-    public partial class lblReserva : Form
+    public partial class FrmReserva : Form
     {
-        public lblReserva()
+        public FrmReserva(Form main)
         {
             InitializeComponent();
+            this.Owner = main;
         }
 
         private void lblNombre_Click(object sender, EventArgs e)
