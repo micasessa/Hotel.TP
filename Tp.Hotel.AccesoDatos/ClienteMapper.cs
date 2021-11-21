@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Tp.Hotel.AccesoDatos
 {
-    public class Class1
+    class ClienteMapper
     {
     }
 }
