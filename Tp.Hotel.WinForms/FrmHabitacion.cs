@@ -13,9 +13,10 @@ namespace Tp.Hotel.WinForms
 {
     public partial class FrmHabitacion : Form
     {
-        public FrmHabitacion()
+        public FrmHabitacion(Form main)
         {
             InitializeComponent();
+            this.Owner = main;
         }
     }
 }
