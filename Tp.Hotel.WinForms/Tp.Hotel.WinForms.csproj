@@ -81,6 +81,24 @@
     <Compile Include="FrmReserva.Designer.cs">
       <DependentUpon>FrmReserva.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReporteHabitaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteHabitaciones.Designer.cs">
+      <DependentUpon>ReporteHabitaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteHuespedes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteHuespedes.Designer.cs">
+      <DependentUpon>ReporteHuespedes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteReservas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteReservas.Designer.cs">
+      <DependentUpon>ReporteReservas.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FrmClientes.resx">
       <DependentUpon>FrmClientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -104,6 +122,15 @@
     </Compile>
     <EmbeddedResource Include="FrmReserva.resx">
       <DependentUpon>FrmReserva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteHabitaciones.resx">
+      <DependentUpon>ReporteHabitaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteHuespedes.resx">
+      <DependentUpon>ReporteHuespedes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteReservas.resx">
+      <DependentUpon>ReporteReservas.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
