@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "a2044e4b-99d1-4186-ac13-d4dad6ca8889": {
+      "ProjectGuid": "a2044e4b-99d1-4186-ac13-d4dad6ca8889",
+      "DisplayName": "Tp.Hotel.WinForms",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 1
+}
