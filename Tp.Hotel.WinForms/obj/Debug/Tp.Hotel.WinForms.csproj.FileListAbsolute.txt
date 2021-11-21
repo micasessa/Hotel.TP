@@ -43,3 +43,14 @@ C:\Users\Romina\source\repos\Mica\Hotel.TP\Tp.Hotel.WinForms\obj\Debug\Tp.Hotel.
 C:\Users\Romina\source\repos\Mica\Hotel.TP\Tp.Hotel.WinForms\obj\Debug\Tp.Hotel.WinForms.csproj.CopyComplete
 C:\Users\Romina\source\repos\Mica\Hotel.TP\Tp.Hotel.WinForms\obj\Debug\Tp.Hotel.WinForms.exe
 C:\Users\Romina\source\repos\Mica\Hotel.TP\Tp.Hotel.WinForms\obj\Debug\Tp.Hotel.WinForms.pdb
+C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.WinForms\obj\Debug\Tp.Hotel.WinForms.csproj.AssemblyReference.cache
+C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.WinForms\obj\Debug\Tp.Hotel.WinForms.FrmClientes.resources
+C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.WinForms\obj\Debug\Tp.Hotel.WinForms.FrmHabitacion.resources
+C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.WinForms\obj\Debug\Tp.Hotel.WinForms.FrmHoteles.resources
+C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.WinForms\obj\Debug\Tp.Hotel.WinForms.FrmPrincipal.resources
+C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.WinForms\obj\Debug\Tp.Hotel.WinForms.Properties.Resources.resources
+C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.WinForms\obj\Debug\Tp.Hotel.WinForms.lblReserva.resources
+C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.WinForms\obj\Debug\Tp.Hotel.WinForms.csproj.GenerateResource.cache
+C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.WinForms\obj\Debug\Tp.Hotel.WinForms.csproj.CoreCompileInputs.cache
+C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.WinForms\obj\Debug\Tp.Hotel.WinForms.exe
+C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.WinForms\obj\Debug\Tp.Hotel.WinForms.pdb

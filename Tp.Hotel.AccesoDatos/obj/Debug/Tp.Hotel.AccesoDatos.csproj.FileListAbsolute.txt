@@ -1,0 +1,2 @@
+C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.AccesoDatos\obj\Debug\Tp.Hotel.AccesoDatos.csproj.AssemblyReference.cache
+C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.AccesoDatos\obj\Debug\Tp.Hotel.AccesoDatos.csproj.CoreCompileInputs.cache
