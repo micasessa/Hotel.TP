@@ -13,9 +13,10 @@ namespace Tp.Hotel.WinForms
 {
     public partial class FrmClientes : Form
     {
-        public FrmClientes()
+        public FrmClientes(Form main)
         {
             InitializeComponent();
+            this.Owner = main;
         }
 
         private void label1_Click(object sender, EventArgs e)

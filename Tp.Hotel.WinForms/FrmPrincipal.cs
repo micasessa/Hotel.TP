@@ -19,22 +19,26 @@ namespace Tp.Hotel.WinForms
         }
 
 
-       
-
   
         private void _btnCliente_Click(object sender, EventArgs e)
         {
-
+            FrmClientes cli = new FrmClientes(this);
+            cli.Show();
+            this.Hide();
         }
 
         private void _btnReserva_Click(object sender, EventArgs e)
         {
-
+            FrmReserva res = new FrmReserva(this);
+            res.Show();
+            this.Hide();
         }
 
         private void _btnHoteles_Click(object sender, EventArgs e)
         {
-
+            FrmHoteles hot = new FrmHoteles(this);
+            hot.Show();
+            this.Hide();
         }
 
         private void _btnHabitaciones_Click(object sender, EventArgs e)
