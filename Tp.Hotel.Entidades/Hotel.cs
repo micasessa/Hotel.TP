@@ -17,7 +17,7 @@ namespace Tp.Hotel.Entidades
         private bool _amenities;
         private int _usuario;
 
-        //Creacion de propiedades
+        //Creacion de propiedades 
         public int IdHotel { get => _idHotel; set => _idHotel = value; }
         public int Estrellas { get => _estrellas; set => _estrellas = value; }
         public string Nombre { get => _nombre; set => _nombre = value; }
