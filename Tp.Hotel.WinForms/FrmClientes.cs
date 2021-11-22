@@ -67,7 +67,17 @@ namespace Tp.Hotel.WinForms
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                //Completar con los valores ingresados por el usuario (y mas)
 
+
+                Limpiar();
+
+            } catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
