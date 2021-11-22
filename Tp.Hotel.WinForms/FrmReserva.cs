@@ -107,5 +107,18 @@ namespace Tp.Hotel.WinForms
             this.Hide();
             this.Owner.Show();
         }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
+
+        private void Limpiar()
+        {
+            txtNroReserva.Clear();
+            txtFechaIngreso.Clear();
+            txtFechaEgreso.Clear();
+            txtHuespedes.Clear();
+        }
     }
 }

@@ -26,5 +26,18 @@ namespace Tp.Hotel.WinForms
             this.Hide();
             this.Owner.Show();
         }
+
+        private void _btnLimpiarHabitacion_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
+
+        private void Limpiar()
+        {
+            _txtIdHotel.Clear();
+            _txtIdHabitacion.Clear();
+            _txtCantidadPlazas.Clear();
+            _txtPrecio.Clear();
+        }
     }
 }

@@ -36,5 +36,21 @@ namespace Tp.Hotel.WinForms
             this.Hide();
             this.Owner.Show();
         }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
+
+        private void Limpiar()
+        {
+            txtNombre.Clear();
+            txtApellido.Clear();
+            txtDireccion.Clear();
+            txtDni.Clear();
+            txtTelefono.Clear();
+            txtMail.Clear();
+            txtFechaNacimiento.Clear();
+        }
     }
 }
