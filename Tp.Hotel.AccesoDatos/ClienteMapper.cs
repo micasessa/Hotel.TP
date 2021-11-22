@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Tp.Hotel.Entidades;
+using Newtonsoft.Json;
 
 namespace Tp.Hotel.AccesoDatos
 {
