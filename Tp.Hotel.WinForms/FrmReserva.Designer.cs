@@ -125,7 +125,7 @@ namespace Tp.Hotel.WinForms
             // 
             this.btnGuardar.BackColor = System.Drawing.Color.BlueViolet;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(534, 422);
+            this.btnGuardar.Location = new System.Drawing.Point(837, 422);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(112, 77);
@@ -137,19 +137,20 @@ namespace Tp.Hotel.WinForms
             // 
             this.btnLimpiar.BackColor = System.Drawing.Color.BlueViolet;
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.Location = new System.Drawing.Point(294, 422);
+            this.btnLimpiar.Location = new System.Drawing.Point(537, 422);
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(112, 77);
             this.btnLimpiar.TabIndex = 6;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnVolver
             // 
             this.btnVolver.BackColor = System.Drawing.Color.BlueViolet;
             this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.Location = new System.Drawing.Point(814, 422);
+            this.btnVolver.Location = new System.Drawing.Point(348, 422);
             this.btnVolver.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(112, 77);
@@ -216,7 +217,7 @@ namespace Tp.Hotel.WinForms
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumPurple;
-            this.ClientSize = new System.Drawing.Size(999, 692);
+            this.ClientSize = new System.Drawing.Size(999, 573);
             this.Controls.Add(this.lblDatosCliente);
             this.Controls.Add(this.lstClientes);
             this.Controls.Add(this.txtNroReserva);

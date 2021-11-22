@@ -154,6 +154,7 @@ namespace Tp.Hotel.WinForms
             this._btnLimpiarHabitacion.TabIndex = 25;
             this._btnLimpiarHabitacion.Text = "Limpiar";
             this._btnLimpiarHabitacion.UseVisualStyleBackColor = false;
+            this._btnLimpiarHabitacion.Click += new System.EventHandler(this._btnLimpiarHabitacion_Click);
             // 
             // _btnVolver
             // 
