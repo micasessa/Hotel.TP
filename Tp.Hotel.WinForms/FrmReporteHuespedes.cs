@@ -13,25 +13,15 @@ using Tp.Hotel.Negocio;
 
 namespace Tp.Hotel.WinForms
 {
-    public partial class FrmClientes : Form
+    public partial class FrmReporteHuespedes : Form
     {
-        public FrmClientes(Form main)
+        public FrmReporteHuespedes(Form main)
         {
             InitializeComponent();
             this.Owner = main;
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblApellido_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnVolver_Click(object sender, EventArgs e)
+        private void _btnVolver_Click(object sender, EventArgs e)
         {
             this.Hide();
             this.Owner.Show();

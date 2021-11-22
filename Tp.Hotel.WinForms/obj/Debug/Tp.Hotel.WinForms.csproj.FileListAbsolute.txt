@@ -64,6 +64,5 @@ C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.WinForms\bin\Debug\Tp.Hotel.Negocio.p
 C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.WinForms\bin\Debug\Newtonsoft.Json.xml
 C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.WinForms\obj\Debug\Tp.Hotel.WinForms.FrmReserva.resources
 C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.WinForms\obj\Debug\Tp.Hotel.WinForms.FrmReporteHabitaciones.resources
-C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.WinForms\obj\Debug\Tp.Hotel.WinForms.ReporteHuespedes.resources
-C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.WinForms\obj\Debug\Tp.Hotel.WinForms.ReporteReservas.resources
-C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.WinForms\obj\Debug\Tp.Hotel.WinForms.csproj.CopyComplete
+C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.WinForms\obj\Debug\Tp.Hotel.WinForms.FrmReporteHuespedes.resources
+C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.WinForms\obj\Debug\Tp.Hotel.WinForms.FrmReporteReservas.resources

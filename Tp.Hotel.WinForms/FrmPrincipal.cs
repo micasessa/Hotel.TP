@@ -16,10 +16,7 @@ namespace Tp.Hotel.WinForms
         public FrmPrincipal()
         {
             InitializeComponent();
-        }
-
-
-  
+        }  
         private void _btnCliente_Click(object sender, EventArgs e)
         {
             FrmClientes cli = new FrmClientes(this);
@@ -50,16 +47,22 @@ namespace Tp.Hotel.WinForms
 
         private void _btnHuespedesReserva_Click(object sender, EventArgs e)
         {
-
+            FrmReporteHuespedes repHue = new FrmReporteHuespedes(this);
+            repHue.Show();
+            this.Hide();
         }
 
         private void _btnReporteHabitaciones_Click(object sender, EventArgs e)
         {
-
+            FrmReporteHabitaciones repHab = new FrmReporteHabitaciones(this);
+            repHab.Show();
+            this.Hide();
         }
         private void _btnReporteReservas_Click(object sender, EventArgs e)
         {
-
+            FrmReporteReservas repRes = new FrmReporteReservas(this);
+            repRes.Show();
+            this.Hide();
         }
     }
 }

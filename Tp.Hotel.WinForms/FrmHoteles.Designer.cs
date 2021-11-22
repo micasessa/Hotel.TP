@@ -218,6 +218,7 @@ namespace Tp.Hotel.WinForms
             this._btnVolver.TabIndex = 11;
             this._btnVolver.Text = "Volver";
             this._btnVolver.UseVisualStyleBackColor = false;
+            this._btnVolver.Click += new System.EventHandler(this._btnVolver_Click);
             // 
             // _lblNombre
             // 

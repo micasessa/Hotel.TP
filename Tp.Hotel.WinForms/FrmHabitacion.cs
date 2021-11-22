@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
+using Tp.Hotel.Entidades;
+using Tp.Hotel.Negocio;
 
 namespace Tp.Hotel.WinForms
 {
@@ -17,6 +19,12 @@ namespace Tp.Hotel.WinForms
         {
             InitializeComponent();
             this.Owner = main;
+        }
+
+        private void _btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            this.Owner.Show();
         }
     }
 }
