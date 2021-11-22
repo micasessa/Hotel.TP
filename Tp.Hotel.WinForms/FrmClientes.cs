@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
+using Tp.Hotel.Entidades;
+using Tp.Hotel.Negocio;
 
 namespace Tp.Hotel.WinForms
 {
