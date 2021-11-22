@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace Tp.Hotel.WinForms
 {
-    public partial class FrmReporteHabitaciones : Form
+    public partial class FrmReporteHuespedes : Form
     {
-        public FrmReporteHabitaciones()
+        public FrmReporteHuespedes(Form main)
         {
             InitializeComponent();
+            this.Owner = main;
         }
     }
 }

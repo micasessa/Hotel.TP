@@ -81,23 +81,23 @@
     <Compile Include="FrmReserva.Designer.cs">
       <DependentUpon>FrmReserva.cs</DependentUpon>
     </Compile>
-    <Compile Include="ReporteHabitaciones.cs">
+    <Compile Include="FrmReporteHabitaciones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReporteHabitaciones.Designer.cs">
-      <DependentUpon>ReporteHabitaciones.cs</DependentUpon>
+    <Compile Include="FrmReporteHabitaciones.Designer.cs">
+      <DependentUpon>FrmReporteHabitaciones.cs</DependentUpon>
     </Compile>
-    <Compile Include="ReporteHuespedes.cs">
+    <Compile Include="FrmReporteHuespedes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReporteHuespedes.Designer.cs">
-      <DependentUpon>ReporteHuespedes.cs</DependentUpon>
+    <Compile Include="FrmReporteHuespedes.Designer.cs">
+      <DependentUpon>FrmReporteHuespedes.cs</DependentUpon>
     </Compile>
-    <Compile Include="ReporteReservas.cs">
+    <Compile Include="FrmReporteReservas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReporteReservas.Designer.cs">
-      <DependentUpon>ReporteReservas.cs</DependentUpon>
+    <Compile Include="FrmReporteReservas.Designer.cs">
+      <DependentUpon>FrmReporteReservas.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FrmClientes.resx">
       <DependentUpon>FrmClientes.cs</DependentUpon>
@@ -123,14 +123,14 @@
     <EmbeddedResource Include="FrmReserva.resx">
       <DependentUpon>FrmReserva.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReporteHabitaciones.resx">
-      <DependentUpon>ReporteHabitaciones.cs</DependentUpon>
+    <EmbeddedResource Include="FrmReporteHabitaciones.resx">
+      <DependentUpon>FrmReporteHabitaciones.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReporteHuespedes.resx">
-      <DependentUpon>ReporteHuespedes.cs</DependentUpon>
+    <EmbeddedResource Include="FrmReporteHuespedes.resx">
+      <DependentUpon>FrmReporteHuespedes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReporteReservas.resx">
-      <DependentUpon>ReporteReservas.cs</DependentUpon>
+    <EmbeddedResource Include="FrmReporteReservas.resx">
+      <DependentUpon>FrmReporteReservas.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

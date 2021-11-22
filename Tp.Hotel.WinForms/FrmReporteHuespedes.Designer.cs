@@ -1,6 +1,6 @@
 ﻿namespace Tp.Hotel.WinForms
 {
-    partial class ReporteHuespedes
+    partial class FrmReporteHuespedes
     {
         /// <summary>
         /// Required designer variable.
