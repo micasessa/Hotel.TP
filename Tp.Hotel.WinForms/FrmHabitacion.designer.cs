@@ -30,6 +30,12 @@ namespace Tp.Hotel.WinForms
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblDatosHabitacion = new System.Windows.Forms.Label();
+            this._btnRegargar = new System.Windows.Forms.Button();
+            this._lstHabitaciones = new System.Windows.Forms.ListBox();
+            this.cmbHabitaciones = new System.Windows.Forms.ComboBox();
+            this.lblFiltrar = new System.Windows.Forms.Label();
+            this.lblHabitaciones = new System.Windows.Forms.Label();
             this._btnLimpiarHabitacion = new System.Windows.Forms.Button();
             this._btnVolver = new System.Windows.Forms.Button();
             this._btnGuardarHabitacion = new System.Windows.Forms.Button();
@@ -45,12 +51,6 @@ namespace Tp.Hotel.WinForms
             this._lblCancelable = new System.Windows.Forms.Label();
             this._txtIdHotel = new System.Windows.Forms.TextBox();
             this._lblIdHotel = new System.Windows.Forms.Label();
-            this.lblHabitaciones = new System.Windows.Forms.Label();
-            this.lblFiltrar = new System.Windows.Forms.Label();
-            this.cmbHabitaciones = new System.Windows.Forms.ComboBox();
-            this._lstHabitaciones = new System.Windows.Forms.ListBox();
-            this._btnRegargar = new System.Windows.Forms.Button();
-            this.lblDatosHabitacion = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,6 +83,68 @@ namespace Tp.Hotel.WinForms
             this.panel1.Size = new System.Drawing.Size(1072, 675);
             this.panel1.TabIndex = 0;
             // 
+            // lblDatosHabitacion
+            // 
+            this.lblDatosHabitacion.AutoSize = true;
+            this.lblDatosHabitacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDatosHabitacion.Location = new System.Drawing.Point(577, 99);
+            this.lblDatosHabitacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDatosHabitacion.Name = "lblDatosHabitacion";
+            this.lblDatosHabitacion.Size = new System.Drawing.Size(254, 29);
+            this.lblDatosHabitacion.TabIndex = 31;
+            this.lblDatosHabitacion.Text = "Datos de la Habitación";
+            // 
+            // _btnRegargar
+            // 
+            this._btnRegargar.BackColor = System.Drawing.Color.MistyRose;
+            this._btnRegargar.Location = new System.Drawing.Point(66, 456);
+            this._btnRegargar.Name = "_btnRegargar";
+            this._btnRegargar.Size = new System.Drawing.Size(159, 34);
+            this._btnRegargar.TabIndex = 30;
+            this._btnRegargar.Text = "Recargar";
+            this._btnRegargar.UseVisualStyleBackColor = false;
+            // 
+            // _lstHabitaciones
+            // 
+            this._lstHabitaciones.FormattingEnabled = true;
+            this._lstHabitaciones.ItemHeight = 20;
+            this._lstHabitaciones.Location = new System.Drawing.Point(66, 150);
+            this._lstHabitaciones.Name = "_lstHabitaciones";
+            this._lstHabitaciones.Size = new System.Drawing.Size(367, 284);
+            this._lstHabitaciones.TabIndex = 29;
+            // 
+            // cmbHabitaciones
+            // 
+            this.cmbHabitaciones.FormattingEnabled = true;
+            this.cmbHabitaciones.Location = new System.Drawing.Point(144, 103);
+            this.cmbHabitaciones.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmbHabitaciones.Name = "cmbHabitaciones";
+            this.cmbHabitaciones.Size = new System.Drawing.Size(289, 28);
+            this.cmbHabitaciones.TabIndex = 28;
+            // 
+            // lblFiltrar
+            // 
+            this.lblFiltrar.AutoSize = true;
+            this.lblFiltrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFiltrar.Location = new System.Drawing.Point(61, 103);
+            this.lblFiltrar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFiltrar.Name = "lblFiltrar";
+            this.lblFiltrar.Size = new System.Drawing.Size(75, 29);
+            this.lblFiltrar.TabIndex = 27;
+            this.lblFiltrar.Text = "Filtrar";
+            // 
+            // lblHabitaciones
+            // 
+            this.lblHabitaciones.AutoSize = true;
+            this.lblHabitaciones.BackColor = System.Drawing.Color.LightCoral;
+            this.lblHabitaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHabitaciones.Location = new System.Drawing.Point(59, 30);
+            this.lblHabitaciones.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblHabitaciones.Name = "lblHabitaciones";
+            this.lblHabitaciones.Size = new System.Drawing.Size(214, 37);
+            this.lblHabitaciones.TabIndex = 26;
+            this.lblHabitaciones.Text = "Habitaciones";
+            // 
             // _btnLimpiarHabitacion
             // 
             this._btnLimpiarHabitacion.BackColor = System.Drawing.Color.MistyRose;
@@ -102,6 +164,7 @@ namespace Tp.Hotel.WinForms
             this._btnVolver.TabIndex = 24;
             this._btnVolver.Text = "Volver";
             this._btnVolver.UseVisualStyleBackColor = false;
+            this._btnVolver.Click += new System.EventHandler(this._btnVolver_Click);
             // 
             // _btnGuardarHabitacion
             // 
@@ -216,68 +279,6 @@ namespace Tp.Hotel.WinForms
             this._lblIdHotel.Size = new System.Drawing.Size(78, 25);
             this._lblIdHotel.TabIndex = 1;
             this._lblIdHotel.Text = "Id Hotel";
-            // 
-            // lblHabitaciones
-            // 
-            this.lblHabitaciones.AutoSize = true;
-            this.lblHabitaciones.BackColor = System.Drawing.Color.LightCoral;
-            this.lblHabitaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHabitaciones.Location = new System.Drawing.Point(59, 30);
-            this.lblHabitaciones.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblHabitaciones.Name = "lblHabitaciones";
-            this.lblHabitaciones.Size = new System.Drawing.Size(214, 37);
-            this.lblHabitaciones.TabIndex = 26;
-            this.lblHabitaciones.Text = "Habitaciones";
-            // 
-            // lblFiltrar
-            // 
-            this.lblFiltrar.AutoSize = true;
-            this.lblFiltrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFiltrar.Location = new System.Drawing.Point(61, 103);
-            this.lblFiltrar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblFiltrar.Name = "lblFiltrar";
-            this.lblFiltrar.Size = new System.Drawing.Size(75, 29);
-            this.lblFiltrar.TabIndex = 27;
-            this.lblFiltrar.Text = "Filtrar";
-            // 
-            // cmbHabitaciones
-            // 
-            this.cmbHabitaciones.FormattingEnabled = true;
-            this.cmbHabitaciones.Location = new System.Drawing.Point(144, 103);
-            this.cmbHabitaciones.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cmbHabitaciones.Name = "cmbHabitaciones";
-            this.cmbHabitaciones.Size = new System.Drawing.Size(289, 28);
-            this.cmbHabitaciones.TabIndex = 28;
-            // 
-            // _lstHabitaciones
-            // 
-            this._lstHabitaciones.FormattingEnabled = true;
-            this._lstHabitaciones.ItemHeight = 20;
-            this._lstHabitaciones.Location = new System.Drawing.Point(66, 150);
-            this._lstHabitaciones.Name = "_lstHabitaciones";
-            this._lstHabitaciones.Size = new System.Drawing.Size(367, 284);
-            this._lstHabitaciones.TabIndex = 29;
-            // 
-            // _btnRegargar
-            // 
-            this._btnRegargar.BackColor = System.Drawing.Color.MistyRose;
-            this._btnRegargar.Location = new System.Drawing.Point(66, 456);
-            this._btnRegargar.Name = "_btnRegargar";
-            this._btnRegargar.Size = new System.Drawing.Size(159, 34);
-            this._btnRegargar.TabIndex = 30;
-            this._btnRegargar.Text = "Recargar";
-            this._btnRegargar.UseVisualStyleBackColor = false;
-            // 
-            // lblDatosHabitacion
-            // 
-            this.lblDatosHabitacion.AutoSize = true;
-            this.lblDatosHabitacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDatosHabitacion.Location = new System.Drawing.Point(577, 99);
-            this.lblDatosHabitacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDatosHabitacion.Name = "lblDatosHabitacion";
-            this.lblDatosHabitacion.Size = new System.Drawing.Size(254, 29);
-            this.lblDatosHabitacion.TabIndex = 31;
-            this.lblDatosHabitacion.Text = "Datos de la Habitación";
             // 
             // FrmHabitacion
             // 

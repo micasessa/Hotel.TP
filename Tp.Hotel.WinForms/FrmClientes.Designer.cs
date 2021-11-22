@@ -59,9 +59,10 @@ namespace Tp.Hotel.WinForms
             this.lblClientes.AutoSize = true;
             this.lblClientes.BackColor = System.Drawing.Color.PapayaWhip;
             this.lblClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClientes.Location = new System.Drawing.Point(33, 9);
+            this.lblClientes.Location = new System.Drawing.Point(50, 14);
+            this.lblClientes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblClientes.Name = "lblClientes";
-            this.lblClientes.Size = new System.Drawing.Size(98, 25);
+            this.lblClientes.Size = new System.Drawing.Size(139, 37);
             this.lblClientes.TabIndex = 14;
             this.lblClientes.Text = "Clientes";
             this.lblClientes.Click += new System.EventHandler(this.label1_Click);
@@ -69,18 +70,21 @@ namespace Tp.Hotel.WinForms
             // lstClientes
             // 
             this.lstClientes.FormattingEnabled = true;
-            this.lstClientes.Location = new System.Drawing.Point(19, 110);
+            this.lstClientes.ItemHeight = 20;
+            this.lstClientes.Location = new System.Drawing.Point(28, 169);
+            this.lstClientes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lstClientes.Name = "lstClientes";
-            this.lstClientes.Size = new System.Drawing.Size(323, 186);
+            this.lstClientes.Size = new System.Drawing.Size(482, 284);
             this.lstClientes.TabIndex = 11;
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(419, 65);
+            this.lblNombre.Location = new System.Drawing.Point(628, 100);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(60, 16);
+            this.lblNombre.Size = new System.Drawing.Size(87, 25);
             this.lblNombre.TabIndex = 2;
             this.lblNombre.Text = "Nombre:";
             // 
@@ -88,9 +92,10 @@ namespace Tp.Hotel.WinForms
             // 
             this.lblApellido.AutoSize = true;
             this.lblApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellido.Location = new System.Drawing.Point(419, 101);
+            this.lblApellido.Location = new System.Drawing.Point(628, 155);
+            this.lblApellido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(61, 16);
+            this.lblApellido.Size = new System.Drawing.Size(88, 25);
             this.lblApellido.TabIndex = 3;
             this.lblApellido.Text = "Apellido:";
             this.lblApellido.Click += new System.EventHandler(this.lblApellido_Click);
@@ -99,9 +104,10 @@ namespace Tp.Hotel.WinForms
             // 
             this.lblDireccion.AutoSize = true;
             this.lblDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDireccion.Location = new System.Drawing.Point(417, 135);
+            this.lblDireccion.Location = new System.Drawing.Point(626, 208);
+            this.lblDireccion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDireccion.Name = "lblDireccion";
-            this.lblDireccion.Size = new System.Drawing.Size(68, 16);
+            this.lblDireccion.Size = new System.Drawing.Size(99, 25);
             this.lblDireccion.TabIndex = 4;
             this.lblDireccion.Text = "Dirección:";
             // 
@@ -109,9 +115,10 @@ namespace Tp.Hotel.WinForms
             // 
             this.lblDni.AutoSize = true;
             this.lblDni.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDni.Location = new System.Drawing.Point(418, 171);
+            this.lblDni.Location = new System.Drawing.Point(627, 263);
+            this.lblDni.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDni.Name = "lblDni";
-            this.lblDni.Size = new System.Drawing.Size(34, 16);
+            this.lblDni.Size = new System.Drawing.Size(51, 25);
             this.lblDni.TabIndex = 5;
             this.lblDni.Text = "DNI:";
             // 
@@ -119,9 +126,10 @@ namespace Tp.Hotel.WinForms
             // 
             this.lblTelefono.AutoSize = true;
             this.lblTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelefono.Location = new System.Drawing.Point(418, 208);
+            this.lblTelefono.Location = new System.Drawing.Point(627, 320);
+            this.lblTelefono.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(65, 16);
+            this.lblTelefono.Size = new System.Drawing.Size(95, 25);
             this.lblTelefono.TabIndex = 6;
             this.lblTelefono.Text = "Teléfono:";
             // 
@@ -129,9 +137,10 @@ namespace Tp.Hotel.WinForms
             // 
             this.lblMail.AutoSize = true;
             this.lblMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMail.Location = new System.Drawing.Point(418, 247);
+            this.lblMail.Location = new System.Drawing.Point(627, 380);
+            this.lblMail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMail.Name = "lblMail";
-            this.lblMail.Size = new System.Drawing.Size(36, 16);
+            this.lblMail.Size = new System.Drawing.Size(54, 25);
             this.lblMail.TabIndex = 7;
             this.lblMail.Text = "Mail:";
             // 
@@ -139,68 +148,77 @@ namespace Tp.Hotel.WinForms
             // 
             this.lblFechNacimiento.AutoSize = true;
             this.lblFechNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechNacimiento.Location = new System.Drawing.Point(417, 278);
+            this.lblFechNacimiento.Location = new System.Drawing.Point(626, 428);
+            this.lblFechNacimiento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFechNacimiento.Name = "lblFechNacimiento";
-            this.lblFechNacimiento.Size = new System.Drawing.Size(120, 16);
+            this.lblFechNacimiento.Size = new System.Drawing.Size(175, 25);
             this.lblFechNacimiento.TabIndex = 8;
             this.lblFechNacimiento.Text = "Fecha Nacimiento:";
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(566, 97);
+            this.txtApellido.Location = new System.Drawing.Point(849, 149);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(100, 20);
+            this.txtApellido.Size = new System.Drawing.Size(148, 26);
             this.txtApellido.TabIndex = 2;
             // 
             // txtDni
             // 
-            this.txtDni.Location = new System.Drawing.Point(566, 167);
+            this.txtDni.Location = new System.Drawing.Point(849, 257);
+            this.txtDni.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDni.Name = "txtDni";
-            this.txtDni.Size = new System.Drawing.Size(100, 20);
+            this.txtDni.Size = new System.Drawing.Size(148, 26);
             this.txtDni.TabIndex = 4;
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(566, 131);
+            this.txtDireccion.Location = new System.Drawing.Point(849, 202);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(100, 20);
+            this.txtDireccion.Size = new System.Drawing.Size(148, 26);
             this.txtDireccion.TabIndex = 3;
             // 
             // txtFechaNacimiento
             // 
-            this.txtFechaNacimiento.Location = new System.Drawing.Point(566, 278);
+            this.txtFechaNacimiento.Location = new System.Drawing.Point(849, 428);
+            this.txtFechaNacimiento.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtFechaNacimiento.Name = "txtFechaNacimiento";
-            this.txtFechaNacimiento.Size = new System.Drawing.Size(100, 20);
+            this.txtFechaNacimiento.Size = new System.Drawing.Size(148, 26);
             this.txtFechaNacimiento.TabIndex = 7;
             // 
             // txtMail
             // 
-            this.txtMail.Location = new System.Drawing.Point(566, 243);
+            this.txtMail.Location = new System.Drawing.Point(849, 374);
+            this.txtMail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMail.Name = "txtMail";
-            this.txtMail.Size = new System.Drawing.Size(100, 20);
+            this.txtMail.Size = new System.Drawing.Size(148, 26);
             this.txtMail.TabIndex = 6;
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(566, 204);
+            this.txtTelefono.Location = new System.Drawing.Point(849, 314);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(100, 20);
+            this.txtTelefono.Size = new System.Drawing.Size(148, 26);
             this.txtTelefono.TabIndex = 5;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(566, 64);
+            this.txtNombre.Location = new System.Drawing.Point(849, 98);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtNombre.Size = new System.Drawing.Size(148, 26);
             this.txtNombre.TabIndex = 1;
             // 
             // btnRecargar
             // 
             this.btnRecargar.BackColor = System.Drawing.Color.SandyBrown;
             this.btnRecargar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRecargar.Location = new System.Drawing.Point(19, 309);
+            this.btnRecargar.Location = new System.Drawing.Point(28, 475);
+            this.btnRecargar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnRecargar.Name = "btnRecargar";
-            this.btnRecargar.Size = new System.Drawing.Size(75, 34);
+            this.btnRecargar.Size = new System.Drawing.Size(112, 52);
             this.btnRecargar.TabIndex = 12;
             this.btnRecargar.Text = "Recargar";
             this.btnRecargar.UseVisualStyleBackColor = false;
@@ -209,20 +227,23 @@ namespace Tp.Hotel.WinForms
             // 
             this.btnVolver.BackColor = System.Drawing.Color.SandyBrown;
             this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.Location = new System.Drawing.Point(237, 309);
+            this.btnVolver.Location = new System.Drawing.Point(356, 475);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(75, 34);
+            this.btnVolver.Size = new System.Drawing.Size(112, 52);
             this.btnVolver.TabIndex = 13;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = false;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // btnLimpiar
             // 
             this.btnLimpiar.BackColor = System.Drawing.Color.SandyBrown;
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.Location = new System.Drawing.Point(406, 309);
+            this.btnLimpiar.Location = new System.Drawing.Point(609, 475);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(75, 34);
+            this.btnLimpiar.Size = new System.Drawing.Size(112, 52);
             this.btnLimpiar.TabIndex = 9;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = false;
@@ -231,9 +252,10 @@ namespace Tp.Hotel.WinForms
             // 
             this.btnGuardar.BackColor = System.Drawing.Color.SandyBrown;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(594, 309);
+            this.btnGuardar.Location = new System.Drawing.Point(891, 475);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(75, 34);
+            this.btnGuardar.Size = new System.Drawing.Size(112, 52);
             this.btnGuardar.TabIndex = 8;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
@@ -242,36 +264,39 @@ namespace Tp.Hotel.WinForms
             // 
             this.lblFiltrar.AutoSize = true;
             this.lblFiltrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFiltrar.Location = new System.Drawing.Point(34, 70);
+            this.lblFiltrar.Location = new System.Drawing.Point(51, 108);
+            this.lblFiltrar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFiltrar.Name = "lblFiltrar";
-            this.lblFiltrar.Size = new System.Drawing.Size(49, 20);
+            this.lblFiltrar.Size = new System.Drawing.Size(75, 29);
             this.lblFiltrar.TabIndex = 20;
             this.lblFiltrar.Text = "Filtrar";
             // 
             // cmbClientes
             // 
             this.cmbClientes.FormattingEnabled = true;
-            this.cmbClientes.Location = new System.Drawing.Point(148, 69);
+            this.cmbClientes.Location = new System.Drawing.Point(222, 106);
+            this.cmbClientes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbClientes.Name = "cmbClientes";
-            this.cmbClientes.Size = new System.Drawing.Size(194, 21);
+            this.cmbClientes.Size = new System.Drawing.Size(289, 28);
             this.cmbClientes.TabIndex = 10;
             // 
             // lblDatos
             // 
             this.lblDatos.AutoSize = true;
             this.lblDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDatos.Location = new System.Drawing.Point(472, 22);
+            this.lblDatos.Location = new System.Drawing.Point(708, 34);
+            this.lblDatos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDatos.Name = "lblDatos";
-            this.lblDatos.Size = new System.Drawing.Size(127, 20);
+            this.lblDatos.Size = new System.Drawing.Size(191, 29);
             this.lblDatos.TabIndex = 15;
             this.lblDatos.Text = "Datos de Cliente";
             // 
             // FrmClientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PapayaWhip;
-            this.ClientSize = new System.Drawing.Size(710, 450);
+            this.ClientSize = new System.Drawing.Size(1065, 692);
             this.Controls.Add(this.lblDatos);
             this.Controls.Add(this.cmbClientes);
             this.Controls.Add(this.lblFiltrar);
@@ -295,6 +320,7 @@ namespace Tp.Hotel.WinForms
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lstClientes);
             this.Controls.Add(this.lblClientes);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmClientes";
             this.Text = "Cliente";
             this.ResumeLayout(false);

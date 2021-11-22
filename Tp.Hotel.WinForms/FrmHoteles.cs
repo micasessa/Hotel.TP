@@ -19,6 +19,10 @@ namespace Tp.Hotel.WinForms
             this.Owner = main;
         }
 
-        
+        private void _btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            this.Owner.Show();
+        }
     }
 }
