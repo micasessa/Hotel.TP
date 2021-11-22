@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Habitacion.cs" />
     <Compile Include="Hotel.cs" />
+    <Compile Include="Modelos\TransactionResult.cs" />
     <Compile Include="Reserva.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="Persona.cs" />

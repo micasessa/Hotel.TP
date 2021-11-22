@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Tp.Hotel.Entidades;
 using Newtonsoft.Json;
+using Tp.Hotel.Entidades.Modelos;
 
 namespace Tp.Hotel.AccesoDatos
 {
@@ -38,8 +39,6 @@ namespace Tp.Hotel.AccesoDatos
             return lst;
         }
 
-
-
         private NameValueCollection ReverseMap(Cliente cliente)
         {
             NameValueCollection cl = new NameValueCollection();
@@ -49,7 +48,7 @@ namespace Tp.Hotel.AccesoDatos
             cl.Add("direccion", cliente.Direccion);
             cl.Add("email", cliente.Email);
             cl.Add("telefono", cliente.Telefono);
-            cl.Add("fechaNacimiento", cliente.FechaNacimiento.ToString()); //no se porque me salta error
+            cl.Add("fechaNacimiento", cliente.FechaNacimiento.ToString());
             cl.Add("fechaAlta", cliente.FechaAlta.ToString());
             cl.Add("activo", cliente.Activo.ToString());
             cl.Add("usuario", cliente.Usuario);
