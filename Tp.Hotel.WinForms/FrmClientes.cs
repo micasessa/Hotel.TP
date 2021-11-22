@@ -15,11 +15,23 @@ namespace Tp.Hotel.WinForms
 {
     public partial class FrmClientes : Form
     {
+        private ClienteNegocio _clienteNegocio;
+        private List<Cliente> _clientes;
         public FrmClientes(Form main)
         {
             InitializeComponent();
             this.Owner = main;
+
+            _clienteNegocio = new ClienteNegocio;
         }
+
+        
+        private void FrmClientes_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -51,6 +63,21 @@ namespace Tp.Hotel.WinForms
             txtTelefono.Clear();
             txtMail.Clear();
             txtFechaNacimiento.Clear();
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //Completar con los valores ingresados por el usuario (y mas)
+
+
+                Limpiar();
+
+            } catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

@@ -260,6 +260,7 @@ namespace Tp.Hotel.WinForms
             this.btnGuardar.TabIndex = 8;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // lblFiltrar
             // 
@@ -324,6 +325,7 @@ namespace Tp.Hotel.WinForms
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmClientes";
             this.Text = "Cliente";
+            this.Load += new System.EventHandler(this.FrmClientes_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

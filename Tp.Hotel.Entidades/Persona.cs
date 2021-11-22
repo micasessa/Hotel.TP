@@ -28,6 +28,8 @@ namespace Tp.Hotel.Entidades
         public string Direccion { get => _direccion; set => _direccion = value; }
         public string Email { get => _email; set => _email = value; }
         public string Telefono { get => _telefono; set => _telefono = value; }
+
+        //[DataMember(Name = "FechaNacimiento")]
         public DateTime FechaNacimiento { get => _fechaNacimiento; set => _fechaNacimiento = value; }
 
         //Creacion de constructores
