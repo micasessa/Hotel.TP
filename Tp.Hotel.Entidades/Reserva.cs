@@ -11,8 +11,8 @@ namespace Tp.Hotel.Entidades
     {
         //Declaracion de atributos
         private int _idReserva;
-        private Habitacion _idHabitacion; //dejo el int como en el DER o pongo Habitacion?
-        private Cliente _idCliente; //dejo el int como en el DER o pongo Cliente?
+        private int _idHabitacion; 
+        private int _idCliente; 
         private int _cantidadHuespedes;
         private DateTime _fechaIngreso;
         private DateTime _fechaEgreso;
@@ -20,27 +20,27 @@ namespace Tp.Hotel.Entidades
 
         //Creacion de propiedades
         public int IdReserva { get => _idReserva; set => _idReserva = value; }
-        public Habitacion IdHabitacion { get => _idHabitacion; set => _idHabitacion = value; }
-        public Cliente IdCliente { get => _idCliente; set => _idCliente = value; }
+        public int IdHabitacion { get => _idHabitacion; set => _idHabitacion = value; }
+        public int IdCliente { get => _idCliente; set => _idCliente = value; }
         public int CantidadHuespedes { get => _cantidadHuespedes; set => _cantidadHuespedes = value; }
         public DateTime FechaIngreso { get => _fechaIngreso; set => _fechaIngreso = value; }
         public DateTime FechaEgreso { get => _fechaEgreso; set => _fechaEgreso = value; }
-        public int Usuario { get => _usuario; set => _usuario = value; } //estoy con duda si agregarlo o no
+        public int Usuario { get => _usuario; set => _usuario = value; } 
 
 
         //Creacion de constructores.
         public Reserva()
         { }
 
-        public Reserva(int idReserva, Habitacion idHabitacion, Cliente idCliente, int cantidadHuespedes, DateTime fechaIngreso, DateTime fechaEgreso, int usuario)
+        public Reserva(int idReserva, int idHabitacion, int idCliente, int cantidadHuespedes, DateTime fechaIngreso, DateTime fechaEgreso, int usuario)
         {
-            idReserva = _idReserva;
-            idHabitacion = _idHabitacion;
-            idCliente = _idCliente;
-            cantidadHuespedes = _cantidadHuespedes;
-            fechaIngreso = _fechaIngreso;
-            fechaEgreso = _fechaEgreso;
-            usuario = _usuario;
+            _idReserva = idReserva;
+            _idHabitacion = idHabitacion;
+            _idCliente = idCliente;
+            _cantidadHuespedes = cantidadHuespedes;
+            _fechaIngreso = fechaIngreso;
+            _fechaEgreso = fechaEgreso;
+            _usuario = usuario;
 
         }
 

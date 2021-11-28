@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Tp.Hotel.Entidades
 {
-    //[DataContract]
+    
     public class Cliente : Persona
     {
         //Declaracion de atributos
@@ -16,23 +16,23 @@ namespace Tp.Hotel.Entidades
         private bool _activo;
         private string _usuario;
 
-        //creacion propiedades
-        //Falta agregar los datamembers (checkear los nombres del postman)
+        //creacion propiedades        
         public int IdCliente { get => _idCliente; set => _idCliente = value; }
-        public DateTime FechaAlta { get => _fechaAlta; set => _fechaAlta = value; } //estoy con duda si agregarlo o no
+        public DateTime FechaAlta { get => _fechaAlta; set => _fechaAlta = value; } 
         public bool Activo { get => _activo; set => _activo = value; }
-        public string Usuario { get => _usuario; set => _usuario = value; } //estoy con duda si agregarlo o no
+        public string Usuario { get => _usuario; set => _usuario = value; } 
 
-        //creacion constructores. COMMENT: NO SE SI PONER EN EL CONSTRUCTOR LA FECHA DE ALTA Y EL NUM DE USUARIO!
+        //creacion constructores
         public Cliente()
         { 
         }
-        public Cliente(int dni, string nombre, string apellido, string direccion, string email, string telefono, DateTime fechaNacimiento, int idCliente, DateTime fechaAlta, bool activo, string usuario ) : base(dni, nombre, apellido, direccion, email, telefono, fechaNacimiento)
+        public Cliente(int dni, string nombre, string apellido, string direccion, string email, string telefono, 
+            DateTime fechaNacimiento, int idCliente, bool activo, string usuario ) : base(dni, nombre, apellido, direccion, email, telefono, fechaNacimiento)
         {
-            idCliente = _idCliente;
-            fechaAlta = _fechaAlta;
-            activo = _activo;
-            usuario = _usuario;
+            _idCliente = idCliente;
+            _fechaAlta = DateTime.Now;
+            _activo = activo;
+            _usuario = usuario;
         }
 
     }

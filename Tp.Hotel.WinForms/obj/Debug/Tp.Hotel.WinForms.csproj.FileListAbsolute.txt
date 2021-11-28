@@ -66,3 +66,4 @@ C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.WinForms\obj\Debug\Tp.Hotel.WinForms.
 C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.WinForms\obj\Debug\Tp.Hotel.WinForms.FrmReporteHabitaciones.resources
 C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.WinForms\obj\Debug\Tp.Hotel.WinForms.FrmReporteHuespedes.resources
 C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.WinForms\obj\Debug\Tp.Hotel.WinForms.FrmReporteReservas.resources
+C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.WinForms\obj\Debug\Tp.Hotel.WinForms.csproj.CopyComplete

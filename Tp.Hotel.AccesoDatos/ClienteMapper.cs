@@ -17,7 +17,7 @@ namespace Tp.Hotel.AccesoDatos
         //Para traer la lista de clientes:
         public List<Cliente> TraerTodos()
         {
-            string json2 = WebHelper.Get(""); //FALTA COMPLETAR TEMA URL
+            string json2 = WebHelper.Get(""); //FALTA COMPLETAR TEMA URL + USUARIO
             List<Cliente> resultado = MapList(json2);
             _clientes = resultado;
             return _clientes;
@@ -33,7 +33,7 @@ namespace Tp.Hotel.AccesoDatos
         public TransactionResult Agregar (Cliente cliente)
         {
             NameValueCollection obj = ReverseMap(cliente);
-            string json = WebHelper.Post("", obj);
+            string json = WebHelper.Post("", obj); //FALTA COMPLETAR TEMA URL
             TransactionResult lst = JsonConvert.DeserializeObject<TransactionResult>(json);
             _clientes.Add(cliente);
             return lst;

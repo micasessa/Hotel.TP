@@ -22,25 +22,19 @@ namespace Tp.Hotel.WinForms
             InitializeComponent();
             this.Owner = main;
 
-            _clienteNegocio = new ClienteNegocio;
+            _clienteNegocio = new ClienteNegocio();
         }
 
         
         private void FrmClientes_Load(object sender, EventArgs e)
         {
-            
+            Carga();
+            Limpiar();            
         }
 
-        
-
-        private void label1_Click(object sender, EventArgs e)
+        private void Carga()
         {
-
-        }
-
-        private void lblApellido_Click(object sender, EventArgs e)
-        {
-
+            //Falta desarrollar metodo
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
@@ -63,6 +57,7 @@ namespace Tp.Hotel.WinForms
             txtTelefono.Clear();
             txtMail.Clear();
             txtFechaNacimiento.Clear();
+            cmbClientes.SelectedItem = "--SELECCIONE--";
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -78,6 +73,11 @@ namespace Tp.Hotel.WinForms
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void btnRecargar_Click(object sender, EventArgs e)
+        {
+            //Falta desarrollar
         }
     }
 }
