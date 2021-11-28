@@ -21,6 +21,17 @@ namespace Tp.Hotel.WinForms
             this.Owner = main;
         }
 
+        private void FrmHabitacion_Load(object sender, EventArgs e)
+        {
+            Carga();
+            Limpiar();
+        }
+
+        private void Carga()
+        {
+            //Falta desarrollar
+        }
+
         private void _btnVolver_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -39,5 +50,17 @@ namespace Tp.Hotel.WinForms
             _txtCantidadPlazas.Clear();
             _txtPrecio.Clear();
         }
+
+        private void _btnRegargar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void _btnGuardarHabitacion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }

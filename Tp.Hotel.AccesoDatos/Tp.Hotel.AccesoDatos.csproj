@@ -45,6 +45,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClienteMapper.cs" />
+    <Compile Include="HabitacionMapper.cs" />
+    <Compile Include="HotelMapper.cs" />
     <Compile Include="ReservaMapper.cs" />
     <Compile Include="WebHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

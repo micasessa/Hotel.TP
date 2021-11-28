@@ -7,3 +7,5 @@ C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.AccesoDatos\bin\Debug\Tp.Hotel.Entida
 C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.AccesoDatos\obj\Debug\Tp.Hotel.AccesoDatos.csproj.CopyComplete
 C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.AccesoDatos\obj\Debug\Tp.Hotel.AccesoDatos.dll
 C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.AccesoDatos\obj\Debug\Tp.Hotel.AccesoDatos.pdb
+C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.AccesoDatos\bin\Debug\Newtonsoft.Json.dll
+C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.AccesoDatos\bin\Debug\Newtonsoft.Json.xml

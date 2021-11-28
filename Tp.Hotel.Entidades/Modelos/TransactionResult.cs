@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace Tp.Hotel.Entidades.Modelos
 {
-    [DataContract]
+    //[DataContract]
     public class TransactionResult
     {
-        [DataMember]
+        //[DataMember]
         public bool IsOk { get; set; }
-        [DataMember]
+        //[DataMember]
         public int Id { get; set; }
-        [DataMember]
+        //[DataMember]
         public string Error { get; set; }
     }
 }

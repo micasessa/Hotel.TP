@@ -65,7 +65,6 @@ namespace Tp.Hotel.WinForms
             this.lblClientes.Size = new System.Drawing.Size(139, 37);
             this.lblClientes.TabIndex = 14;
             this.lblClientes.Text = "Clientes";
-            this.lblClientes.Click += new System.EventHandler(this.label1_Click);
             // 
             // lstClientes
             // 
@@ -98,7 +97,6 @@ namespace Tp.Hotel.WinForms
             this.lblApellido.Size = new System.Drawing.Size(88, 25);
             this.lblApellido.TabIndex = 3;
             this.lblApellido.Text = "Apellido:";
-            this.lblApellido.Click += new System.EventHandler(this.lblApellido_Click);
             // 
             // lblDireccion
             // 
@@ -222,6 +220,7 @@ namespace Tp.Hotel.WinForms
             this.btnRecargar.TabIndex = 12;
             this.btnRecargar.Text = "Recargar";
             this.btnRecargar.UseVisualStyleBackColor = false;
+            this.btnRecargar.Click += new System.EventHandler(this.btnRecargar_Click);
             // 
             // btnVolver
             // 

@@ -11,7 +11,7 @@ namespace Tp.Hotel.Entidades
     {
         //Declaracion de atributos
         private int _idHabitacion;
-        private Hotel _idHotel;
+        private int _idHotel;
         private int _cantidadPlazas;
         private string _categoria;
         private double _precio;
@@ -25,7 +25,7 @@ namespace Tp.Hotel.Entidades
         public string Categoria { get => _categoria; set => _categoria = value; }
         public double Precio { get => _precio; set => _precio = value; }
         public bool Cancelable { get => _cancelable; set => _cancelable = value; }
-        public int Usuario { get => _usuario; set => _usuario = value; } //estoy con duda si agregarlo o no
+        public int Usuario { get => _usuario; set => _usuario = value; } 
 
 
         //Creacion de constructores
@@ -34,13 +34,13 @@ namespace Tp.Hotel.Entidades
 
         public Habitacion(int idHabitacion, Hotel idHotel, int cantidadPlazas, string categoria, double precio, bool cancelable, int usuario)
         {
-            idHabitacion = _idHabitacion;
-            idHotel = _idHotel;
-            cantidadPlazas = _cantidadPlazas;
-            categoria = _categoria;
-            precio = _precio;
-            cancelable = _cancelable;
-            usuario = _usuario;
+            _idHabitacion = idHabitacion;
+            _cantidadPlazas = cantidadPlazas;
+            _categoria = categoria;
+            _precio = precio;
+            _cancelable = cancelable;
+            _usuario = usuario;
+            _idHotel = idHotel;
         }
 
 

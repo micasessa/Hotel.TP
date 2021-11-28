@@ -9,3 +9,5 @@ C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.Negocio\bin\Debug\Tp.Hotel.Entidades.
 C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.Negocio\obj\Debug\Tp.Hotel.Negocio.csproj.CopyComplete
 C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.Negocio\obj\Debug\Tp.Hotel.Negocio.dll
 C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.Negocio\obj\Debug\Tp.Hotel.Negocio.pdb
+C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.Negocio\bin\Debug\Newtonsoft.Json.dll
+C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.Negocio\bin\Debug\Newtonsoft.Json.xml

@@ -23,7 +23,7 @@ namespace Tp.Hotel.Entidades
         public string Nombre { get => _nombre; set => _nombre = value; }
         public string Direccion { get => _direccion; set => _direccion = value; }
         public bool Amenities { get => _amenities; set => _amenities = value; }
-        public int Usuario { get => _usuario; set => _usuario = value; } //estoy con duda si agregarlo o no
+        public int Usuario { get => _usuario; set => _usuario = value; }
 
         //Creacion de constructores
         public Hotel()
@@ -32,12 +32,12 @@ namespace Tp.Hotel.Entidades
 
         public Hotel(int idHotel, int estrellas, string nombre, string direccion, bool amenities, int usuario)
         {
-            idHotel = _idHotel;
-            estrellas = _estrellas;
-            nombre = _nombre;
-            direccion = _direccion;
-            amenities = _amenities;
-            usuario = _usuario;
+            _idHotel = idHotel;
+            _estrellas = estrellas;
+            _nombre = nombre;
+            _direccion = direccion;
+             _amenities = amenities;
+            _usuario = usuario;
         }
 
     }

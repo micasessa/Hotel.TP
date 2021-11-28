@@ -38,13 +38,13 @@ namespace Tp.Hotel.Entidades
 
         public Persona(int dni, string nombre, string apellido, string direccion, string email, string telefono, DateTime fechaNacimiento )
         {
-            dni = _dni;
-            nombre = _nombre;
-            apellido = _apellido;
-            direccion = _direccion;
-            email = _email;
-            telefono = _telefono;
-            fechaNacimiento = _fechaNacimiento;
+            _dni = dni;
+             _nombre = nombre;
+            _apellido = apellido;
+            _direccion = direccion;
+            _email = email;
+            _telefono = telefono;
+            _fechaNacimiento = fechaNacimiento;
         }
     }
 }

@@ -103,6 +103,7 @@ namespace Tp.Hotel.WinForms
             this._btnRegargar.TabIndex = 30;
             this._btnRegargar.Text = "Recargar";
             this._btnRegargar.UseVisualStyleBackColor = false;
+            this._btnRegargar.Click += new System.EventHandler(this._btnRegargar_Click);
             // 
             // _lstHabitaciones
             // 
@@ -176,6 +177,7 @@ namespace Tp.Hotel.WinForms
             this._btnGuardarHabitacion.TabIndex = 22;
             this._btnGuardarHabitacion.Text = "Guardar";
             this._btnGuardarHabitacion.UseVisualStyleBackColor = false;
+            this._btnGuardarHabitacion.Click += new System.EventHandler(this._btnGuardarHabitacion_Click);
             // 
             // _cmbCategoria
             // 
@@ -289,6 +291,7 @@ namespace Tp.Hotel.WinForms
             this.Controls.Add(this.panel1);
             this.Name = "FrmHabitacion";
             this.Text = "FrmHabitacion";
+            this.Load += new System.EventHandler(this.FrmHabitacion_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
