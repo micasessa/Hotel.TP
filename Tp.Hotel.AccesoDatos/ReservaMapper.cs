@@ -17,7 +17,7 @@ namespace Tp.Hotel.AccesoDatos
         //Para traer la lista de Reservas:
         public List<Reserva> TraerTodos()
         {
-            string json2 = WebHelper.Get("Hotel/Reservas/{registro}"); //FALTA COMPLETAR TEMA registro
+            string json2 = WebHelper.Get("Hotel/Reservas/836465"); //FALTA COMPLETAR TEMA registro
             List<Reserva> resultado = MapList(json2);
             _reserva = resultado;
             return _reserva;
@@ -35,7 +35,7 @@ namespace Tp.Hotel.AccesoDatos
             NameValueCollection obj = ReverseMap(reserva);
             string json = WebHelper.Post("Hotel/Reservas", obj);
             TransactionResult lst = JsonConvert.DeserializeObject<TransactionResult>(json);
-            _reserva.Add(reserva);
+           // _reserva.Add(reserva);
             return lst;
         }
 

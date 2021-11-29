@@ -8,7 +8,8 @@ namespace Tp.Hotel.Entidades.Enum
 {
     public enum Booleano
     {
-        Si=1,
+        Seleccione = 0,
+        Si =1,
         No=2,
     }
 }

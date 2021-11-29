@@ -27,7 +27,7 @@ namespace Tp.Hotel.WinForms
         private void FrmHoteles_Load(object sender, EventArgs e)
         {
             Carga();
-            //Limpiar();
+           
         }
         private void _btnVolver_Click(object sender, EventArgs e)
         {
@@ -50,11 +50,8 @@ namespace Tp.Hotel.WinForms
         {
              _txtNombre.Clear();
             _txtDireccion.Clear();
-           // _cmbEstrellas.DataSource = null;
             _cmbEstrellas.SelectedIndex = 0;
-           // _cmbAmenities.DataSource = null;
             _cmbAmenities.SelectedIndex = 0;
-           // cmbHoteles.DataSource = null;
             cmbHoteles.SelectedIndex =0;
 
 
@@ -64,10 +61,9 @@ namespace Tp.Hotel.WinForms
             CargarHoteles();
             CargarAmenities();
             CargarEstrellas();
-            CargarComboHoteles();
+           CargarComboHoteles();
             
-            //_cmbEstrellas.SelectedItem = 0;
-            //_cmbAmenities.SelectedItem = "--SELECCIONE--";
+            
         }
 
         public void CargarEstrellas()
@@ -75,7 +71,7 @@ namespace Tp.Hotel.WinForms
             _cmbEstrellas.DataSource = null;
             _cmbEstrellas.DataSource = Estrellas.GetValues(typeof(Estrellas));
             _cmbEstrellas.ValueMember = "";
-            //_cmbEstrellas.DisplayMember = "";
+           
         }
 
         public void CargarAmenities()
@@ -83,7 +79,7 @@ namespace Tp.Hotel.WinForms
             _cmbAmenities.DataSource = null;
             _cmbAmenities.DataSource = Booleano.GetValues(typeof(Booleano));
             _cmbEstrellas.ValueMember = "";
-            //_cmbEstrellas.DisplayMember = "";
+           
         }
 
 
@@ -100,21 +96,10 @@ namespace Tp.Hotel.WinForms
             cmbHoteles.DataSource = null;
             cmbHoteles.DataSource = Estrellas.GetValues(typeof(Estrellas));
             cmbHoteles.DisplayMember = "";
-            //cmbHoteles.ValueMember = "";
+           
         }
 
-        private void cmbEstrella_Click(object sender, EventArgs e)
-        {
-            //_cmbEstrellas.DataSource = null;
-            //_cmbEstrellas.DataSource = Estrellas.GetValues(typeof(Estrellas));
-        }
-        private void cmbAmenities_Click(object sender, EventArgs e)
-        {
-            //_cmbAmenities.DataSource = null;
-            //_cmbAmenities.DataSource = Booleano.GetValues(typeof(Booleano));
-        }
-
-
+        
         private List<Hotel1> ListarHoteles()
         {
             return _HotelNegocio.TraerHoteles();
@@ -163,6 +148,7 @@ namespace Tp.Hotel.WinForms
             {
                 Limpiar();
                 CargarComboHoteles();
+               
             }
             else
             {
@@ -172,12 +158,7 @@ namespace Tp.Hotel.WinForms
                 _lstHoteles.DisplayMember = "DisplayHotel";
             }
         }
-        private void cmbHoteles_Click(object sender, EventArgs e)
-        {
-            //cmbHoteles.DataSource = null;
-            //cmbHoteles.DataSource = Estrellas.GetValues(typeof(Estrellas));
-        }
-
+        
         private void _btnRegargar_Click(object sender, EventArgs e)
         {
             Limpiar();

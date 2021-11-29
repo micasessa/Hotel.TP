@@ -55,7 +55,6 @@ namespace Tp.Hotel.WinForms
             this.cmbHoteles.Size = new System.Drawing.Size(194, 21);
             this.cmbHoteles.TabIndex = 33;
             this.cmbHoteles.DropDownClosed += new System.EventHandler(this.cmbHabitaciones_Select);
-            this.cmbHoteles.Click += new System.EventHandler(this.cmbHoteles_click);
             // 
             // lblFiltrar
             // 
@@ -70,7 +69,7 @@ namespace Tp.Hotel.WinForms
             // lblHabitaciones
             // 
             this.lblHabitaciones.AutoSize = true;
-            this.lblHabitaciones.BackColor = System.Drawing.Color.LightCoral;
+            this.lblHabitaciones.BackColor = System.Drawing.Color.MediumPurple;
             this.lblHabitaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHabitaciones.Location = new System.Drawing.Point(50, 9);
             this.lblHabitaciones.Name = "lblHabitaciones";
@@ -80,7 +79,7 @@ namespace Tp.Hotel.WinForms
             // 
             // _btnVolver
             // 
-            this._btnVolver.BackColor = System.Drawing.Color.MistyRose;
+            this._btnVolver.BackColor = System.Drawing.Color.BlueViolet;
             this._btnVolver.Location = new System.Drawing.Point(270, 324);
             this._btnVolver.Margin = new System.Windows.Forms.Padding(2);
             this._btnVolver.Name = "_btnVolver";
@@ -92,7 +91,7 @@ namespace Tp.Hotel.WinForms
             // 
             // _btnLimpiar
             // 
-            this._btnLimpiar.BackColor = System.Drawing.Color.MistyRose;
+            this._btnLimpiar.BackColor = System.Drawing.Color.BlueViolet;
             this._btnLimpiar.Location = new System.Drawing.Point(148, 324);
             this._btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
             this._btnLimpiar.Name = "_btnLimpiar";
@@ -104,7 +103,7 @@ namespace Tp.Hotel.WinForms
             // 
             // btnSeleccionar
             // 
-            this.btnSeleccionar.BackColor = System.Drawing.Color.MistyRose;
+            this.btnSeleccionar.BackColor = System.Drawing.Color.BlueViolet;
             this.btnSeleccionar.Location = new System.Drawing.Point(4, 324);
             this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(2);
             this.btnSeleccionar.Name = "btnSeleccionar";
@@ -118,6 +117,7 @@ namespace Tp.Hotel.WinForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.MediumPurple;
             this.ClientSize = new System.Drawing.Size(387, 450);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this._btnLimpiar);

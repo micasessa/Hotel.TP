@@ -29,33 +29,43 @@ namespace Tp.Hotel.WinForms
 
         private void FrmHabitacion_Load(object sender, EventArgs e)
         {
-          
+    
+            Carga();
             Limpiar();
         }
 
-       
+       private void Carga()
+        {
+            CargarCategorias();
+            CargarCancelable();
+            CargarHoteles();
+
+        }
 
         private void _btnVolver_Click(object sender, EventArgs e)
         {
             this.Hide();
             this.Owner.Show();
         }
-        private void cmbHabitaciones_Click(object sender, EventArgs e)
+        private void CargarHoteles()
         {
             cmbHabitaciones.DataSource = null;
             cmbHabitaciones.DataSource = ListaHoteles();
             cmbHabitaciones.DisplayMember = "DisplayHotel";
+            cmbHabitaciones.ValueMember = "IdHotel";
         }
        
-        private void cmbCategoria_Click(object sender, EventArgs e)
+        private void CargarCategorias()
         {
             _cmbCategoria.DataSource = null;
             _cmbCategoria.DataSource = Estrellas.GetValues(typeof(Estrellas));
+            _cmbCategoria.ValueMember = "";
         }
-        private void cmbCancelable_Click(object sender, EventArgs e)
+        private void CargarCancelable()
         {
             _cmbCancelable.DataSource = null;
             _cmbCancelable.DataSource = Booleano.GetValues(typeof(Booleano));
+            _cmbCancelable.ValueMember = "";
         }
         private void _btnLimpiarHabitacion_Click(object sender, EventArgs e)
         {
@@ -66,13 +76,10 @@ namespace Tp.Hotel.WinForms
         {
             _txtCantidadPlazas.Clear();
             _txtPrecio.Clear();
-            _cmbCategoria.DataSource = null;
-            _cmbCategoria.SelectedItem = "--SELECCIONE--";
-            _cmbCancelable.DataSource = null;
-            _cmbCancelable.SelectedItem = "--SELECCIONE--";
-            cmbHabitaciones.DataSource = null;
-            cmbHabitaciones.SelectedItem = "Seleccione";
-            _lstHabitaciones.DataSource = null;
+            _cmbCategoria.SelectedIndex = 0;
+            _cmbCancelable.SelectedIndex = 0;
+            cmbHabitaciones.Text = "Seleccione";
+
         }
         
         
@@ -147,5 +154,6 @@ namespace Tp.Hotel.WinForms
             }
 
         }
+        
     }
 }

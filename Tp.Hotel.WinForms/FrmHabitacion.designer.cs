@@ -101,7 +101,7 @@ namespace Tp.Hotel.WinForms
             this.cmbHabitaciones.Size = new System.Drawing.Size(194, 21);
             this.cmbHabitaciones.TabIndex = 28;
             this.cmbHabitaciones.DropDownClosed += new System.EventHandler(this.cmbHabitaciones_Select);
-            this.cmbHabitaciones.Click += new System.EventHandler(this.cmbHabitaciones_Click);
+            
             // 
             // lblFiltrar
             // 
@@ -168,7 +168,7 @@ namespace Tp.Hotel.WinForms
             this._cmbCategoria.Name = "_cmbCategoria";
             this._cmbCategoria.Size = new System.Drawing.Size(109, 21);
             this._cmbCategoria.TabIndex = 21;
-            this._cmbCategoria.Click += new System.EventHandler(this.cmbCategoria_Click);
+            
             // 
             // _cmbCancelable
             // 
@@ -178,7 +178,7 @@ namespace Tp.Hotel.WinForms
             this._cmbCancelable.Name = "_cmbCancelable";
             this._cmbCancelable.Size = new System.Drawing.Size(109, 21);
             this._cmbCancelable.TabIndex = 20;
-            this._cmbCancelable.Click += new System.EventHandler(this.cmbCancelable_Click);
+            
             // 
             // _txtCantidadPlazas
             // 
