@@ -26,7 +26,7 @@ namespace Tp.Hotel.WinForms
 
         private void _btnReserva_Click(object sender, EventArgs e)
         {
-            FrmReserva res = new FrmReserva(this);
+            FrmReservaHabitacion res = new FrmReservaHabitacion(this);
             res.Show();
             this.Hide();
         }

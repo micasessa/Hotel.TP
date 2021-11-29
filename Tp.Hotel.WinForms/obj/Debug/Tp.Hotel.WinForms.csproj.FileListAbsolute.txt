@@ -93,3 +93,4 @@ C:\Users\Romina\source\repos\Mica\Hotel.TP\Tp.Hotel.WinForms\bin\Debug\Tp.Hotel.
 C:\Users\Romina\source\repos\Mica\Hotel.TP\Tp.Hotel.WinForms\bin\Debug\Tp.Hotel.Negocio.pdb
 C:\Users\Romina\source\repos\Mica\Hotel.TP\Tp.Hotel.WinForms\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Romina\source\repos\Mica\Hotel.TP\Tp.Hotel.WinForms\bin\Debug\Tp.Hotel.AccesoDatos.pdb
+C:\Users\Romina\source\repos\Mica\Hotel.TP\Tp.Hotel.WinForms\obj\Debug\Tp.Hotel.WinForms.FrmReservaHabitacion.resources

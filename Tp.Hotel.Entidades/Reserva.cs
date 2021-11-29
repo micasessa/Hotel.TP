@@ -32,15 +32,15 @@ namespace Tp.Hotel.Entidades
         public Reserva()
         { }
 
-        public Reserva(int idReserva, int idHabitacion, int idCliente, int cantidadHuespedes, DateTime fechaIngreso, DateTime fechaEgreso, int usuario)
+        public Reserva( int idHabitacion, int idCliente, int cantidadHuespedes, DateTime fechaIngreso, DateTime fechaEgreso)
         {
-            _idReserva = idReserva;
+            
             _idHabitacion = idHabitacion;
             _idCliente = idCliente;
             _cantidadHuespedes = cantidadHuespedes;
             _fechaIngreso = fechaIngreso;
             _fechaEgreso = fechaEgreso;
-            _usuario = usuario;
+            
 
         }
 

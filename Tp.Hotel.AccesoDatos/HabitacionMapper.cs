@@ -16,9 +16,9 @@ namespace Tp.Hotel.AccesoDatos
         private List<Habitacion> _habitaciones;
 
         //Para traer la lista de habitaciones:
-        public List<Habitacion> TraerTodos()
+        public List<Habitacion> Traerxhotel(int hotel)
         {
-            string json2 = WebHelper.Get("Hotel/Habitaciones/{idHotel}"); //FALTA COMPLETAR TEMA URL + USUARIO/IdHOtel
+            string json2 = WebHelper.Get("Hotel/Habitaciones/"+hotel.ToString()); //FALTA COMPLETAR TEMA URL + USUARIO/IdHOtel
             List <Habitacion> resultado = MapList(json2);
             _habitaciones = resultado;
             return _habitaciones;

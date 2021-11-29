@@ -45,9 +45,9 @@ namespace Tp.Hotel.AccesoDatos
             res.Add("idHabitacion", reserva.IdHabitacion.ToString());
             res.Add("idCliente", reserva.IdCliente.ToString());
             res.Add("cantidadHuespedes", reserva.CantidadHuespedes.ToString());
-            res.Add("fechaIngreso", "2021-11-29T00:49:02.390Z");
-            res.Add("fechaEgreso", "2021-11-29T00:49:02.390Z");
-            res.Add("usuario", reserva.Usuario.ToString());
+            res.Add("fechaIngreso", reserva.FechaIngreso.ToString("yyyy-MM-dd"));
+            res.Add("fechaEgreso", reserva.FechaEgreso.ToString("yyyy-MM-dd"));
+            res.Add("usuario","836465");
             return res;
         }
 

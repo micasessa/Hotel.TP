@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Tp.Hotel.Entidades;
 using Tp.Hotel.AccesoDatos;
-
+using Tp.Hotel.Entidades.Modelos;
 
 namespace Tp.Hotel.Negocio
 {
@@ -75,7 +75,20 @@ namespace Tp.Hotel.Negocio
             return reserva.CantidadHuespedes;
         }
 
+        public TransactionResult AltaReserva (int idHabitacion, int idCliente, int cantidadHuespedes, DateTime fechaIngreso, DateTime fechaEgreso) // ALTA DE RESERVA
+        {
 
+            Reserva reserva = new Reserva(idHabitacion, idCliente, cantidadHuespedes, fechaIngreso, fechaEgreso);
+            TransactionResult resultado = _reservaMapper.Agregar(reserva);
+            if (resultado.IsOk == false)
+            {
+                throw new Exception("No se pudo realizar la registración de la reserva.");
+            }
+            else
+            {
+                return resultado;
+            }
+        }
 
 
 

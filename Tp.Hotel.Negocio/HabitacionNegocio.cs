@@ -12,55 +12,36 @@ namespace Tp.Hotel.Negocio
     public class HabitacionNegocio
     {
 
-        private List<Habitacion> _habitaciones;
+       
         private HabitacionMapper _habitacionMapper;
-        private HelperHabitacion _Helper;
-        private HotelNegocio _HotelNegocio;
-
+             
 
         public HabitacionNegocio()
         {
-            //_habitaciones = new List<Habitacion>();
             _habitacionMapper = new HabitacionMapper();
-            _HotelNegocio = new HotelNegocio();
-            _Helper = new HelperHabitacion(_HotelNegocio.TraerHoteles());
+            
         }
 
-
-        public List<Habitacion> TraerHabitaciones()
-        {
-            try
-            {
-                List<Habitacion> _Habitaciones=_habitacionMapper.TraerTodos();
-                foreach(Habitacion habitacion in _Habitaciones)
-                {
-                    habitacion.Hotel = _Helper.HotelxId(habitacion.IdHotel);
-                }
-
-                return _Habitaciones;
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-        }
 
         public List<Habitacion> TraerHabitacionesPorHotel(int hotel)
         {
-            List<Habitacion> habitacionPotHotel = new List<Habitacion>();
-            List<Habitacion> todas = TraerHabitaciones();
-            foreach(Habitacion hab in todas)
-            {
-                if(hab.IdHotel == hotel)
-                {
-                    habitacionPotHotel.Add(hab);
-                }
-            }
-            return habitacionPotHotel;
+            return _habitacionMapper.Traerxhotel(hotel);
         }
 
-       
+        public TransactionResult AltaHabitacion(int idHotel, int cantidadPlazas, string categoria, double precio, bool cancelable) // ALTA DE HABITACION
+        {
+
+            Habitacion habitacion = new Habitacion(idHotel, cantidadPlazas, categoria, precio, cancelable);
+            TransactionResult resultado = _habitacionMapper.Agregar(habitacion);
+            if (resultado.IsOk == false)
+            {
+                throw new Exception("No se pudo realizar el Alta de la habitación.");
+            }
+            else
+            {
+                return resultado;
+            }
+        }
 
 
     }
