@@ -44,7 +44,7 @@ namespace Tp.Hotel.WinForms
         {
             cmbHabitaciones.DataSource = null;
             cmbHabitaciones.DataSource = ListaHoteles();
-           cmbHabitaciones.DisplayMember = "DisplayHotel";
+            cmbHabitaciones.DisplayMember = "DisplayHotel";
         }
        
         private void cmbCategoria_Click(object sender, EventArgs e)

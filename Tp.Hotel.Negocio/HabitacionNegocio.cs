@@ -14,6 +14,7 @@ namespace Tp.Hotel.Negocio
 
        
         private HabitacionMapper _habitacionMapper;
+        private HotelMapper _hotelMapper;
              
 
         public HabitacionNegocio()
@@ -27,6 +28,18 @@ namespace Tp.Hotel.Negocio
         {
             return _habitacionMapper.Traerxhotel(hotel);
         }
+
+        //public List<Habitacion> TraerHabitaciones()
+        //{
+        //    List<Habitacion> _todas = new List<Habitacion>();
+        //    foreach(Hotel1 hotel in _hotelMapper.TraerTodos())
+        //    {
+                
+        //    }
+
+
+        //    return _todas;
+        //}
 
         public TransactionResult AltaHabitacion(int idHotel, int cantidadPlazas, string categoria, double precio, bool cancelable) // ALTA DE HABITACION
         {
