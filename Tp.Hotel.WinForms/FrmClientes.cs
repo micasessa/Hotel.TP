@@ -34,7 +34,9 @@ namespace Tp.Hotel.WinForms
 
         private void Carga()
         {
-            //Falta desarrollar metodo
+            lstClientes.DataSource = null;
+            lstClientes.DataSource=ListarClientes();
+
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
@@ -78,6 +80,11 @@ namespace Tp.Hotel.WinForms
         private void btnRecargar_Click(object sender, EventArgs e)
         {
             //Falta desarrollar
+        }
+
+        private List<Cliente> ListarClientes()
+        {
+           return _clienteNegocio.TraerClientes();
         }
     }
 }
