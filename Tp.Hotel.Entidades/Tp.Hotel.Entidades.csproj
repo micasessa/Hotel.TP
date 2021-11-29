@@ -45,6 +45,7 @@
     <Compile Include="Habitacion.cs" />
     <Compile Include="Hotel1.cs" />
     <Compile Include="Enum\Estrellas.cs" />
+    <Compile Include="Modelos\HelperHabitacion.cs" />
     <Compile Include="Modelos\TransactionResult.cs" />
     <Compile Include="Modelos\ValidacionesForm.cs" />
     <Compile Include="Reserva.cs" />

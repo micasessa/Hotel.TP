@@ -4,6 +4,8 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
+using Tp.Hotel.Entidades.Modelos;
+
 
 namespace Tp.Hotel.Entidades
 {
@@ -17,7 +19,9 @@ namespace Tp.Hotel.Entidades
         private double _precio;
         private bool _cancelable;
         private int _usuario;
-
+        private Hotel1 _Hotel;
+        
+       
         //Creacion de propiedades
         public int IdHabitacion { get => _idHabitacion; set => _idHabitacion = value; }
         public int IdHotel { get => _idHotel; set => _idHotel = value; }
@@ -27,14 +31,15 @@ namespace Tp.Hotel.Entidades
         public bool Cancelable { get => _cancelable; set => _cancelable = value; }
         public int Usuario { get => _usuario; set => _usuario = value; } 
 
+        
+
 
         //Creacion de constructores
         public Habitacion()
         { }
 
-        public Habitacion(int idHabitacion, int idHotel, int cantidadPlazas, string categoria, double precio, bool cancelable, int usuario)
+        public Habitacion( int idHotel, int cantidadPlazas, string categoria, double precio, bool cancelable, int usuario)
         {
-            _idHabitacion = idHabitacion;
             _cantidadPlazas = cantidadPlazas;
             _categoria = categoria;
             _precio = precio;
@@ -43,6 +48,12 @@ namespace Tp.Hotel.Entidades
             _idHotel = idHotel;
         }
 
+        public string DisplayHabitacion
+        {
+            get {  return ("Hotel: "+ Hotel.Nombre+" Cantidad de plazas: "+ CantidadPlazas + " Categoría: "+ Categoria + " Precio: $" + Precio); }
+        }
 
+        public Hotel1 Hotel { get => Hotel1; set => Hotel1 = value; }
+        public Hotel1 Hotel1 { get => _Hotel; set => _Hotel = value; }
     }
 }

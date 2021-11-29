@@ -15,8 +15,10 @@ namespace Tp.Hotel.WinForms
 {
     public partial class FrmHabitacion : Form
     {
+        HabitacionNegocio _HabitacionNegocio;
         public FrmHabitacion(Form main)
         {
+            _HabitacionNegocio = new HabitacionNegocio();
             InitializeComponent();
             this.Owner = main;
         }
@@ -29,7 +31,11 @@ namespace Tp.Hotel.WinForms
 
         private void Carga()
         {
-            //Falta desarrollar
+            _lstHabitaciones.DataSource = null;
+            _lstHabitaciones.DataSource = ListarHabitaciones();
+            _lstHabitaciones.DisplayMember = "DisplayHabitacion";
+            /* _cmbEstrellas.SelectedItem = "--SELECCIONE--";
+             _cmbAmenities.SelectedItem = "--SELECCIONE--";*/
         }
 
         private void _btnVolver_Click(object sender, EventArgs e)
@@ -45,7 +51,6 @@ namespace Tp.Hotel.WinForms
 
         private void Limpiar()
         {
-            _txtIdHotel.Clear();
             _txtIdHabitacion.Clear();
             _txtCantidadPlazas.Clear();
             _txtPrecio.Clear();
@@ -53,14 +58,18 @@ namespace Tp.Hotel.WinForms
 
         private void _btnRegargar_Click(object sender, EventArgs e)
         {
-
+            Carga();
         }
 
         private void _btnGuardarHabitacion_Click(object sender, EventArgs e)
         {
 
         }
+       
+        private List<Habitacion> ListarHabitaciones()
+        {
+            return _HabitacionNegocio.TraerHabitaciones();
+        }
 
-        
     }
 }
