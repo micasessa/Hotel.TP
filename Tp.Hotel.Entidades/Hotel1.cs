@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Tp.Hotel.Entidades
 {
-    public class Hotel
+    public class Hotel1
     {
         //Declaracion de atributos
         private int _idHotel;
@@ -26,11 +26,11 @@ namespace Tp.Hotel.Entidades
         public int Usuario { get => _usuario; set => _usuario = value; }
 
         //Creacion de constructores
-        public Hotel()
+        public Hotel1()
         { }
 
 
-        public Hotel(int idHotel, int estrellas, string nombre, string direccion, bool amenities, int usuario)
+        public Hotel1(int idHotel, int estrellas, string nombre, string direccion, bool amenities, int usuario)
         {
             _idHotel = idHotel;
             _estrellas = estrellas;
