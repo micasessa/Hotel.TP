@@ -39,6 +39,12 @@ namespace Tp.Hotel.Entidades
              _amenities = amenities;
             _usuario = usuario;
         }
-
+        public string DisplayHotel
+        {
+            get
+            {
+                return (Nombre + " Estrellas: " + Estrellas);
+            }
+        }
     }
 }
