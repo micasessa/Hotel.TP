@@ -18,7 +18,8 @@ namespace Tp.Hotel.Negocio
 
         public HabitacionNegocio()
         {
-            _habitaciones = new List<Habitacion>();
+            //_habitaciones = new List<Habitacion>();
+            _habitacionMapper = new HabitacionMapper(); 
         }
 
 
@@ -35,10 +36,19 @@ namespace Tp.Hotel.Negocio
             }
         }
 
-
-
-
-
+        public List<Habitacion> TraerHabitacionesPorHotel(int hotel)
+        {
+            List<Habitacion> habitacionPotHotel = new List<Habitacion>();
+            List<Habitacion> todas = TraerHabitaciones();
+            foreach(Habitacion hab in todas)
+            {
+                if(hab.IdHotel == hotel)
+                {
+                    habitacionPotHotel.Add(hab);
+                }
+            }
+            return habitacionPotHotel;
+        }
 
 
 

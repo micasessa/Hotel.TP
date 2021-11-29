@@ -18,11 +18,12 @@ namespace Tp.Hotel.Negocio
 
         public ClienteNegocio()
         {
-            _clientes = new List<Cliente>();
+           //  _clientes = new List<Cliente>();
+            _clienteMapper = new ClienteMapper();
         }
 
 
-        public List<Cliente> TraerClientes()
+        public List<Cliente> TraerClientes() //TRAER LISTA DE CLIENTES
         {
             try
             {
@@ -36,7 +37,7 @@ namespace Tp.Hotel.Negocio
         }
 
 
-        public TransactionResult AltaCliente(Cliente cliente)
+        public TransactionResult AltaCliente(Cliente cliente) //ALTA DE CLIENTE
         {
 
 
@@ -50,6 +51,7 @@ namespace Tp.Hotel.Negocio
                 return resultado;
             }
         }
+
 
 
 
