@@ -12,7 +12,7 @@ namespace Tp.Hotel.Negocio
     public class HotelNegocio
     {
 
-        private List<Hotel1> _hoteles;
+        private List<Entidades.Hotel1> _hoteles;
         private HotelMapper _hotelMapper;
 
 
@@ -23,7 +23,7 @@ namespace Tp.Hotel.Negocio
         }
 
 
-        public List<Hotel1> TraerHoteles() ///LISTA DE HOTELES
+        public List<Entidades.Hotel1> TraerHoteles() ///LISTA DE HOTELES
         {
             try
             {
@@ -37,7 +37,7 @@ namespace Tp.Hotel.Negocio
             }
         }
 
-        public TransactionResult AltaHotel(Hotel1 hotel) // ALTA DE HOTEL
+        public TransactionResult AltaHotel(Entidades.Hotel1 hotel) // ALTA DE HOTEL
         {
 
 
