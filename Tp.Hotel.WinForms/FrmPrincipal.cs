@@ -17,6 +17,8 @@ namespace Tp.Hotel.WinForms
         {
             InitializeComponent();
         }  
+
+
         private void _btnCliente_Click(object sender, EventArgs e)
         {
             FrmClientes cli = new FrmClientes(this);
@@ -63,6 +65,11 @@ namespace Tp.Hotel.WinForms
             FrmReporteReservas repRes = new FrmReporteReservas(this);
             repRes.Show();
             this.Hide();
+        }
+
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+            _txtUsuario.Text = "836465";
         }
     }
 }

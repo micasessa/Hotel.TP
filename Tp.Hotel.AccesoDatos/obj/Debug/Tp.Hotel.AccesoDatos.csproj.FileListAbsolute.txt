@@ -20,3 +20,14 @@ C:\Users\Romina\source\repos\Mica\Hotel.TP\Tp.Hotel.AccesoDatos\bin\Debug\Tp.Hot
 C:\Users\Romina\source\repos\Mica\Hotel.TP\Tp.Hotel.AccesoDatos\bin\Debug\Tp.Hotel.Entidades.pdb
 C:\Users\Romina\source\repos\Mica\Hotel.TP\Tp.Hotel.AccesoDatos\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Romina\source\repos\Mica\Hotel.TP\Tp.Hotel.AccesoDatos\obj\Debug\Tp.Hotel.AccesoDatos.csproj.CopyComplete
+C:\Users\Florencia\Desktop\EjerciciosCAI\Hotel.TP\Tp.Hotel.AccesoDatos\bin\Debug\Tp.Hotel.AccesoDatos.dll
+C:\Users\Florencia\Desktop\EjerciciosCAI\Hotel.TP\Tp.Hotel.AccesoDatos\bin\Debug\Tp.Hotel.AccesoDatos.pdb
+C:\Users\Florencia\Desktop\EjerciciosCAI\Hotel.TP\Tp.Hotel.AccesoDatos\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Florencia\Desktop\EjerciciosCAI\Hotel.TP\Tp.Hotel.AccesoDatos\bin\Debug\Tp.Hotel.Entidades.dll
+C:\Users\Florencia\Desktop\EjerciciosCAI\Hotel.TP\Tp.Hotel.AccesoDatos\bin\Debug\Tp.Hotel.Entidades.pdb
+C:\Users\Florencia\Desktop\EjerciciosCAI\Hotel.TP\Tp.Hotel.AccesoDatos\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Florencia\Desktop\EjerciciosCAI\Hotel.TP\Tp.Hotel.AccesoDatos\obj\Debug\Tp.Hotel.AccesoDatos.csproj.AssemblyReference.cache
+C:\Users\Florencia\Desktop\EjerciciosCAI\Hotel.TP\Tp.Hotel.AccesoDatos\obj\Debug\Tp.Hotel.AccesoDatos.csproj.CoreCompileInputs.cache
+C:\Users\Florencia\Desktop\EjerciciosCAI\Hotel.TP\Tp.Hotel.AccesoDatos\obj\Debug\Tp.Hotel.AccesoDatos.csproj.CopyComplete
+C:\Users\Florencia\Desktop\EjerciciosCAI\Hotel.TP\Tp.Hotel.AccesoDatos\obj\Debug\Tp.Hotel.AccesoDatos.dll
+C:\Users\Florencia\Desktop\EjerciciosCAI\Hotel.TP\Tp.Hotel.AccesoDatos\obj\Debug\Tp.Hotel.AccesoDatos.pdb
