@@ -37,9 +37,9 @@ namespace Tp.Hotel.Negocio
         }
 
 
-        public TransactionResult AltaCliente(Cliente cliente) //ALTA DE CLIENTE
+        public TransactionResult AltaCliente(int dni, string nombre, string apellido, string direccion,string email, string telefono, DateTime fechaNacimiento) //ALTA DE CLIENTE
         {
-
+            Cliente cliente = new Cliente(dni, nombre, apellido, direccion, email, telefono, fechaNacimiento);
 
             TransactionResult resultado = _clienteMapper.Agregar(cliente);
             if (resultado.IsOk == false)

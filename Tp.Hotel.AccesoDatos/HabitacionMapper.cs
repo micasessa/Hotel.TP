@@ -48,7 +48,7 @@ namespace Tp.Hotel.AccesoDatos
             hab.Add("categoria", habitacion.Categoria);
             hab.Add("precio", habitacion.Precio.ToString());
             hab.Add("cancelable", habitacion.Cancelable.ToString());
-            hab.Add("usuario", habitacion.Usuario.ToString());
+            hab.Add("usuario", "836465");
             return hab;
         }
     }

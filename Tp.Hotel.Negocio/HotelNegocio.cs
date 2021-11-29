@@ -37,10 +37,10 @@ namespace Tp.Hotel.Negocio
             }
         }
 
-        public TransactionResult AltaHotel(Entidades.Hotel1 hotel) // ALTA DE HOTEL
+        public TransactionResult AltaHotel(int estrellas, string nombre, string direccion, bool amenities) // ALTA DE HOTEL
         {
 
-
+            Hotel1 hotel = new Hotel1(estrellas, nombre, direccion, amenities);
             TransactionResult resultado = _hotelMapper.Agregar(hotel);
             if (resultado.IsOk == false)
             {

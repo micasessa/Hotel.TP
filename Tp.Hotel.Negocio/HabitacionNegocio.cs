@@ -14,12 +14,16 @@ namespace Tp.Hotel.Negocio
 
         private List<Habitacion> _habitaciones;
         private HabitacionMapper _habitacionMapper;
+        private HelperHabitacion _Helper;
+        private HotelNegocio _HotelNegocio;
 
 
         public HabitacionNegocio()
         {
             //_habitaciones = new List<Habitacion>();
-            _habitacionMapper = new HabitacionMapper(); 
+            _habitacionMapper = new HabitacionMapper();
+            _HotelNegocio = new HotelNegocio();
+            _Helper = new HelperHabitacion(_HotelNegocio.TraerHoteles());
         }
 
 
@@ -27,7 +31,13 @@ namespace Tp.Hotel.Negocio
         {
             try
             {
-                return _habitacionMapper.TraerTodos();
+                List<Habitacion> _Habitaciones=_habitacionMapper.TraerTodos();
+                foreach(Habitacion habitacion in _Habitaciones)
+                {
+                    habitacion.Hotel = _Helper.HotelxId(habitacion.IdHotel);
+                }
+
+                return _Habitaciones;
             }
             catch (Exception)
             {
@@ -50,7 +60,7 @@ namespace Tp.Hotel.Negocio
             return habitacionPotHotel;
         }
 
-
+       
 
 
     }
