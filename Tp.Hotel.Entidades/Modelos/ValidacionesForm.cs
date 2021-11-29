@@ -29,6 +29,14 @@ namespace Tp.Hotel.Entidades.Modelos
             }
             return numero;
         }
+        public static double  ValidacionDouble(string txt)
+        {
+            if (!double.TryParse(txt, out double numero))
+            {
+                throw new Exception("Debe ingresar un valor con formato de número");
+            }
+            return numero;
+        }
 
         public static DateTime ValidacionFecha(string txt)
         {
@@ -45,7 +53,16 @@ namespace Tp.Hotel.Entidades.Modelos
             {
                 throw new Exception("Debe seleccionar un objeto de la lista");
             }
-            
+
+        }
+
+        public static void ExisteHabitacion(List<Habitacion> _habitaciones)
+        {
+            if (_habitaciones == null)
+            {
+                throw new Exception("Aún no hay habitaciones ingresadas");
+            }
         }
     }
 }
+

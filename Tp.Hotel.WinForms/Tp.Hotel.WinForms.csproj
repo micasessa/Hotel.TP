@@ -99,6 +99,12 @@
     <Compile Include="FrmReporteReservas.Designer.cs">
       <DependentUpon>FrmReporteReservas.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmReservaHabitacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReservaHabitacion.Designer.cs">
+      <DependentUpon>FrmReservaHabitacion.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FrmClientes.resx">
       <DependentUpon>FrmClientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -131,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmReporteReservas.resx">
       <DependentUpon>FrmReporteReservas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReservaHabitacion.resx">
+      <DependentUpon>FrmReservaHabitacion.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

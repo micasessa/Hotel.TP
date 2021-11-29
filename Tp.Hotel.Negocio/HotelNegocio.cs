@@ -23,7 +23,7 @@ namespace Tp.Hotel.Negocio
         }
 
 
-        public List<Entidades.Hotel1> TraerHoteles() ///LISTA DE HOTELES
+        public List<Hotel1> TraerHoteles() ///LISTA DE HOTELES
         {
             try
             {
@@ -51,7 +51,19 @@ namespace Tp.Hotel.Negocio
                 return resultado;
             }
         }
+        public List<Hotel1> HotelesxEstrellas(int Estrellas)
+        {
+            List<Hotel1> _Hoteles = new List<Hotel1>();
 
+            foreach ( Hotel1 hotel in _hotelMapper.TraerTodos())
+            {
+                if(hotel.Estrellas==Estrellas)
+                {
+                    _Hoteles.Add(hotel);
+                }
+            }
+            return _Hoteles;
+        }
 
 
 

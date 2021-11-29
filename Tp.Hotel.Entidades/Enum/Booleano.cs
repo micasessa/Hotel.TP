@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Tp.Hotel.Entidades.Enum
 {
-    public enum Amenities
+    public enum Booleano
     {
         Si=1,
         No=2,

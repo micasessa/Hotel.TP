@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 using Tp.Hotel.Entidades;
+using Tp.Hotel.Entidades.Modelos;
 using Tp.Hotel.Negocio;
 
 
@@ -16,91 +17,24 @@ namespace Tp.Hotel.WinForms
 {
     public partial class FrmReserva : Form
     {
-        public FrmReserva(Form main)
+        private ClienteNegocio _ClienteNegocio;
+        private ReservaNegocio _ReservaNegocio;
+        private Habitacion _Habitacion;
+        private int _idHabitacion;
+
+        public int IdHabitacion { get => _idHabitacion; set => _idHabitacion = value; }
+
+        public FrmReserva(Form main, int idHabitacion, Habitacion habitacion)
         {
             InitializeComponent();
             this.Owner = main;
+            _ClienteNegocio = new ClienteNegocio();
+            _ReservaNegocio = new ReservaNegocio();
+            _Habitacion = habitacion;
+            IdHabitacion = idHabitacion;
         }
 
-        private void lblNombre_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox7_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblFechNacimiento_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblMail_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblTelefono_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblDni_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblDireccion_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblApellido_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblDatos_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
@@ -119,6 +53,56 @@ namespace Tp.Hotel.WinForms
             txtFechaIngreso.Clear();
             txtFechaEgreso.Clear();
             txtHuespedes.Clear();
+        }
+
+        private void btnCargarCliente_Click(object sender, EventArgs e)
+        {
+            FrmClientes FormClientes = new FrmClientes(this.Owner);
+            this.Hide();
+            FormClientes.Show();
+        }
+
+        private void lstClientes_Load(object sender, EventArgs e)
+        {
+            Carga();
+        }
+
+        private void Carga()
+        {
+            lstClientes.DataSource = null;
+            lstClientes.DataSource = _ClienteNegocio.TraerClientes();
+            lstClientes.DisplayMember = "DisplayCliente";
+        }
+
+        private void Alta()
+        {
+            try
+            {
+                string nroReserva = ValidacionesForm.ValidacionesAlta(txtNroReserva.Text, lblNroReserva.Text);
+                string huespedes = ValidacionesForm.ValidacionesAlta(txtHuespedes.Text, lblHuespedes.Text);
+                string ingreso = ValidacionesForm.ValidacionesAlta(txtFechaIngreso.Text, lblFechaIngreso.Text);
+                string egreso = ValidacionesForm.ValidacionesAlta(txtFechaEgreso.Text, lblFechaEgreso.Text);
+                int canthuespedes = ValidacionesForm.ValidacionNumero(huespedes);
+                DateTime fechaingreso = ValidacionesForm.ValidacionFecha(ingreso);
+                DateTime fechaegreso = ValidacionesForm.ValidacionFecha(egreso);
+                int idCliente = lstClientes.SelectedIndex;                
+                TransactionResult operacion = _ReservaNegocio.AltaReserva(IdHabitacion,idCliente, canthuespedes, fechaingreso, fechaegreso);
+                    if (operacion.IsOk)
+                {
+                    MessageBox.Show("El hotel ha sido registrado exitosamente");
+                }
+                else
+                {
+                    MessageBox.Show(operacion.Error);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+
+            }
         }
     }
 }

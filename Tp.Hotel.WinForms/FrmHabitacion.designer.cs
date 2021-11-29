@@ -31,7 +31,6 @@ namespace Tp.Hotel.WinForms
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblDatosHabitacion = new System.Windows.Forms.Label();
-            this._btnRegargar = new System.Windows.Forms.Button();
             this._lstHabitaciones = new System.Windows.Forms.ListBox();
             this.cmbHabitaciones = new System.Windows.Forms.ComboBox();
             this.lblFiltrar = new System.Windows.Forms.Label();
@@ -41,10 +40,8 @@ namespace Tp.Hotel.WinForms
             this._btnGuardarHabitacion = new System.Windows.Forms.Button();
             this._cmbCategoria = new System.Windows.Forms.ComboBox();
             this._cmbCancelable = new System.Windows.Forms.ComboBox();
-            this._txtIdHabitacion = new System.Windows.Forms.TextBox();
             this._txtCantidadPlazas = new System.Windows.Forms.TextBox();
             this._txtPrecio = new System.Windows.Forms.TextBox();
-            this._lblIdHabitacion = new System.Windows.Forms.Label();
             this._lblCantidadPlazas = new System.Windows.Forms.Label();
             this._lblCategoria = new System.Windows.Forms.Label();
             this._lblPrecio = new System.Windows.Forms.Label();
@@ -56,7 +53,6 @@ namespace Tp.Hotel.WinForms
             // 
             this.panel1.BackColor = System.Drawing.Color.LightCoral;
             this.panel1.Controls.Add(this.lblDatosHabitacion);
-            this.panel1.Controls.Add(this._btnRegargar);
             this.panel1.Controls.Add(this._lstHabitaciones);
             this.panel1.Controls.Add(this.cmbHabitaciones);
             this.panel1.Controls.Add(this.lblFiltrar);
@@ -66,16 +62,14 @@ namespace Tp.Hotel.WinForms
             this.panel1.Controls.Add(this._btnGuardarHabitacion);
             this.panel1.Controls.Add(this._cmbCategoria);
             this.panel1.Controls.Add(this._cmbCancelable);
-            this.panel1.Controls.Add(this._txtIdHabitacion);
             this.panel1.Controls.Add(this._txtCantidadPlazas);
             this.panel1.Controls.Add(this._txtPrecio);
-            this.panel1.Controls.Add(this._lblIdHabitacion);
             this.panel1.Controls.Add(this._lblCantidadPlazas);
             this.panel1.Controls.Add(this._lblCategoria);
             this.panel1.Controls.Add(this._lblPrecio);
             this.panel1.Controls.Add(this._lblCancelable);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(715, 439);
             this.panel1.TabIndex = 0;
@@ -90,44 +84,34 @@ namespace Tp.Hotel.WinForms
             this.lblDatosHabitacion.TabIndex = 31;
             this.lblDatosHabitacion.Text = "Datos de la Habitación";
             // 
-            // _btnRegargar
-            // 
-            this._btnRegargar.BackColor = System.Drawing.Color.MistyRose;
-            this._btnRegargar.Location = new System.Drawing.Point(44, 296);
-            this._btnRegargar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this._btnRegargar.Name = "_btnRegargar";
-            this._btnRegargar.Size = new System.Drawing.Size(106, 22);
-            this._btnRegargar.TabIndex = 30;
-            this._btnRegargar.Text = "Recargar";
-            this._btnRegargar.UseVisualStyleBackColor = false;
-            this._btnRegargar.Click += new System.EventHandler(this._btnRegargar_Click);
-            // 
             // _lstHabitaciones
             // 
             this._lstHabitaciones.FormattingEnabled = true;
-            this._lstHabitaciones.Location = new System.Drawing.Point(44, 97);
-            this._lstHabitaciones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this._lstHabitaciones.Location = new System.Drawing.Point(11, 132);
+            this._lstHabitaciones.Margin = new System.Windows.Forms.Padding(2);
             this._lstHabitaciones.Name = "_lstHabitaciones";
-            this._lstHabitaciones.Size = new System.Drawing.Size(246, 186);
+            this._lstHabitaciones.Size = new System.Drawing.Size(325, 186);
             this._lstHabitaciones.TabIndex = 29;
             // 
             // cmbHabitaciones
             // 
             this.cmbHabitaciones.FormattingEnabled = true;
-            this.cmbHabitaciones.Location = new System.Drawing.Point(96, 67);
+            this.cmbHabitaciones.Location = new System.Drawing.Point(15, 90);
             this.cmbHabitaciones.Name = "cmbHabitaciones";
             this.cmbHabitaciones.Size = new System.Drawing.Size(194, 21);
             this.cmbHabitaciones.TabIndex = 28;
+            this.cmbHabitaciones.DropDownClosed += new System.EventHandler(this.cmbHabitaciones_Select);
+            this.cmbHabitaciones.Click += new System.EventHandler(this.cmbHabitaciones_Click);
             // 
             // lblFiltrar
             // 
             this.lblFiltrar.AutoSize = true;
-            this.lblFiltrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFiltrar.Location = new System.Drawing.Point(41, 67);
+            this.lblFiltrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblFiltrar.Location = new System.Drawing.Point(41, 64);
             this.lblFiltrar.Name = "lblFiltrar";
-            this.lblFiltrar.Size = new System.Drawing.Size(49, 20);
+            this.lblFiltrar.Size = new System.Drawing.Size(133, 17);
             this.lblFiltrar.TabIndex = 27;
-            this.lblFiltrar.Text = "Filtrar";
+            this.lblFiltrar.Text = "Seleccione el Hotel:";
             // 
             // lblHabitaciones
             // 
@@ -144,7 +128,7 @@ namespace Tp.Hotel.WinForms
             // 
             this._btnLimpiarHabitacion.BackColor = System.Drawing.Color.MistyRose;
             this._btnLimpiarHabitacion.Location = new System.Drawing.Point(349, 296);
-            this._btnLimpiarHabitacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this._btnLimpiarHabitacion.Margin = new System.Windows.Forms.Padding(2);
             this._btnLimpiarHabitacion.Name = "_btnLimpiarHabitacion";
             this._btnLimpiarHabitacion.Size = new System.Drawing.Size(106, 22);
             this._btnLimpiarHabitacion.TabIndex = 25;
@@ -155,8 +139,8 @@ namespace Tp.Hotel.WinForms
             // _btnVolver
             // 
             this._btnVolver.BackColor = System.Drawing.Color.MistyRose;
-            this._btnVolver.Location = new System.Drawing.Point(183, 296);
-            this._btnVolver.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this._btnVolver.Location = new System.Drawing.Point(201, 332);
+            this._btnVolver.Margin = new System.Windows.Forms.Padding(2);
             this._btnVolver.Name = "_btnVolver";
             this._btnVolver.Size = new System.Drawing.Size(106, 22);
             this._btnVolver.TabIndex = 24;
@@ -168,7 +152,7 @@ namespace Tp.Hotel.WinForms
             // 
             this._btnGuardarHabitacion.BackColor = System.Drawing.Color.MistyRose;
             this._btnGuardarHabitacion.Location = new System.Drawing.Point(475, 296);
-            this._btnGuardarHabitacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this._btnGuardarHabitacion.Margin = new System.Windows.Forms.Padding(2);
             this._btnGuardarHabitacion.Name = "_btnGuardarHabitacion";
             this._btnGuardarHabitacion.Size = new System.Drawing.Size(104, 22);
             this._btnGuardarHabitacion.TabIndex = 22;
@@ -179,61 +163,44 @@ namespace Tp.Hotel.WinForms
             // _cmbCategoria
             // 
             this._cmbCategoria.FormattingEnabled = true;
-            this._cmbCategoria.Location = new System.Drawing.Point(475, 170);
-            this._cmbCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this._cmbCategoria.Location = new System.Drawing.Point(475, 135);
+            this._cmbCategoria.Margin = new System.Windows.Forms.Padding(2);
             this._cmbCategoria.Name = "_cmbCategoria";
             this._cmbCategoria.Size = new System.Drawing.Size(109, 21);
             this._cmbCategoria.TabIndex = 21;
+            this._cmbCategoria.Click += new System.EventHandler(this.cmbCategoria_Click);
             // 
             // _cmbCancelable
             // 
             this._cmbCancelable.FormattingEnabled = true;
-            this._cmbCancelable.Location = new System.Drawing.Point(475, 226);
-            this._cmbCancelable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this._cmbCancelable.Location = new System.Drawing.Point(475, 191);
+            this._cmbCancelable.Margin = new System.Windows.Forms.Padding(2);
             this._cmbCancelable.Name = "_cmbCancelable";
             this._cmbCancelable.Size = new System.Drawing.Size(109, 21);
             this._cmbCancelable.TabIndex = 20;
-            // 
-            // _txtIdHabitacion
-            // 
-            this._txtIdHabitacion.Location = new System.Drawing.Point(475, 115);
-            this._txtIdHabitacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this._txtIdHabitacion.Name = "_txtIdHabitacion";
-            this._txtIdHabitacion.Size = new System.Drawing.Size(109, 20);
-            this._txtIdHabitacion.TabIndex = 19;
+            this._cmbCancelable.Click += new System.EventHandler(this.cmbCancelable_Click);
             // 
             // _txtCantidadPlazas
             // 
-            this._txtCantidadPlazas.Location = new System.Drawing.Point(475, 143);
-            this._txtCantidadPlazas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this._txtCantidadPlazas.Location = new System.Drawing.Point(475, 108);
+            this._txtCantidadPlazas.Margin = new System.Windows.Forms.Padding(2);
             this._txtCantidadPlazas.Name = "_txtCantidadPlazas";
             this._txtCantidadPlazas.Size = new System.Drawing.Size(109, 20);
             this._txtCantidadPlazas.TabIndex = 18;
             // 
             // _txtPrecio
             // 
-            this._txtPrecio.Location = new System.Drawing.Point(475, 199);
-            this._txtPrecio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this._txtPrecio.Location = new System.Drawing.Point(475, 164);
+            this._txtPrecio.Margin = new System.Windows.Forms.Padding(2);
             this._txtPrecio.Name = "_txtPrecio";
             this._txtPrecio.Size = new System.Drawing.Size(109, 20);
             this._txtPrecio.TabIndex = 16;
-            // 
-            // _lblIdHabitacion
-            // 
-            this._lblIdHabitacion.AutoSize = true;
-            this._lblIdHabitacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this._lblIdHabitacion.Location = new System.Drawing.Point(349, 115);
-            this._lblIdHabitacion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this._lblIdHabitacion.Name = "_lblIdHabitacion";
-            this._lblIdHabitacion.Size = new System.Drawing.Size(87, 16);
-            this._lblIdHabitacion.TabIndex = 15;
-            this._lblIdHabitacion.Text = "Id Habitacion";
             // 
             // _lblCantidadPlazas
             // 
             this._lblCantidadPlazas.AutoSize = true;
             this._lblCantidadPlazas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this._lblCantidadPlazas.Location = new System.Drawing.Point(349, 142);
+            this._lblCantidadPlazas.Location = new System.Drawing.Point(349, 107);
             this._lblCantidadPlazas.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this._lblCantidadPlazas.Name = "_lblCantidadPlazas";
             this._lblCantidadPlazas.Size = new System.Drawing.Size(106, 16);
@@ -244,7 +211,7 @@ namespace Tp.Hotel.WinForms
             // 
             this._lblCategoria.AutoSize = true;
             this._lblCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this._lblCategoria.Location = new System.Drawing.Point(349, 172);
+            this._lblCategoria.Location = new System.Drawing.Point(349, 137);
             this._lblCategoria.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this._lblCategoria.Name = "_lblCategoria";
             this._lblCategoria.Size = new System.Drawing.Size(67, 16);
@@ -255,7 +222,7 @@ namespace Tp.Hotel.WinForms
             // 
             this._lblPrecio.AutoSize = true;
             this._lblPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this._lblPrecio.Location = new System.Drawing.Point(349, 200);
+            this._lblPrecio.Location = new System.Drawing.Point(349, 165);
             this._lblPrecio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this._lblPrecio.Name = "_lblPrecio";
             this._lblPrecio.Size = new System.Drawing.Size(47, 16);
@@ -266,7 +233,7 @@ namespace Tp.Hotel.WinForms
             // 
             this._lblCancelable.AutoSize = true;
             this._lblCancelable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this._lblCancelable.Location = new System.Drawing.Point(349, 228);
+            this._lblCancelable.Location = new System.Drawing.Point(349, 193);
             this._lblCancelable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this._lblCancelable.Name = "_lblCancelable";
             this._lblCancelable.Size = new System.Drawing.Size(77, 16);
@@ -279,7 +246,7 @@ namespace Tp.Hotel.WinForms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(634, 380);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmHabitacion";
             this.Text = "FrmHabitacion";
             this.Load += new System.EventHandler(this.FrmHabitacion_Load);
@@ -292,10 +259,8 @@ namespace Tp.Hotel.WinForms
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox _txtIdHabitacion;
         private System.Windows.Forms.TextBox _txtCantidadPlazas;
         private System.Windows.Forms.TextBox _txtPrecio;
-        private System.Windows.Forms.Label _lblIdHabitacion;
         private System.Windows.Forms.Label _lblCantidadPlazas;
         private System.Windows.Forms.Label _lblCategoria;
         private System.Windows.Forms.Label _lblPrecio;
@@ -309,7 +274,6 @@ namespace Tp.Hotel.WinForms
         private System.Windows.Forms.Label lblFiltrar;
         private System.Windows.Forms.ComboBox cmbHabitaciones;
         private System.Windows.Forms.ListBox _lstHabitaciones;
-        private System.Windows.Forms.Button _btnRegargar;
         private System.Windows.Forms.Label lblDatosHabitacion;
     }
 }

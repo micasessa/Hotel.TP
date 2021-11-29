@@ -39,6 +39,7 @@ namespace Tp.Hotel.Entidades
              _amenities = amenities;
           
         }
+       
         public string DisplayHotel
         {
             get

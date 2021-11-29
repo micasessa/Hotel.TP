@@ -18,7 +18,7 @@ namespace Tp.Hotel.AccesoDatos
         public List<Hotel1> TraerTodos()
         {
             string json2 = WebHelper.Get("Hotel/Hoteles/836465"); //FALTA COMPLETAR TEMA USUARIO/IdHOtel
-            List<Entidades.Hotel1> resultado = MapList(json2);
+            List<Hotel1> resultado = MapList(json2);
             _hoteles = resultado;
             return _hoteles;
         }

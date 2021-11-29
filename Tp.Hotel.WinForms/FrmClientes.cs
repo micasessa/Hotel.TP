@@ -76,7 +76,23 @@ namespace Tp.Hotel.WinForms
 
         private void btnRecargar_Click(object sender, EventArgs e)
         {
-            //Falta desarrollar
+            try
+            {
+                ValidacionesForm.ValidarSeleccion(lstClientes.SelectedItem);
+                Cliente ClienteSelect = (Cliente)lstClientes.SelectedItem;
+                txtNombre.Text = ClienteSelect.Nombre;
+                txtApellido.Text = ClienteSelect.Apellido;
+                txtDireccion.Text = ClienteSelect.Direccion;
+                txtDni.Text = ClienteSelect.Dni.ToString();
+                txtTelefono.Text = ClienteSelect.Telefono.ToString();
+                txtMail.Text = ClienteSelect.Email;
+                txtFechaNacimiento.Text = ClienteSelect.FechaNacimiento.ToString("dd-MM-yyyy");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
         private List<Cliente> ListarClientes()

@@ -54,6 +54,8 @@ namespace Tp.Hotel.WinForms
             _cmbEstrellas.SelectedItem = "--SELECCIONE--";
             _cmbAmenities.DataSource = null;
             _cmbAmenities.SelectedItem = "--SELECCIONE--";
+            cmbHoteles.DataSource = null;
+            cmbHoteles.SelectedItem = "--SELECCIONE--";
 
 
         }
@@ -74,7 +76,7 @@ namespace Tp.Hotel.WinForms
         private void cmbAmenities_Click(object sender, EventArgs e)
         {
             _cmbAmenities.DataSource = null;
-            _cmbAmenities.DataSource = Amenities.GetValues(typeof(Amenities));
+            _cmbAmenities.DataSource = Booleano.GetValues(typeof(Booleano));
         }
         
 
@@ -92,10 +94,10 @@ namespace Tp.Hotel.WinForms
                ValidacionesForm.ValidarSeleccion(_cmbAmenities.SelectedItem);
               ValidacionesForm.ValidarSeleccion(_cmbEstrellas.SelectedItem);
                 Estrellas EstrellaSelect= (Estrellas)_cmbEstrellas.SelectedItem;
-                Amenities AmenitieSelect = (Amenities)_cmbAmenities.SelectedItem;
+                Booleano AmenitieSelect = (Booleano)_cmbAmenities.SelectedItem;
                 int estrellas = (int)EstrellaSelect;
                 bool amenities = false;
-               if(AmenitieSelect==Amenities.Si)
+               if(AmenitieSelect==Booleano.Si)
                 {
                     amenities = true;
                 }
@@ -117,6 +119,26 @@ namespace Tp.Hotel.WinForms
 
 
             }
+        }
+
+        private void cmbHoteles_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int estrellaSelect = cmbHoteles.SelectedIndex+1;
+            
+            _lstHoteles.DataSource = null;
+            _lstHoteles.DataSource= _HotelNegocio.HotelesxEstrellas(estrellaSelect);
+            _lstHoteles.DisplayMember = "DisplayHotel";
+        }
+        private void cmbHoteles_Click(object sender, EventArgs e)
+        {
+            cmbHoteles.DataSource = null;
+            cmbHoteles.DataSource = Estrellas.GetValues(typeof(Estrellas));
+        }
+
+        private void _btnRegargar_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+            Carga();
         }
     }
 }

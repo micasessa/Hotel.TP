@@ -89,24 +89,27 @@ namespace Tp.Hotel.WinForms
             this._btnRegargar.TabIndex = 10;
             this._btnRegargar.Text = "Recargar";
             this._btnRegargar.UseVisualStyleBackColor = false;
+            this._btnRegargar.Click += new System.EventHandler(this._btnRegargar_Click);
             // 
             // cmbHoteles
             // 
             this.cmbHoteles.FormattingEnabled = true;
-            this.cmbHoteles.Location = new System.Drawing.Point(83, 57);
+            this.cmbHoteles.Location = new System.Drawing.Point(146, 54);
             this.cmbHoteles.Name = "cmbHoteles";
             this.cmbHoteles.Size = new System.Drawing.Size(194, 21);
             this.cmbHoteles.TabIndex = 8;
+            this.cmbHoteles.SelectedIndexChanged += new System.EventHandler(this.cmbHoteles_SelectedIndexChanged);
+            this.cmbHoteles.Click += new System.EventHandler(this.cmbHoteles_Click);
             // 
             // lblFiltrar
             // 
             this.lblFiltrar.AutoSize = true;
-            this.lblFiltrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFiltrar.Location = new System.Drawing.Point(28, 55);
+            this.lblFiltrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblFiltrar.Location = new System.Drawing.Point(8, 58);
             this.lblFiltrar.Name = "lblFiltrar";
-            this.lblFiltrar.Size = new System.Drawing.Size(49, 20);
+            this.lblFiltrar.Size = new System.Drawing.Size(131, 17);
             this.lblFiltrar.TabIndex = 21;
-            this.lblFiltrar.Text = "Filtrar";
+            this.lblFiltrar.Text = "Filtrar por Estrellas:";
             // 
             // lblDatosHotel
             // 
@@ -132,10 +135,10 @@ namespace Tp.Hotel.WinForms
             // _lstHoteles
             // 
             this._lstHoteles.FormattingEnabled = true;
-            this._lstHoteles.Location = new System.Drawing.Point(31, 83);
+            this._lstHoteles.Location = new System.Drawing.Point(11, 83);
             this._lstHoteles.Margin = new System.Windows.Forms.Padding(2);
             this._lstHoteles.Name = "_lstHoteles";
-            this._lstHoteles.Size = new System.Drawing.Size(246, 186);
+            this._lstHoteles.Size = new System.Drawing.Size(330, 186);
             this._lstHoteles.TabIndex = 9;
             // 
             // pictureBox1

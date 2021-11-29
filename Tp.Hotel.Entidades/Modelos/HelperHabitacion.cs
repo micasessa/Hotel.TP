@@ -30,7 +30,7 @@ namespace Tp.Hotel.Entidades.Modelos
             return null;
         }
 
-
+       
 
     }
 }

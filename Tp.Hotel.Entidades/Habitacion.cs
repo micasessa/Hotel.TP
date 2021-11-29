@@ -38,19 +38,18 @@ namespace Tp.Hotel.Entidades
         public Habitacion()
         { }
 
-        public Habitacion( int idHotel, int cantidadPlazas, string categoria, double precio, bool cancelable, int usuario)
+        public Habitacion( int idHotel, int cantidadPlazas, string categoria, double precio, bool cancelable)
         {
             _cantidadPlazas = cantidadPlazas;
             _categoria = categoria;
             _precio = precio;
             _cancelable = cancelable;
-            _usuario = usuario;
             _idHotel = idHotel;
         }
 
         public string DisplayHabitacion
         {
-            get {  return ("Hotel: "+ Hotel.Nombre+" Cantidad de plazas: "+ CantidadPlazas + " Categoría: "+ Categoria + " Precio: $" + Precio); }
+            get {  return (" Cantidad de plazas: "+ CantidadPlazas + " Categoría: "+ Categoria + " Precio: $" + Precio); }
         }
 
         public Hotel1 Hotel { get => Hotel1; set => Hotel1 = value; }
