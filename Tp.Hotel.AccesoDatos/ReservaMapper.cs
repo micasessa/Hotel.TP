@@ -17,7 +17,7 @@ namespace Tp.Hotel.AccesoDatos
         //Para traer la lista de Reservas:
         public List<Reserva> TraerTodos()
         {
-            string json2 = WebHelper.Get("Hotel/Reservas/{registro}"); //FALTA COMPLETAR TEMA USUARIO/IdHOtel
+            string json2 = WebHelper.Get("Hotel/Reservas/{registro}"); //FALTA COMPLETAR TEMA registro
             List<Reserva> resultado = MapList(json2);
             _reserva = resultado;
             return _reserva;
