@@ -17,7 +17,7 @@ namespace Tp.Hotel.AccesoDatos
         //Para traer la lista de clientes:
         public List<Cliente> TraerTodos()
         {
-            string json2 = WebHelper.Get("cliente/{registro}"); //FALTA COMPLETAR USUARIO
+            string json2 = WebHelper.Get("cliente/836465"); //FALTA COMPLETAR USUARIO
             List <Cliente> resultado = MapList(json2);
             _clientes = resultado;
             return _clientes;
@@ -51,7 +51,7 @@ namespace Tp.Hotel.AccesoDatos
             cl.Add("fechaNacimiento", cliente.FechaNacimiento.ToString());
             cl.Add("fechaAlta", cliente.FechaAlta.ToString());
             cl.Add("activo", cliente.Activo.ToString());
-            cl.Add("usuario", cliente.Usuario);
+            cl.Add("usuario", "836465");
             return cl;
         }
     }

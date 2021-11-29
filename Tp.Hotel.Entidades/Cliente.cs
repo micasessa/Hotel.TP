@@ -27,12 +27,20 @@ namespace Tp.Hotel.Entidades
         { 
         }
         public Cliente(int dni, string nombre, string apellido, string direccion, string email, string telefono, 
-            DateTime fechaNacimiento, int idCliente, bool activo, string usuario ) : base(dni, nombre, apellido, direccion, email, telefono, fechaNacimiento)
+            DateTime fechaNacimiento ) : base(dni, nombre, apellido, direccion, email, telefono, fechaNacimiento)
         {
-            _idCliente = idCliente;
+           
             _fechaAlta = DateTime.Now;
-            _activo = activo;
-            _usuario = usuario;
+            _activo = true;
+            
+           
+        }
+        public string DisplayCliente
+        {
+            get
+            {
+                return (Nombre + " " + Apellido + " Dni: " + Dni);
+            }
         }
 
     }

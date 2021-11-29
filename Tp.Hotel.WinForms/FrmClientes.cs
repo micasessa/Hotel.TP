@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 using Tp.Hotel.Entidades;
+using Tp.Hotel.Entidades.Modelos;
 using Tp.Hotel.Negocio;
 
 namespace Tp.Hotel.WinForms
@@ -17,11 +18,12 @@ namespace Tp.Hotel.WinForms
     {
         private ClienteNegocio _clienteNegocio;
         private List<Cliente> _clientes;
+        
         public FrmClientes(Form main)
         {
             InitializeComponent();
             this.Owner = main;
-
+            
             _clienteNegocio = new ClienteNegocio();
         }
 
@@ -34,7 +36,10 @@ namespace Tp.Hotel.WinForms
 
         private void Carga()
         {
-            //Falta desarrollar metodo
+            lstClientes.DataSource = null;
+            lstClientes.DataSource=ListarClientes();
+            lstClientes.DisplayMember = "DisplayCliente";
+
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
@@ -62,22 +67,55 @@ namespace Tp.Hotel.WinForms
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                //Completar con los valores ingresados por el usuario (y mas)
-
-
+         
+                AltaCliente();
                 Limpiar();
+                Carga();
 
-            } catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
         }
 
         private void btnRecargar_Click(object sender, EventArgs e)
         {
             //Falta desarrollar
         }
+
+        private List<Cliente> ListarClientes()
+        {
+           return _clienteNegocio.TraerClientes();
+        }
+
+        private void AltaCliente()
+        {
+            try
+            {
+                string nombre= ValidacionesForm.ValidacionesAlta(txtNombre.Text, lblNombre.Text);
+                string apellido= ValidacionesForm.ValidacionesAlta(txtApellido.Text, lblApellido.Text);
+                string direccion= ValidacionesForm.ValidacionesAlta(txtDireccion.Text, lblDireccion.Text);
+                string email = ValidacionesForm.ValidacionesAlta(txtMail.Text, lblMail.Text);
+                string Dni= ValidacionesForm.ValidacionesAlta(txtDni.Text, lblDni.Text);
+                string telefono= ValidacionesForm.ValidacionesAlta(txtTelefono.Text, lblTelefono.Text);
+                string mail= ValidacionesForm.ValidacionesAlta(txtMail.Text, lblMail.Text);
+                string fechaNac= ValidacionesForm.ValidacionesAlta(txtFechaNacimiento.Text, lblFechNacimiento.Text);
+                DateTime fechaNacimiento=ValidacionesForm.ValidacionFecha(fechaNac);
+                int dni=ValidacionesForm.ValidacionNumero(Dni);
+               TransactionResult operacion= _clienteNegocio.AltaCliente(dni, nombre, apellido, direccion, email, telefono, fechaNacimiento);
+                if(operacion.IsOk)
+                {
+                    MessageBox.Show("El cliente ha sido registrado exitosamente");
+                }
+                else
+                {
+                    MessageBox.Show(operacion.Error);
+                }
+               
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        
     }
 }
