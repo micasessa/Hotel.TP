@@ -41,7 +41,6 @@ namespace Tp.Hotel.WinForms
             this._cmbEstrellas = new System.Windows.Forms.ComboBox();
             this._txtDireccion = new System.Windows.Forms.TextBox();
             this._txtNombre = new System.Windows.Forms.TextBox();
-            this._txtIdHotel = new System.Windows.Forms.TextBox();
             this._btnLimpiarHabitacion = new System.Windows.Forms.Button();
             this._btnGuardarHabitacion = new System.Windows.Forms.Button();
             this._btnVolver = new System.Windows.Forms.Button();
@@ -49,7 +48,6 @@ namespace Tp.Hotel.WinForms
             this._lblDireccion = new System.Windows.Forms.Label();
             this._lblEstrellas = new System.Windows.Forms.Label();
             this._lblAmenities = new System.Windows.Forms.Label();
-            this._lblIdHotel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -68,7 +66,6 @@ namespace Tp.Hotel.WinForms
             this.panel1.Controls.Add(this._cmbEstrellas);
             this.panel1.Controls.Add(this._txtDireccion);
             this.panel1.Controls.Add(this._txtNombre);
-            this.panel1.Controls.Add(this._txtIdHotel);
             this.panel1.Controls.Add(this._btnLimpiarHabitacion);
             this.panel1.Controls.Add(this._btnGuardarHabitacion);
             this.panel1.Controls.Add(this._btnVolver);
@@ -76,9 +73,8 @@ namespace Tp.Hotel.WinForms
             this.panel1.Controls.Add(this._lblDireccion);
             this.panel1.Controls.Add(this._lblEstrellas);
             this.panel1.Controls.Add(this._lblAmenities);
-            this.panel1.Controls.Add(this._lblIdHotel);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(608, 430);
             this.panel1.TabIndex = 0;
@@ -87,7 +83,7 @@ namespace Tp.Hotel.WinForms
             // 
             this._btnRegargar.BackColor = System.Drawing.Color.PaleTurquoise;
             this._btnRegargar.Location = new System.Drawing.Point(31, 281);
-            this._btnRegargar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this._btnRegargar.Margin = new System.Windows.Forms.Padding(2);
             this._btnRegargar.Name = "_btnRegargar";
             this._btnRegargar.Size = new System.Drawing.Size(89, 22);
             this._btnRegargar.TabIndex = 10;
@@ -137,7 +133,7 @@ namespace Tp.Hotel.WinForms
             // 
             this._lstHoteles.FormattingEnabled = true;
             this._lstHoteles.Location = new System.Drawing.Point(31, 83);
-            this._lstHoteles.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this._lstHoteles.Margin = new System.Windows.Forms.Padding(2);
             this._lstHoteles.Name = "_lstHoteles";
             this._lstHoteles.Size = new System.Drawing.Size(246, 186);
             this._lstHoteles.TabIndex = 9;
@@ -145,7 +141,7 @@ namespace Tp.Hotel.WinForms
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(67, 32);
             this.pictureBox1.TabIndex = 0;
@@ -154,50 +150,44 @@ namespace Tp.Hotel.WinForms
             // _cmbAmenities
             // 
             this._cmbAmenities.FormattingEnabled = true;
-            this._cmbAmenities.Location = new System.Drawing.Point(430, 243);
-            this._cmbAmenities.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this._cmbAmenities.Location = new System.Drawing.Point(429, 212);
+            this._cmbAmenities.Margin = new System.Windows.Forms.Padding(2);
             this._cmbAmenities.Name = "_cmbAmenities";
             this._cmbAmenities.Size = new System.Drawing.Size(109, 21);
             this._cmbAmenities.TabIndex = 5;
+            this._cmbAmenities.Click += new System.EventHandler(this.cmbAmenities_Click);
             // 
             // _cmbEstrellas
             // 
             this._cmbEstrellas.FormattingEnabled = true;
-            this._cmbEstrellas.Location = new System.Drawing.Point(430, 204);
-            this._cmbEstrellas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this._cmbEstrellas.Location = new System.Drawing.Point(429, 173);
+            this._cmbEstrellas.Margin = new System.Windows.Forms.Padding(2);
             this._cmbEstrellas.Name = "_cmbEstrellas";
             this._cmbEstrellas.Size = new System.Drawing.Size(109, 21);
             this._cmbEstrellas.TabIndex = 4;
+            this._cmbEstrellas.Click += new System.EventHandler(this.cmbEstrella_Click);
             // 
             // _txtDireccion
             // 
-            this._txtDireccion.Location = new System.Drawing.Point(430, 170);
-            this._txtDireccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this._txtDireccion.Location = new System.Drawing.Point(429, 139);
+            this._txtDireccion.Margin = new System.Windows.Forms.Padding(2);
             this._txtDireccion.Name = "_txtDireccion";
             this._txtDireccion.Size = new System.Drawing.Size(109, 20);
             this._txtDireccion.TabIndex = 3;
             // 
             // _txtNombre
             // 
-            this._txtNombre.Location = new System.Drawing.Point(430, 133);
-            this._txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this._txtNombre.Location = new System.Drawing.Point(429, 102);
+            this._txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this._txtNombre.Name = "_txtNombre";
             this._txtNombre.Size = new System.Drawing.Size(109, 20);
             this._txtNombre.TabIndex = 2;
-            // 
-            // _txtIdHotel
-            // 
-            this._txtIdHotel.Location = new System.Drawing.Point(430, 101);
-            this._txtIdHotel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this._txtIdHotel.Name = "_txtIdHotel";
-            this._txtIdHotel.Size = new System.Drawing.Size(109, 20);
-            this._txtIdHotel.TabIndex = 1;
             // 
             // _btnLimpiarHabitacion
             // 
             this._btnLimpiarHabitacion.BackColor = System.Drawing.Color.PaleTurquoise;
             this._btnLimpiarHabitacion.Location = new System.Drawing.Point(346, 281);
-            this._btnLimpiarHabitacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this._btnLimpiarHabitacion.Margin = new System.Windows.Forms.Padding(2);
             this._btnLimpiarHabitacion.Name = "_btnLimpiarHabitacion";
             this._btnLimpiarHabitacion.Size = new System.Drawing.Size(89, 22);
             this._btnLimpiarHabitacion.TabIndex = 6;
@@ -209,18 +199,19 @@ namespace Tp.Hotel.WinForms
             // 
             this._btnGuardarHabitacion.BackColor = System.Drawing.Color.PaleTurquoise;
             this._btnGuardarHabitacion.Location = new System.Drawing.Point(449, 281);
-            this._btnGuardarHabitacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this._btnGuardarHabitacion.Margin = new System.Windows.Forms.Padding(2);
             this._btnGuardarHabitacion.Name = "_btnGuardarHabitacion";
             this._btnGuardarHabitacion.Size = new System.Drawing.Size(89, 22);
             this._btnGuardarHabitacion.TabIndex = 7;
             this._btnGuardarHabitacion.Text = "Guardar";
             this._btnGuardarHabitacion.UseVisualStyleBackColor = false;
+            this._btnGuardarHabitacion.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // _btnVolver
             // 
             this._btnVolver.BackColor = System.Drawing.Color.PaleTurquoise;
             this._btnVolver.Location = new System.Drawing.Point(187, 281);
-            this._btnVolver.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this._btnVolver.Margin = new System.Windows.Forms.Padding(2);
             this._btnVolver.Name = "_btnVolver";
             this._btnVolver.Size = new System.Drawing.Size(89, 22);
             this._btnVolver.TabIndex = 11;
@@ -232,7 +223,7 @@ namespace Tp.Hotel.WinForms
             // 
             this._lblNombre.AutoSize = true;
             this._lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this._lblNombre.Location = new System.Drawing.Point(349, 134);
+            this._lblNombre.Location = new System.Drawing.Point(348, 103);
             this._lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this._lblNombre.Name = "_lblNombre";
             this._lblNombre.Size = new System.Drawing.Size(57, 16);
@@ -243,7 +234,7 @@ namespace Tp.Hotel.WinForms
             // 
             this._lblDireccion.AutoSize = true;
             this._lblDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this._lblDireccion.Location = new System.Drawing.Point(346, 170);
+            this._lblDireccion.Location = new System.Drawing.Point(345, 139);
             this._lblDireccion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this._lblDireccion.Name = "_lblDireccion";
             this._lblDireccion.Size = new System.Drawing.Size(65, 16);
@@ -254,7 +245,7 @@ namespace Tp.Hotel.WinForms
             // 
             this._lblEstrellas.AutoSize = true;
             this._lblEstrellas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this._lblEstrellas.Location = new System.Drawing.Point(346, 204);
+            this._lblEstrellas.Location = new System.Drawing.Point(345, 173);
             this._lblEstrellas.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this._lblEstrellas.Name = "_lblEstrellas";
             this._lblEstrellas.Size = new System.Drawing.Size(60, 16);
@@ -265,23 +256,12 @@ namespace Tp.Hotel.WinForms
             // 
             this._lblAmenities.AutoSize = true;
             this._lblAmenities.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this._lblAmenities.Location = new System.Drawing.Point(346, 245);
+            this._lblAmenities.Location = new System.Drawing.Point(345, 214);
             this._lblAmenities.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this._lblAmenities.Name = "_lblAmenities";
             this._lblAmenities.Size = new System.Drawing.Size(67, 16);
             this._lblAmenities.TabIndex = 1;
             this._lblAmenities.Text = "Amenities";
-            // 
-            // _lblIdHotel
-            // 
-            this._lblIdHotel.AutoSize = true;
-            this._lblIdHotel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this._lblIdHotel.Location = new System.Drawing.Point(349, 101);
-            this._lblIdHotel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this._lblIdHotel.Name = "_lblIdHotel";
-            this._lblIdHotel.Size = new System.Drawing.Size(54, 16);
-            this._lblIdHotel.TabIndex = 0;
-            this._lblIdHotel.Text = "Id Hotel";
             // 
             // FrmHoteles
             // 
@@ -289,7 +269,7 @@ namespace Tp.Hotel.WinForms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(603, 355);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmHoteles";
             this.Text = "Hoteles";
             this.Load += new System.EventHandler(this.FrmHoteles_Load);
@@ -310,13 +290,11 @@ namespace Tp.Hotel.WinForms
         private System.Windows.Forms.Label _lblDireccion;
         private System.Windows.Forms.Label _lblEstrellas;
         private System.Windows.Forms.Label _lblAmenities;
-        private System.Windows.Forms.Label _lblIdHotel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox _cmbAmenities;
         private System.Windows.Forms.ComboBox _cmbEstrellas;
         private System.Windows.Forms.TextBox _txtDireccion;
         private System.Windows.Forms.TextBox _txtNombre;
-        private System.Windows.Forms.TextBox _txtIdHotel;
         private System.Windows.Forms.ListBox _lstHoteles;
         private System.Windows.Forms.Label lblHoteles;
         private System.Windows.Forms.Label lblDatosHotel;

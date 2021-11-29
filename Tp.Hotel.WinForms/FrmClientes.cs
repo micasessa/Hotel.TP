@@ -18,11 +18,12 @@ namespace Tp.Hotel.WinForms
     {
         private ClienteNegocio _clienteNegocio;
         private List<Cliente> _clientes;
+        
         public FrmClientes(Form main)
         {
             InitializeComponent();
             this.Owner = main;
-
+            
             _clienteNegocio = new ClienteNegocio();
         }
 
@@ -87,16 +88,16 @@ namespace Tp.Hotel.WinForms
         {
             try
             {
-                string nombre= ValidacionesAlta(txtNombre.Text, lblNombre.Text);
-                string apellido=ValidacionesAlta(txtApellido.Text, lblApellido.Text);
-                string direccion=ValidacionesAlta(txtDireccion.Text, lblDireccion.Text);
-                string email = ValidacionesAlta(txtMail.Text, lblMail.Text);
-                string Dni=ValidacionesAlta(txtDni.Text, lblDni.Text);
-                string telefono=ValidacionesAlta(txtTelefono.Text, lblTelefono.Text);
-                string mail= ValidacionesAlta(txtMail.Text, lblMail.Text);
-                string fechaNac=ValidacionesAlta(txtFechaNacimiento.Text, lblFechNacimiento.Text);
-                DateTime fechaNacimiento=ValidacionFecha(fechaNac);
-                int dni=ValidacionNumero(Dni);
+                string nombre= ValidacionesForm.ValidacionesAlta(txtNombre.Text, lblNombre.Text);
+                string apellido= ValidacionesForm.ValidacionesAlta(txtApellido.Text, lblApellido.Text);
+                string direccion= ValidacionesForm.ValidacionesAlta(txtDireccion.Text, lblDireccion.Text);
+                string email = ValidacionesForm.ValidacionesAlta(txtMail.Text, lblMail.Text);
+                string Dni= ValidacionesForm.ValidacionesAlta(txtDni.Text, lblDni.Text);
+                string telefono= ValidacionesForm.ValidacionesAlta(txtTelefono.Text, lblTelefono.Text);
+                string mail= ValidacionesForm.ValidacionesAlta(txtMail.Text, lblMail.Text);
+                string fechaNac= ValidacionesForm.ValidacionesAlta(txtFechaNacimiento.Text, lblFechNacimiento.Text);
+                DateTime fechaNacimiento=ValidacionesForm.ValidacionFecha(fechaNac);
+                int dni=ValidacionesForm.ValidacionNumero(Dni);
                TransactionResult operacion= _clienteNegocio.AltaCliente(dni, nombre, apellido, direccion, email, telefono, fechaNacimiento);
                 if(operacion.IsOk)
                 {
@@ -115,31 +116,6 @@ namespace Tp.Hotel.WinForms
 
         }
 
-        private string ValidacionesAlta(string txt, string lbl)
-        {
-            if(txt==string.Empty)
-            {
-                throw new Exception("Falta ingresar el valor en el campo " + lbl);
-            }
-            return txt;
-        }
-
-        private int ValidacionNumero(string txt)
-        {
-            if(!int.TryParse(txt, out int numero))
-                {
-                throw new Exception("Debe ingresar un valor con formato de número");
-            }
-            return numero;
-        }
-
-        private DateTime ValidacionFecha(string txt)
-        {
-            if (!DateTime.TryParse(txt, out DateTime fecha))
-            {
-                throw new Exception("Debe ingresar un valor con formato de fecha");
-            }
-            return fecha;
-        }
+        
     }
 }

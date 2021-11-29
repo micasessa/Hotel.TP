@@ -30,14 +30,14 @@ namespace Tp.Hotel.Entidades
         { }
 
 
-        public Hotel1(int idHotel, int estrellas, string nombre, string direccion, bool amenities, int usuario)
+        public Hotel1(int estrellas, string nombre, string direccion, bool amenities)
         {
-            _idHotel = idHotel;
+            
             _estrellas = estrellas;
             _nombre = nombre;
             _direccion = direccion;
              _amenities = amenities;
-            _usuario = usuario;
+          
         }
         public string DisplayHotel
         {
