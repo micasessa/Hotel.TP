@@ -36,4 +36,3 @@ C:\Users\Florencia\Desktop\EjerciciosCAI\Hotel.TP\Tp.Hotel.Negocio\obj\Debug\Tp.
 C:\Users\Florencia\Desktop\EjerciciosCAI\Hotel.TP\Tp.Hotel.Negocio\obj\Debug\Tp.Hotel.Negocio.csproj.CopyComplete
 C:\Users\Florencia\Desktop\EjerciciosCAI\Hotel.TP\Tp.Hotel.Negocio\obj\Debug\Tp.Hotel.Negocio.dll
 C:\Users\Florencia\Desktop\EjerciciosCAI\Hotel.TP\Tp.Hotel.Negocio\obj\Debug\Tp.Hotel.Negocio.pdb
-C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.Negocio\obj\Debug\Tp.Hotel.Negocio.csproj.CopyComplete

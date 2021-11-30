@@ -14,6 +14,7 @@ namespace Tp.Hotel.Negocio
 
         private List<Reserva> _reservas;
         private ReservaMapper _reservaMapper;
+        private ClienteMapper _clienteMapper;
 
 
         public ReservaNegocio()
@@ -36,18 +37,18 @@ namespace Tp.Hotel.Negocio
             }
         }
 
-        public List<Reserva> TraerReservasPorCliente (int idCliente)  //TRAER RESERVAS POR CLIENTE
+        public List<Cliente> TraerReservasPorCliente (int idCliente)  //TRAER RESERVAS POR CLIENTE
         {
-            List<Reserva> reservasPorCliente = new List<Reserva>();
-            List<Reserva> todas = TraerReservas();
-            foreach (Reserva reserva in todas)
+            List<Cliente> clientexReserva = new List<Cliente>();           
+            
+            foreach (Reserva reserva in ListaReserva_Cliente())
             {
                 if ( reserva.IdCliente == idCliente)
                 {
-                    reservasPorCliente.Add(reserva);
+                    clientexReserva.Add(reserva.Cliente);
                 }
             }
-            return reservasPorCliente;
+            return clientexReserva;
         }
 
 
@@ -73,13 +74,11 @@ namespace Tp.Hotel.Negocio
             return reserva.CantidadHuespedes;
         }
 
-        public Cliente TraerHuespedesPorIdReserva(int idreserva)
-        {
-            //Traer lista de clientes
-            Cliente cli = new Cliente();
+        public List<Reserva> ListaReserva_Cliente()
+        {           
             List<Reserva> reservasPorCliente = new List<Reserva>();
             List<Reserva> todas = TraerReservas();
-            List<Cliente> cliente = new List<Cliente>();
+            List<Cliente> cliente = _clienteMapper.TraerTodos();
             
             foreach (Reserva re in todas)
             {
@@ -91,7 +90,7 @@ namespace Tp.Hotel.Negocio
                     }
                 }                
             }
-            return cli;
+            return reservasPorCliente;
 
         }
 
