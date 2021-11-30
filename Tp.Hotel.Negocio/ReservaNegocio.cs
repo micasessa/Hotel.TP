@@ -70,16 +70,29 @@ namespace Tp.Hotel.Negocio
            // List<Reserva> todas = TraerReservas();
             Reserva reserva = TraerReservas().Find(x => x.IdReserva == idreserva);
 
-
-
             return reserva.CantidadHuespedes;
         }
 
-        public int TraerHuespedesPorIdReserva(int idreserva)
+        public Cliente TraerHuespedesPorIdReserva(int idreserva)
         {
-            //Falta desarrollo!
-            int a = 0;
-            return a;
+            //Traer lista de clientes
+            Cliente cli = new Cliente();
+            List<Reserva> reservasPorCliente = new List<Reserva>();
+            List<Reserva> todas = TraerReservas();
+            List<Cliente> cliente = new List<Cliente>();
+            
+            foreach (Reserva re in todas)
+            {
+                foreach (Cliente cl in cliente)
+                {
+                    if (re.IdCliente == cl.IdCliente)
+                    {
+                        re.Cliente = cl;
+                    }
+                }                
+            }
+            return cli;
+
         }
 
         public TransactionResult AltaReserva (int idHabitacion, int idCliente, int cantidadHuespedes, DateTime fechaIngreso, DateTime fechaEgreso) // ALTA DE RESERVA

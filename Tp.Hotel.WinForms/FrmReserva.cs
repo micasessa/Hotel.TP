@@ -94,7 +94,7 @@ namespace Tp.Hotel.WinForms
         private List<Reserva> ListaReservas()
         {
             //FALTA DESARROLLO
-            return _ReservaNegocio.TraerHuespedesPorIdReserva();
+            return _ReservaNegocio.TraerHuespedesPorIdReserva(Convert.ToInt32(txtNroReserva.Text));
         }
 
         private void Alta()
