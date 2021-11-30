@@ -117,7 +117,6 @@
             this.Controls.Add(this._lBoxHabitacionesPorHotel);
             this.Controls.Add(this._cBoxRepoSeleccioneHotel);
             this.Controls.Add(this._lblRepoSeleccioneHotel);
-            this.Enabled = false;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmReporteHabitaciones";
             this.Text = "Reporte Habitaciones Por Hotel";

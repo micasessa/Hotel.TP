@@ -14,6 +14,7 @@ namespace Tp.Hotel.Negocio
 
         private List<Reserva> _reservas;
         private ReservaMapper _reservaMapper;
+        private ClienteMapper _clienteMapper;
 
 
         public ReservaNegocio()
@@ -36,18 +37,18 @@ namespace Tp.Hotel.Negocio
             }
         }
 
-        public List<Reserva> TraerReservasPorCliente (int idCliente)  //TRAER RESERVAS POR CLIENTE
+        public List<Cliente> TraerReservasPorCliente (int idCliente)  //TRAER RESERVAS POR CLIENTE
         {
-            List<Reserva> reservasPorCliente = new List<Reserva>();
-            List<Reserva> todas = TraerReservas();
-            foreach (Reserva reserva in todas)
+            List<Cliente> clientexReserva = new List<Cliente>();           
+            
+            foreach (Reserva reserva in ListaReserva_Cliente())
             {
                 if ( reserva.IdCliente == idCliente)
                 {
-                    reservasPorCliente.Add(reserva);
+                    clientexReserva.Add(reserva.Cliente);
                 }
             }
-            return reservasPorCliente;
+            return clientexReserva;
         }
 
 
@@ -70,16 +71,27 @@ namespace Tp.Hotel.Negocio
            // List<Reserva> todas = TraerReservas();
             Reserva reserva = TraerReservas().Find(x => x.IdReserva == idreserva);
 
-
-
             return reserva.CantidadHuespedes;
         }
 
-        public int TraerHuespedesPorIdReserva(int idreserva)
-        {
-            //Falta desarrollo!
-            int a = 0;
-            return a;
+        public List<Reserva> ListaReserva_Cliente()
+        {           
+            List<Reserva> reservasPorCliente = new List<Reserva>();
+            List<Reserva> todas = TraerReservas();
+            List<Cliente> cliente = _clienteMapper.TraerTodos();
+            
+            foreach (Reserva re in todas)
+            {
+                foreach (Cliente cl in cliente)
+                {
+                    if (re.IdCliente == cl.IdCliente)
+                    {
+                        re.Cliente = cl;
+                    }
+                }                
+            }
+            return reservasPorCliente;
+
         }
 
         public TransactionResult AltaReserva (int idHabitacion, int idCliente, int cantidadHuespedes, DateTime fechaIngreso, DateTime fechaEgreso) // ALTA DE RESERVA

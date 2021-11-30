@@ -17,6 +17,7 @@ namespace Tp.Hotel.Entidades
         private DateTime _fechaIngreso;
         private DateTime _fechaEgreso;
         private int _usuario;
+        private Cliente _cliente;
 
         //Creacion de propiedades
         public int IdReserva { get => _idReserva; set => _idReserva = value; }
@@ -25,17 +26,29 @@ namespace Tp.Hotel.Entidades
         public int CantidadHuespedes { get => _cantidadHuespedes; set => _cantidadHuespedes = value; }
         public DateTime FechaIngreso { get => _fechaIngreso; set => _fechaIngreso = value; }
         public DateTime FechaEgreso { get => _fechaEgreso; set => _fechaEgreso = value; }
-        public int Usuario { get => _usuario; set => _usuario = value; } 
+        public int Usuario { get => _usuario; set => _usuario = value; }
+        public Cliente Cliente { get => _cliente; set => _cliente = value; }
 
 
         //Creacion de constructores.
         public Reserva()
         { }
-
-        public Reserva( int idHabitacion, int idCliente, int cantidadHuespedes, DateTime fechaIngreso, DateTime fechaEgreso)
+        public Reserva(int idHabitacion, int idCliente, int cantidadHuespedes, DateTime fechaIngreso, DateTime fechaEgreso)
         {
-            
             _idHabitacion = idHabitacion;
+            _idCliente = idCliente;
+            _cantidadHuespedes = cantidadHuespedes;
+            _fechaIngreso = fechaIngreso;
+            _fechaEgreso = fechaEgreso;
+
+
+        }
+        public Reserva( int idReserva, int idHabitacion, int idCliente, int cantidadHuespedes, DateTime fechaIngreso, DateTime fechaEgreso)
+        {
+
+            _idReserva = idReserva;
+            _idHabitacion = idHabitacion;
+            _cliente = new Cliente();
             _idCliente = idCliente;
             _cantidadHuespedes = cantidadHuespedes;
             _fechaIngreso = fechaIngreso;
