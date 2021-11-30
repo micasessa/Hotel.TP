@@ -36,9 +36,11 @@ namespace Tp.Hotel.WinForms
 
         private void Carga()
         {
+            
             lstClientes.DataSource = null;
             lstClientes.DataSource=ListarClientes();
             lstClientes.DisplayMember = "DisplayCliente";
+            lstClientes.ValueMember = "idCliente";
 
         }
 
@@ -62,7 +64,7 @@ namespace Tp.Hotel.WinForms
             txtTelefono.Clear();
             txtMail.Clear();
             txtFechaNacimiento.Clear();
-            cmbClientes.SelectedItem = "--SELECCIONE--";
+            cmbClientes.Text = "Seleccione";
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)

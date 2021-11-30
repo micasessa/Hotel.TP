@@ -34,14 +34,19 @@ namespace Tp.Hotel.WinForms
             IdHabitacion = idHabitacion;
         }
 
-        
+
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            this.Owner.Show();
+            Volver();
         }
-
+            
+        private void Volver()
+        {
+                this.Hide();
+                this.Owner.Show();
+            
+        }
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             Limpiar();
@@ -72,13 +77,14 @@ namespace Tp.Hotel.WinForms
             lstClientes.DataSource = null;
             lstClientes.DataSource = _ClienteNegocio.TraerClientes();
             lstClientes.DisplayMember = "DisplayCliente";
+            lstClientes.ValueMember = "idCliente";
         }
 
         private void Alta()
         {
             try
             {
-                string nroReserva = ValidacionesForm.ValidacionesAlta(txtNroReserva.Text, lblNroReserva.Text);
+                
                 string huespedes = ValidacionesForm.ValidacionesAlta(txtHuespedes.Text, lblHuespedes.Text);
                 string ingreso = ValidacionesForm.ValidacionesAlta(txtFechaIngreso.Text, lblFechaIngreso.Text);
                 string egreso = ValidacionesForm.ValidacionesAlta(txtFechaEgreso.Text, lblFechaEgreso.Text);
@@ -89,7 +95,7 @@ namespace Tp.Hotel.WinForms
                 TransactionResult operacion = _ReservaNegocio.AltaReserva(IdHabitacion,idCliente, canthuespedes, fechaingreso, fechaegreso);
                     if (operacion.IsOk)
                 {
-                    MessageBox.Show("El hotel ha sido registrado exitosamente");
+                    MessageBox.Show("La reserva se ha registrado exitosamente");
                 }
                 else
                 {
@@ -103,6 +109,12 @@ namespace Tp.Hotel.WinForms
 
 
             }
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            Alta();
+            Volver();
         }
     }
 }

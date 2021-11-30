@@ -117,6 +117,7 @@ namespace Tp.Hotel.WinForms
             this.btnGuardar.TabIndex = 7;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnLimpiar
             // 
@@ -156,6 +157,7 @@ namespace Tp.Hotel.WinForms
             // 
             // txtNroReserva
             // 
+            this.txtNroReserva.Enabled = false;
             this.txtNroReserva.Location = new System.Drawing.Point(534, 106);
             this.txtNroReserva.Name = "txtNroReserva";
             this.txtNroReserva.Size = new System.Drawing.Size(100, 20);

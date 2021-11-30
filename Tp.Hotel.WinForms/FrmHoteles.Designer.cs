@@ -99,7 +99,7 @@ namespace Tp.Hotel.WinForms
             this.cmbHoteles.Size = new System.Drawing.Size(194, 21);
             this.cmbHoteles.TabIndex = 8;
             this.cmbHoteles.SelectedIndexChanged += new System.EventHandler(this.cmbHoteles_SelectedIndexChanged);
-            this.cmbHoteles.Click += new System.EventHandler(this.cmbHoteles_Click);
+           
             // 
             // lblFiltrar
             // 
@@ -158,7 +158,7 @@ namespace Tp.Hotel.WinForms
             this._cmbAmenities.Name = "_cmbAmenities";
             this._cmbAmenities.Size = new System.Drawing.Size(109, 21);
             this._cmbAmenities.TabIndex = 5;
-            this._cmbAmenities.Click += new System.EventHandler(this.cmbAmenities_Click);
+            
             // 
             // _cmbEstrellas
             // 
@@ -168,7 +168,7 @@ namespace Tp.Hotel.WinForms
             this._cmbEstrellas.Name = "_cmbEstrellas";
             this._cmbEstrellas.Size = new System.Drawing.Size(109, 21);
             this._cmbEstrellas.TabIndex = 4;
-            this._cmbEstrellas.Click += new System.EventHandler(this.cmbEstrella_Click);
+           
             // 
             // _txtDireccion
             // 

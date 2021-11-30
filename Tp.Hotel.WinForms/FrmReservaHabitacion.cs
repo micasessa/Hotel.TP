@@ -29,7 +29,7 @@ namespace Tp.Hotel.WinForms
        
         private void FrmReservaHabitacion_Load(object sender, EventArgs e)
         {
-
+            Carga();
             Limpiar();
         }
 
@@ -40,24 +40,29 @@ namespace Tp.Hotel.WinForms
             this.Hide();
             this.Owner.Show();
         }
-        private void cmbHoteles_click(object sender, EventArgs e)
+        private void Carga()
         {
             cmbHoteles.DataSource = null;
             cmbHoteles.DataSource = ListaHoteles();
             cmbHoteles.DisplayMember = "DisplayHotel";
+            cmbHoteles.ValueMember = "IdHotel";
+        }
+        private void CargaHotelesxid(int Hotelid)
+        {
+            _lstHoteles.DataSource = null;
+            _lstHoteles.DataSource = _HabitacionNegocio.TraerHabitacionesPorHotel(Hotelid);
+            _lstHoteles.DisplayMember = "DisplayHabitacion";
+
         }
 
-            private void _btnLimpiar_Click(object sender, EventArgs e)
+        private void _btnLimpiar_Click(object sender, EventArgs e)
         {
             Limpiar();
         }
 
         private void Limpiar()
         {
-            
-            cmbHoteles.DataSource = null;
-            cmbHoteles.SelectedItem = "Seleccione";
-            _lstHoteles.DataSource = null;
+            cmbHoteles.Text = "Seleccione";           
         }
 
 
@@ -79,9 +84,7 @@ namespace Tp.Hotel.WinForms
                 int Hotelid = (int)cmbHoteles.SelectedIndex;
                 Hotel1 HotelSelec = (Hotel1)cmbHoteles.SelectedItem;
                 ValidacionesForm.ExisteHabitacion(_HabitacionNegocio.TraerHabitacionesPorHotel(Hotelid));
-                _lstHoteles.DataSource = null;
-                _lstHoteles.DataSource = _HabitacionNegocio.TraerHabitacionesPorHotel(Hotelid);
-                _lstHoteles.DisplayMember = "DisplayHabitacion";
+                CargaHotelesxid(Hotelid);
 
             }
             catch (Exception ex)
