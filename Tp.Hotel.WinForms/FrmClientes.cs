@@ -64,7 +64,7 @@ namespace Tp.Hotel.WinForms
             txtTelefono.Clear();
             txtMail.Clear();
             txtFechaNacimiento.Clear();
-            cmbClientes.Text = "Seleccione";
+            
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)

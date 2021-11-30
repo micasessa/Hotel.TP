@@ -78,6 +78,23 @@ namespace Tp.Hotel.WinForms
             lstClientes.DataSource = _ClienteNegocio.TraerClientes();
             lstClientes.DisplayMember = "DisplayCliente";
             lstClientes.ValueMember = "idCliente";
+
+            CargaIdReserva();
+        }
+
+        private void CargaIdReserva()
+        {
+            cmbReserva.DataSource = null;
+            cmbReserva.DataSource = ListaReservas();
+            cmbReserva.DisplayMember = "DisplayReserva";
+            cmbReserva.ValueMember = "IdReserva";
+
+        }
+
+        private List<Reserva> ListaReservas()
+        {
+            //FALTA DESARROLLO
+            return _ReservaNegocio.TraerHuespedesPorIdReserva();
         }
 
         private void Alta()
