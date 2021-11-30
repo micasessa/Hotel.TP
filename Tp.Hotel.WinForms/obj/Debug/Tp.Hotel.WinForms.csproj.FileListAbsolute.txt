@@ -63,7 +63,6 @@ C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.WinForms\obj\Debug\Tp.Hotel.WinForms.
 C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.WinForms\obj\Debug\Tp.Hotel.WinForms.FrmReporteHabitaciones.resources
 C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.WinForms\obj\Debug\Tp.Hotel.WinForms.FrmReporteHuespedes.resources
 C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.WinForms\obj\Debug\Tp.Hotel.WinForms.FrmReporteReservas.resources
-C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.WinForms\obj\Debug\Tp.Hotel.WinForms.csproj.CopyComplete
 C:\Users\Florencia\Desktop\EjerciciosCAI\Hotel.TP\Tp.Hotel.WinForms\obj\Debug\Tp.Hotel.WinForms.csproj.AssemblyReference.cache
 C:\Users\Florencia\Desktop\EjerciciosCAI\Hotel.TP\Tp.Hotel.WinForms\obj\Debug\Tp.Hotel.WinForms.csproj.SuggestedBindingRedirects.cache
 C:\Users\Florencia\Desktop\EjerciciosCAI\Hotel.TP\Tp.Hotel.WinForms\obj\Debug\Tp.Hotel.WinForms.FrmClientes.resources
@@ -107,3 +106,6 @@ C:\Users\Florencia\Desktop\EjerciciosCAI\Hotel.TP\Tp.Hotel.WinForms\bin\Debug\Ne
 C:\Users\Florencia\Desktop\EjerciciosCAI\Hotel.TP\Tp.Hotel.WinForms\bin\Debug\Tp.Hotel.AccesoDatos.pdb
 C:\Users\Florencia\Desktop\EjerciciosCAI\Hotel.TP\Tp.Hotel.WinForms\obj\Debug\Tp.Hotel.WinForms.FrmReservaHabitacion.resources
 C:\Users\Florencia\Desktop\EjerciciosCAI\Hotel.TP\Tp.Hotel.WinForms\obj\Debug\Tp.Hotel.WinForms.csproj.CopyComplete
+C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.WinForms\bin\Debug\Tp.Hotel.AccesoDatos.dll
+C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.WinForms\bin\Debug\Tp.Hotel.AccesoDatos.pdb
+C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.WinForms\obj\Debug\Tp.Hotel.WinForms.FrmReservaHabitacion.resources
