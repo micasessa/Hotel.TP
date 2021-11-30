@@ -40,7 +40,7 @@ namespace Tp.Hotel.WinForms
             lstClientes.DataSource = null;
             lstClientes.DataSource=ListarClientes();
             lstClientes.DisplayMember = "DisplayCliente";
-            lstClientes.ValueMember = "idCliente";
+            lstClientes.ValueMember = "id";
 
         }
 

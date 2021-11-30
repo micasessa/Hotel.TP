@@ -77,7 +77,7 @@ namespace Tp.Hotel.WinForms
             lstClientes.DataSource = null;
             lstClientes.DataSource = _ClienteNegocio.TraerClientes();
             lstClientes.DisplayMember = "DisplayCliente";
-            lstClientes.ValueMember = "idCliente";
+            lstClientes.ValueMember = "id";
 
             CargaIdReserva();
         }
@@ -85,20 +85,20 @@ namespace Tp.Hotel.WinForms
         private void CargaIdReserva()
         {
             cmbReserva.DataSource = null;
-            cmbReserva.DataSource = ListaReservas();
+           // cmbReserva.DataSource = ListaReservas();
             cmbReserva.DisplayMember = "DisplayReserva";
-            cmbReserva.ValueMember = "IdReserva";
+            cmbReserva.ValueMember = "id";
 
         }
 
-        private List<Reserva> ListaReservas()
+       /*private List<Reserva> ListaReservas()
         {
             List<Cliente> lista = new List<Cliente>();
             lista.Add(_ReservaNegocio.TraerReservasPorCliente());
 
             return lista;
            
-        }
+        }*/
 
         private void Alta()
         {
@@ -111,8 +111,8 @@ namespace Tp.Hotel.WinForms
                 int canthuespedes = ValidacionesForm.ValidacionNumero(huespedes);
                 DateTime fechaingreso = ValidacionesForm.ValidacionFecha(ingreso);
                 DateTime fechaegreso = ValidacionesForm.ValidacionFecha(egreso);
-                int idCliente = lstClientes.SelectedIndex;                
-                TransactionResult operacion = _ReservaNegocio.AltaReserva(IdHabitacion,idCliente, canthuespedes, fechaingreso, fechaegreso);
+                Cliente ClienteSel = (Cliente)lstClientes.SelectedItem;                
+                TransactionResult operacion = _ReservaNegocio.AltaReserva(IdHabitacion,ClienteSel.id, canthuespedes, fechaingreso, fechaegreso);
                     if (operacion.IsOk)
                 {
                     MessageBox.Show("La reserva se ha registrado exitosamente");

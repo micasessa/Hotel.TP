@@ -36,3 +36,16 @@ C:\Users\Florencia\Desktop\EjerciciosCAI\Hotel.TP\Tp.Hotel.Negocio\obj\Debug\Tp.
 C:\Users\Florencia\Desktop\EjerciciosCAI\Hotel.TP\Tp.Hotel.Negocio\obj\Debug\Tp.Hotel.Negocio.csproj.CopyComplete
 C:\Users\Florencia\Desktop\EjerciciosCAI\Hotel.TP\Tp.Hotel.Negocio\obj\Debug\Tp.Hotel.Negocio.dll
 C:\Users\Florencia\Desktop\EjerciciosCAI\Hotel.TP\Tp.Hotel.Negocio\obj\Debug\Tp.Hotel.Negocio.pdb
+C:\Users\Pesimista\source\repos\Hotel.TP\Tp.Hotel.Negocio\bin\Debug\Tp.Hotel.Negocio.dll
+C:\Users\Pesimista\source\repos\Hotel.TP\Tp.Hotel.Negocio\bin\Debug\Tp.Hotel.Negocio.pdb
+C:\Users\Pesimista\source\repos\Hotel.TP\Tp.Hotel.Negocio\bin\Debug\Tp.Hotel.AccesoDatos.dll
+C:\Users\Pesimista\source\repos\Hotel.TP\Tp.Hotel.Negocio\bin\Debug\Tp.Hotel.Entidades.dll
+C:\Users\Pesimista\source\repos\Hotel.TP\Tp.Hotel.Negocio\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Pesimista\source\repos\Hotel.TP\Tp.Hotel.Negocio\bin\Debug\Tp.Hotel.AccesoDatos.pdb
+C:\Users\Pesimista\source\repos\Hotel.TP\Tp.Hotel.Negocio\bin\Debug\Tp.Hotel.Entidades.pdb
+C:\Users\Pesimista\source\repos\Hotel.TP\Tp.Hotel.Negocio\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Pesimista\source\repos\Hotel.TP\Tp.Hotel.Negocio\obj\Debug\Tp.Hotel.Negocio.csproj.AssemblyReference.cache
+C:\Users\Pesimista\source\repos\Hotel.TP\Tp.Hotel.Negocio\obj\Debug\Tp.Hotel.Negocio.csproj.CoreCompileInputs.cache
+C:\Users\Pesimista\source\repos\Hotel.TP\Tp.Hotel.Negocio\obj\Debug\Tp.Hotel.Negocio.csproj.CopyComplete
+C:\Users\Pesimista\source\repos\Hotel.TP\Tp.Hotel.Negocio\obj\Debug\Tp.Hotel.Negocio.dll
+C:\Users\Pesimista\source\repos\Hotel.TP\Tp.Hotel.Negocio\obj\Debug\Tp.Hotel.Negocio.pdb

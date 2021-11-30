@@ -12,7 +12,7 @@ namespace Tp.Hotel.Entidades
     public class Habitacion
     {
         //Declaracion de atributos
-        private int _idHabitacion;
+        private int _id;
         private int _idHotel;
         private int _cantidadPlazas;
         private string _categoria;
@@ -23,7 +23,7 @@ namespace Tp.Hotel.Entidades
         
        
         //Creacion de propiedades
-        public int IdHabitacion { get => _idHabitacion; set => _idHabitacion = value; }
+        public int id { get => _id; set => _id = value; }
         public int IdHotel { get => _idHotel; set => _idHotel = value; }
         public int CantidadPlazas { get => _cantidadPlazas; set => _cantidadPlazas = value; }
         public string Categoria { get => _categoria; set => _categoria = value; }
@@ -40,6 +40,15 @@ namespace Tp.Hotel.Entidades
 
         public Habitacion( int idHotel, int cantidadPlazas, string categoria, double precio, bool cancelable)
         {
+            _cantidadPlazas = cantidadPlazas;
+            _categoria = categoria;
+            _precio = precio;
+            _cancelable = cancelable;
+            _idHotel = idHotel;
+        }
+        public Habitacion(int id, int idHotel, int cantidadPlazas, string categoria, double precio, bool cancelable)
+        {
+            _id=id;
             _cantidadPlazas = cantidadPlazas;
             _categoria = categoria;
             _precio = precio;

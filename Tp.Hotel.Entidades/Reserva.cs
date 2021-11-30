@@ -10,7 +10,7 @@ namespace Tp.Hotel.Entidades
     public class Reserva
     {
         //Declaracion de atributos
-        private int _idReserva;
+        private int _id;
         private int _idHabitacion; 
         private int _idCliente; 
         private int _cantidadHuespedes;
@@ -20,7 +20,7 @@ namespace Tp.Hotel.Entidades
         private Cliente _cliente;
 
         //Creacion de propiedades
-        public int IdReserva { get => _idReserva; set => _idReserva = value; }
+        public int id { get => _id; set => _id = value; }
         public int IdHabitacion { get => _idHabitacion; set => _idHabitacion = value; }
         public int IdCliente { get => _idCliente; set => _idCliente = value; }
         public int CantidadHuespedes { get => _cantidadHuespedes; set => _cantidadHuespedes = value; }
@@ -40,13 +40,14 @@ namespace Tp.Hotel.Entidades
             _cantidadHuespedes = cantidadHuespedes;
             _fechaIngreso = fechaIngreso;
             _fechaEgreso = fechaEgreso;
+            _cliente = new Cliente();
 
 
         }
         public Reserva( int idReserva, int idHabitacion, int idCliente, int cantidadHuespedes, DateTime fechaIngreso, DateTime fechaEgreso)
         {
 
-            _idReserva = idReserva;
+            _id = idReserva;
             _idHabitacion = idHabitacion;
             _cliente = new Cliente();
             _idCliente = idCliente;
@@ -55,6 +56,14 @@ namespace Tp.Hotel.Entidades
             _fechaEgreso = fechaEgreso;
             
 
+        }
+
+        public string DisplayReserva
+        {
+            get
+            {
+                return (CantidadHuespedes + " " + FechaIngreso + " " + FechaEgreso);
+            }
         }
 
 

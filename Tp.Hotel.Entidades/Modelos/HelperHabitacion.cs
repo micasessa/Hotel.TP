@@ -22,7 +22,7 @@ namespace Tp.Hotel.Entidades.Modelos
         {
             foreach (Hotel1 hotel in _Hoteles)
             {
-                if (hotel.IdHotel == IdHotel)
+                if (hotel.id == IdHotel)
                 {
                     return hotel;
                 }

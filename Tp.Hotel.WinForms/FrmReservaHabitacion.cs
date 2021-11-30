@@ -45,7 +45,7 @@ namespace Tp.Hotel.WinForms
             cmbHoteles.DataSource = null;
             cmbHoteles.DataSource = ListaHoteles();
             cmbHoteles.DisplayMember = "DisplayHotel";
-            cmbHoteles.ValueMember = "IdHotel";
+            cmbHoteles.ValueMember = "id";
         }
         private void CargaHotelesxid(int Hotelid)
         {

@@ -52,7 +52,7 @@ namespace Tp.Hotel.WinForms
             cmbHabitaciones.DataSource = null;
             cmbHabitaciones.DataSource = ListaHoteles();
             cmbHabitaciones.DisplayMember = "DisplayHotel";
-            cmbHabitaciones.ValueMember = "IdHotel";
+            cmbHabitaciones.ValueMember = "id";
         }
        
         private void CargarCategorias()
@@ -115,9 +115,8 @@ namespace Tp.Hotel.WinForms
                 {
                     cancelable = true;
                 }
-                int idHotel = cmbHabitaciones.SelectedIndex;
                 Hotel1 HotelSelec = (Hotel1)cmbHabitaciones.SelectedItem;
-                TransactionResult operacion = _HabitacionNegocio.AltaHabitacion(idHotel, cantidadplazas, categoria, precio, cancelable);
+                TransactionResult operacion = _HabitacionNegocio.AltaHabitacion(HotelSelec.id, cantidadplazas, categoria, precio, cancelable);
                 if (operacion.IsOk)
                 {
                     MessageBox.Show("La habitación ha sido registrada para el hotel " + HotelSelec.Nombre);

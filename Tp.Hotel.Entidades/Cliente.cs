@@ -11,13 +11,13 @@ namespace Tp.Hotel.Entidades
     public class Cliente : Persona
     {
         //Declaracion de atributos
-        private int _idCliente;
+        private int _id;
         private DateTime _fechaAlta;
         private bool _activo;
         private string _usuario;
 
         //creacion propiedades        
-        public int IdCliente { get => _idCliente; set => _idCliente = value; }
+        public int id { get => _id; set => _id = value; }
         public DateTime FechaAlta { get => _fechaAlta; set => _fechaAlta = value; } 
         public bool Activo { get => _activo; set => _activo = value; }
         public string Usuario { get => _usuario; set => _usuario = value; } 
@@ -34,6 +34,15 @@ namespace Tp.Hotel.Entidades
             _activo = true;
             
            
+        }
+        public Cliente(int idCliente, int dni, string nombre, string apellido, string direccion, string email, string telefono,
+            DateTime fechaNacimiento) : base(dni, nombre, apellido, direccion, email, telefono, fechaNacimiento)
+        {
+            _id = id;
+            _fechaAlta = DateTime.Now;
+            _activo = true;
+
+
         }
         public string DisplayCliente
         {
