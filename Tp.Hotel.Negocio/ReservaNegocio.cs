@@ -75,6 +75,13 @@ namespace Tp.Hotel.Negocio
             return reserva.CantidadHuespedes;
         }
 
+        public int TraerHuespedesPorIdReserva(int idreserva)
+        {
+            //Falta desarrollo!
+            int a = 0;
+            return a;
+        }
+
         public TransactionResult AltaReserva (int idHabitacion, int idCliente, int cantidadHuespedes, DateTime fechaIngreso, DateTime fechaEgreso) // ALTA DE RESERVA
         {
 

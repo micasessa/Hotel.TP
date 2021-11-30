@@ -109,3 +109,4 @@ C:\Users\Florencia\Desktop\EjerciciosCAI\Hotel.TP\Tp.Hotel.WinForms\obj\Debug\Tp
 C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.WinForms\bin\Debug\Tp.Hotel.AccesoDatos.dll
 C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.WinForms\bin\Debug\Tp.Hotel.AccesoDatos.pdb
 C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.WinForms\obj\Debug\Tp.Hotel.WinForms.FrmReservaHabitacion.resources
+C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.WinForms\obj\Debug\Tp.Hotel.WinForms.csproj.CopyComplete
