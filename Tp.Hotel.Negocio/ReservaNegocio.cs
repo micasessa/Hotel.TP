@@ -21,6 +21,8 @@ namespace Tp.Hotel.Negocio
         {
             //_reservas = new List<Reserva>();
             _reservaMapper = new ReservaMapper();
+            _clienteMapper = new ClienteMapper();
+            
         }
 
 
@@ -37,18 +39,31 @@ namespace Tp.Hotel.Negocio
             }
         }
 
-        public List<Cliente> TraerReservasPorCliente (int idCliente)  //TRAER RESERVAS POR CLIENTE
+        /*public List<Cliente> TraerReservasPorCliente (int idCliente)  //TRAER RESERVAS POR CLIENTE
         {
             List<Cliente> clientexReserva = new List<Cliente>();           
             
             foreach (Reserva reserva in ListaReserva_Cliente())
             {
-                if ( reserva.IdCliente == idCliente)
+                if ( reserva.Cliente.id == idCliente)
                 {
                     clientexReserva.Add(reserva.Cliente);
                 }
             }
             return clientexReserva;
+        }*/
+        public List<Reserva> TraerReservasPorCliente(int idCliente)  //TRAER RESERVAS POR CLIENTE
+        {
+            List<Reserva> Todas = TraerReservas();
+            List<Reserva> _lstReserva =new List<Reserva>();
+            foreach (Reserva reserva in Todas)
+            {
+                if (reserva.IdCliente == idCliente)
+                {
+                    _lstReserva.Add(reserva);
+                }
+            }
+            return _lstReserva;
         }
 
 
@@ -69,24 +84,27 @@ namespace Tp.Hotel.Negocio
         public int TraerHuespedesPorReserva(int idreserva)
         {
            // List<Reserva> todas = TraerReservas();
-            Reserva reserva = TraerReservas().Find(x => x.IdReserva == idreserva);
+            Reserva reserva = TraerReservas().Find(x => x.id == idreserva);
 
             return reserva.CantidadHuespedes;
         }
 
         public List<Reserva> ListaReserva_Cliente()
         {           
-            List<Reserva> reservasPorCliente = new List<Reserva>();
-            List<Reserva> todas = TraerReservas();
+            List<Reserva> reservasPorCliente = TraerReservas();
             List<Cliente> cliente = _clienteMapper.TraerTodos();
             
-            foreach (Reserva re in todas)
+            foreach (Reserva re in reservasPorCliente)
             {
                 foreach (Cliente cl in cliente)
                 {
-                    if (re.IdCliente == cl.IdCliente)
+                    if (re.IdCliente == cl.id)
                     {
                         re.Cliente = cl;
+                    }
+                    else
+                    {
+                        re.Cliente=new Cliente();
                     }
                 }                
             }

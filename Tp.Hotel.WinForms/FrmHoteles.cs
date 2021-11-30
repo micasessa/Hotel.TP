@@ -88,7 +88,7 @@ namespace Tp.Hotel.WinForms
             _lstHoteles.DataSource = null;
             _lstHoteles.DataSource = ListarHoteles();
             _lstHoteles.DisplayMember = "DisplayHotel";
-            _lstHoteles.ValueMember = "IdHotel";
+            _lstHoteles.ValueMember = "id";
         }
 
         public void CargarComboHoteles()

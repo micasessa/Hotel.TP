@@ -15,3 +15,9 @@ C:\Users\Florencia\Desktop\EjerciciosCAI\Hotel.TP\Tp.Hotel.Entidades\bin\Debug\T
 C:\Users\Florencia\Desktop\EjerciciosCAI\Hotel.TP\Tp.Hotel.Entidades\obj\Debug\Tp.Hotel.Entidades.csproj.CoreCompileInputs.cache
 C:\Users\Florencia\Desktop\EjerciciosCAI\Hotel.TP\Tp.Hotel.Entidades\obj\Debug\Tp.Hotel.Entidades.dll
 C:\Users\Florencia\Desktop\EjerciciosCAI\Hotel.TP\Tp.Hotel.Entidades\obj\Debug\Tp.Hotel.Entidades.pdb
+C:\Users\Pesimista\source\repos\Hotel.TP\Tp.Hotel.Entidades\bin\Debug\Tp.Hotel.Entidades.dll
+C:\Users\Pesimista\source\repos\Hotel.TP\Tp.Hotel.Entidades\bin\Debug\Tp.Hotel.Entidades.pdb
+C:\Users\Pesimista\source\repos\Hotel.TP\Tp.Hotel.Entidades\obj\Debug\Tp.Hotel.Entidades.csproj.AssemblyReference.cache
+C:\Users\Pesimista\source\repos\Hotel.TP\Tp.Hotel.Entidades\obj\Debug\Tp.Hotel.Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Pesimista\source\repos\Hotel.TP\Tp.Hotel.Entidades\obj\Debug\Tp.Hotel.Entidades.dll
+C:\Users\Pesimista\source\repos\Hotel.TP\Tp.Hotel.Entidades\obj\Debug\Tp.Hotel.Entidades.pdb
