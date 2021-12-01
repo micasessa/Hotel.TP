@@ -61,11 +61,20 @@ namespace Tp.Hotel.WinForms
         }
         public void HuespedesxRerserva(object sender, EventArgs e)
         {
-            Reserva ReservaSelec = (Reserva)cboxSelecReserva.SelectedItem;
-            _lstHuespedes.DataSource = null;
-            _lstHuespedes.DataSource = _ReservaNegocio.TraerClientexReserva(ReservaSelec.id);
-            _lstHuespedes.DisplayMember = "DisplayCliente";
-            CantHuespedes();
+            try
+            {
+                Reserva ReservaSelec = (Reserva)cboxSelecReserva.SelectedItem;
+                _lstHuespedes.DataSource = null;
+                _lstHuespedes.DataSource = _ReservaNegocio.TraerClientexReserva(ReservaSelec.id);
+                _lstHuespedes.DisplayMember = "DisplayCliente";
+                CantHuespedes();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+           
         }
 
         
