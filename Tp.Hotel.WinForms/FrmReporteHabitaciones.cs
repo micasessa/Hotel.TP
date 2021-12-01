@@ -67,7 +67,6 @@ namespace Tp.Hotel.WinForms
         public void CargaHotelesxid(object sender, EventArgs e)
         {
             Hotel1 hotelSelec = (Hotel1)_cbxSelecHotel.SelectedItem;
-            MessageBox.Show(hotelSelec.id.ToString());
             _lstHabitaciones.DataSource = null;
             _lstHabitaciones.DataSource = _HabitacionNegocio.TraerHabitacionesPorHotel(hotelSelec.id);
             _lstHabitaciones.DisplayMember = "DisplayHabitacion";

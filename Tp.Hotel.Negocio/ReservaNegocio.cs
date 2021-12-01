@@ -39,19 +39,7 @@ namespace Tp.Hotel.Negocio
             }
         }
 
-        /*public List<Cliente> TraerReservasPorCliente (int idCliente)  //TRAER RESERVAS POR CLIENTE
-        {
-            List<Cliente> clientexReserva = new List<Cliente>();           
-            
-            foreach (Reserva reserva in ListaReserva_Cliente())
-            {
-                if ( reserva.Cliente.id == idCliente)
-                {
-                    clientexReserva.Add(reserva.Cliente);
-                }
-            }
-            return clientexReserva;
-        }*/
+       
         public List<Reserva> TraerReservasPorCliente(int idCliente)  //TRAER RESERVAS POR CLIENTE
         {
             List<Reserva> Todas = TraerReservas();
@@ -64,6 +52,19 @@ namespace Tp.Hotel.Negocio
                 }
             }
             return _lstReserva;
+        }
+        public List<Cliente> TraerClientexReserva(int idReserva)  //TRAER CLIENTE POR RESERVA
+        {
+            List<Reserva> Todas = ListaReserva_Cliente();
+            List<Cliente> _lstClientes = new List<Cliente>();
+            foreach (Reserva r in Todas)
+            {
+                if (r.id==idReserva)
+                {
+                    _lstClientes.Add(r.Cliente);
+                }
+            }
+            return _lstClientes;
         }
 
 
@@ -81,13 +82,7 @@ namespace Tp.Hotel.Negocio
             return reservasPorHabitacion;
         }
 
-        public int TraerHuespedesPorReserva(int idreserva)
-        {
-           // List<Reserva> todas = TraerReservas();
-            Reserva reserva = TraerReservas().Find(x => x.id == idreserva);
-
-            return reserva.CantidadHuespedes;
-        }
+        
 
         public List<Reserva> ListaReserva_Cliente()
         {           
