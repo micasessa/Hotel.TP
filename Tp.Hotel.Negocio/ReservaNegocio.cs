@@ -55,31 +55,34 @@ namespace Tp.Hotel.Negocio
         }
         public List<Cliente> TraerClientexReserva(int idReserva)  //TRAER CLIENTE POR RESERVA
         {
-            List<Reserva> Todas = ListaReserva_Cliente();
-            List<Cliente> _lstClientes = new List<Cliente>();
-            foreach (Reserva r in Todas)
+            List<Cliente> _ClientexReserva = new List<Cliente>();
+            int idCliente = BuscarIdCliente(idReserva);
+            foreach (Cliente c in _clienteMapper.TraerTodos())
             {
-                if (r.id==idReserva)
+                if (c.id==idCliente)
                 {
-                    _lstClientes.Add(r.Cliente);
+                    _ClientexReserva.Add(c);
                 }
             }
-            return _lstClientes;
+            if(_ClientexReserva.Count()==0)
+            {
+                throw new Exception("No se ha podido ubicar a los huespedes!!!");
+            }
+            return _ClientexReserva;
         }
 
 
-        public List<Reserva> TraerReservasPorHabitacion(int idHabitacion)  //TRAER RESERVAS POR HABITACION
+        public int BuscarIdCliente(int idReserva)  //TRAER RESERVAS POR HABITACION
         {
-            List<Reserva> reservasPorHabitacion = new List<Reserva>();
-            List<Reserva> todas = TraerReservas();
-            foreach (Reserva reserva in todas)
+            int idCliente = 0;
+            foreach (Reserva r in TraerReservas())
             {
-                if (reserva.IdHabitacion == idHabitacion)
+                if (r.id == idReserva)
                 {
-                    reservasPorHabitacion.Add(reserva);
+                    idCliente = r.IdCliente;
                 }
             }
-            return reservasPorHabitacion;
+            return idCliente;
         }
 
         
