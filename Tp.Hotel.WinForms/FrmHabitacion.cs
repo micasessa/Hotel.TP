@@ -58,7 +58,7 @@ namespace Tp.Hotel.WinForms
         private void CargarCategorias()
         {
             _cmbCategoria.DataSource = null;
-            _cmbCategoria.DataSource = Estrellas.GetValues(typeof(Estrellas));
+            _cmbCategoria.DataSource = Categorias.GetValues(typeof(Categorias));
             _cmbCategoria.ValueMember = "";
         }
         private void CargarCancelable()

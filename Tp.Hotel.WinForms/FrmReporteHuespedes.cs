@@ -46,11 +46,14 @@ namespace Tp.Hotel.WinForms
         {
             cboxSelecReserva.Text = "Seleccione";
             _lstHuespedes.DataSource = null;
+            _txtBoxTotalHabitaciones.Clear();
         }
 
         private void CantHuespedes()
         {
+            Reserva reservaSeleccionada = (Reserva) cboxSelecReserva.SelectedItem;
 
+            _txtBoxTotalHabitaciones.Text = reservaSeleccionada.CantidadHuespedes.ToString();
         }
         private void _btnLimpiar_Click(object sender, EventArgs e)
         {
@@ -62,7 +65,9 @@ namespace Tp.Hotel.WinForms
             _lstHuespedes.DataSource = null;
             _lstHuespedes.DataSource = _ReservaNegocio.TraerClientexReserva(ReservaSelec.id);
             _lstHuespedes.DisplayMember = "DisplayCliente";
-
+            CantHuespedes();
         }
+
+        
     }
 }

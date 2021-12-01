@@ -49,7 +49,8 @@ namespace Tp.Hotel.WinForms
         private void Limpiar()
         {
             _cBoxSelCliente.Text = "Seleccione";
-            _lstReservaxCliente.DataSource = null;
+            _lstReservaxCliente.Text = "Seleccione";
+            _txtBoxTotalHabitaciones.Clear();
         }
         public void cmbClientes_Click(object sender, EventArgs e)
         {

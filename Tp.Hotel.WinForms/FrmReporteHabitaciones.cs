@@ -39,6 +39,7 @@ namespace Tp.Hotel.WinForms
         {
             _cbxSelecHotel.Text = "Seleccione";
             _lstHabitaciones.Text = "Seleccione";
+            _txtBoxTotalHabitaciones.Clear();
         
         }
 
@@ -59,7 +60,8 @@ namespace Tp.Hotel.WinForms
         {
             int canthabitaciones = 0;
             if (_lstHabitaciones != null)
-            { 
+            {
+                canthabitaciones = _lstHabitaciones.Items.Count;
             }
             _txtBoxTotalHabitaciones.Text=canthabitaciones.ToString();
         }
@@ -70,8 +72,10 @@ namespace Tp.Hotel.WinForms
             _lstHabitaciones.DataSource = null;
             _lstHabitaciones.DataSource = _HabitacionNegocio.TraerHabitacionesPorHotel(hotelSelec.id);
             _lstHabitaciones.DisplayMember = "DisplayHabitacion";
+            TotalHabitaciones();
 
         }
+       
 
     }
 }
