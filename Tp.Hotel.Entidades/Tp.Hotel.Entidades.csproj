@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enum\Booleano.cs" />
+    <Compile Include="Enum\Categorias.cs" />
     <Compile Include="Habitacion.cs" />
     <Compile Include="Hotel1.cs" />
     <Compile Include="Enum\Estrellas.cs" />

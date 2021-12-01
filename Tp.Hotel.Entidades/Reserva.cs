@@ -62,7 +62,7 @@ namespace Tp.Hotel.Entidades
         {
             get
             {
-                return (CantidadHuespedes + " " + FechaIngreso + " " + FechaEgreso);
+                return ("Numero Reserva: " + id + " - Cantidad Huespedes: " + CantidadHuespedes + " - Fecha Ingreso: " + FechaIngreso.ToString("dd-MM-yyyy") + " - Fecha Egreso: " + FechaEgreso.ToString("dd-MM-yyyy"));
             }
         }
 
