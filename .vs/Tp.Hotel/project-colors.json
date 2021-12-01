@@ -15,7 +15,17 @@
       "ProjectGuid": "f504adfa-87e3-4405-a2cd-ca513e43e59c",
       "DisplayName": "Tp.Hotel.AccesoDatos",
       "ColorIndex": 1
+    },
+    "96e1156e-375a-4659-a4c1-becfa9bf9bdf": {
+      "ProjectGuid": "96e1156e-375a-4659-a4c1-becfa9bf9bdf",
+      "DisplayName": "Tp.Hotel.Negocio",
+      "ColorIndex": 2
+    },
+    "89f3f0fc-6ba5-4bea-8238-c72238f8eea5": {
+      "ProjectGuid": "89f3f0fc-6ba5-4bea-8238-c72238f8eea5",
+      "DisplayName": "Tp.Hotel.Entidades",
+      "ColorIndex": 3
     }
   },
-  "NextColorIndex": 2
+  "NextColorIndex": 4
 }
