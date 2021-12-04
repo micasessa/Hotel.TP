@@ -53,8 +53,7 @@ namespace Tp.Hotel.WinForms
             _cmbEstrellas.SelectedIndex = 0;
             _cmbAmenities.SelectedIndex = 0;
             cmbHoteles.SelectedIndex =0;
-
-
+            
         }
         private void Carga()
         {
@@ -94,8 +93,9 @@ namespace Tp.Hotel.WinForms
         public void CargarComboHoteles()
         {
             cmbHoteles.DataSource = null;
-            cmbHoteles.DataSource = Estrellas.GetValues(typeof(Estrellas));
-            cmbHoteles.DisplayMember = "";
+            cmbHoteles.DataSource = Enum.GetValues(typeof(EstrellasHoteles));
+            //cmbHoteles.DisplayMember = "";
+            //cmbHoteles.ValueMember = "";
            
         }
 
@@ -144,10 +144,10 @@ namespace Tp.Hotel.WinForms
         private void cmbHoteles_SelectedIndexChanged(object sender, EventArgs e)
         {
             int estrellaSelect = cmbHoteles.SelectedIndex;
-            if(cmbHoteles.SelectedIndex <=0)
+            if (cmbHoteles.SelectedIndex <= 0)
             {
-                Limpiar();
-                CargarComboHoteles();
+                //Limpiar();                
+                CargarHoteles();
                
             }
             else
