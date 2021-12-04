@@ -50,7 +50,7 @@ namespace Tp.Hotel.WinForms
         private void CargarHoteles()
         {
             cmbHabitaciones.DataSource = null;
-            cmbHabitaciones.DataSource = _HotelNeg.TraerHoteles();
+            cmbHabitaciones.DataSource = _HotelNeg.TraerHotelSeleccione();
             cmbHabitaciones.DisplayMember = "DisplayHotel";
             cmbHabitaciones.ValueMember = "id";
         }
@@ -104,7 +104,7 @@ namespace Tp.Hotel.WinForms
         }
         private List<Hotel1> ListaHoteles()
         {
-            return _HotelNeg.TraerHoteles();
+            return _HotelNeg.TraerHotelSeleccione();
         }
         private void Alta()
         {

@@ -137,3 +137,4 @@ C:\Users\Pesimista\source\repos\Hotel.TP\Tp.Hotel.WinForms\bin\Debug\Tp.Hotel.Ne
 C:\Users\Pesimista\source\repos\Hotel.TP\Tp.Hotel.WinForms\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Pesimista\source\repos\Hotel.TP\Tp.Hotel.WinForms\bin\Debug\Tp.Hotel.AccesoDatos.pdb
 C:\Users\Pesimista\source\repos\Hotel.TP\Tp.Hotel.WinForms\obj\Debug\Tp.Hotel.WinForms.csproj.CopyComplete
+C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.WinForms\obj\Debug\Tp.Hotel.WinForms.csproj.CopyComplete

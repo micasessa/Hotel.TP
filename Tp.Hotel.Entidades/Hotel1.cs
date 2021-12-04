@@ -29,7 +29,11 @@ namespace Tp.Hotel.Entidades
         public Hotel1()
         { }
 
-
+        public Hotel1(int id, string nombre)
+        {
+            _id = id;
+            _nombre = nombre;
+        }
         public Hotel1(int estrellas, string nombre, string direccion, bool amenities)
         {
             
@@ -53,7 +57,15 @@ namespace Tp.Hotel.Entidades
         {
             get
             {
-                return (Nombre + " Estrellas: " + Estrellas);
+                if (id <= 0)
+                {
+                    return Nombre;
+                }
+                else
+                {
+                    return (Nombre + " Estrellas: " + Estrellas);
+                }
+                
             }
         }
     }

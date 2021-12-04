@@ -49,4 +49,3 @@ C:\Users\Pesimista\source\repos\Hotel.TP\Tp.Hotel.Negocio\obj\Debug\Tp.Hotel.Neg
 C:\Users\Pesimista\source\repos\Hotel.TP\Tp.Hotel.Negocio\obj\Debug\Tp.Hotel.Negocio.csproj.CopyComplete
 C:\Users\Pesimista\source\repos\Hotel.TP\Tp.Hotel.Negocio\obj\Debug\Tp.Hotel.Negocio.dll
 C:\Users\Pesimista\source\repos\Hotel.TP\Tp.Hotel.Negocio\obj\Debug\Tp.Hotel.Negocio.pdb
-C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.Negocio\obj\Debug\Tp.Hotel.Negocio.csproj.CopyComplete
