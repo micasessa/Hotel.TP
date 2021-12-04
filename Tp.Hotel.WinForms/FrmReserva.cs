@@ -116,6 +116,7 @@ namespace Tp.Hotel.WinForms
                 if (operacion.IsOk)
                 {
                     MessageBox.Show("La reserva se ha registrado exitosamente");
+                    Volver();
                 }
                 else
                 {
