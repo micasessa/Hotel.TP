@@ -37,6 +37,20 @@ namespace Tp.Hotel.Negocio
             }
         }
 
+        public List<Hotel1> TraerHotelSeleccione()
+        {
+            List<Hotel1> _listaSeleccione = new List<Hotel1>();
+            _listaSeleccione.Add(new Hotel1(0, "--Seleccione--"));
+            //Hotel1 hotel;
+            foreach(Hotel1 h1 in _hotelMapper.TraerTodos())
+            {
+                //hotel = h1;
+                _listaSeleccione.Add(h1);
+            }
+
+            return _listaSeleccione;
+        }
+
         public TransactionResult AltaHotel(int estrellas, string nombre, string direccion, bool amenities) // ALTA DE HOTEL
         {
 

@@ -26,7 +26,16 @@ namespace Tp.Hotel.Negocio
 
         public List<Habitacion> TraerHabitacionesPorHotel(int hotel)
         {
-            return _habitacionMapper.Traerxhotel(hotel);
+            if (hotel == 0)
+            {
+                List <Habitacion > hab = new List<Habitacion>();
+                return hab;
+            }
+            else
+            {
+                return _habitacionMapper.Traerxhotel(hotel);
+            }
+            
         }
 
         //public List<Habitacion> TraerHabitaciones()

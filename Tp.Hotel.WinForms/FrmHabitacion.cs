@@ -50,7 +50,7 @@ namespace Tp.Hotel.WinForms
         private void CargarHoteles()
         {
             cmbHabitaciones.DataSource = null;
-            cmbHabitaciones.DataSource = _HotelNeg.TraerHoteles();
+            cmbHabitaciones.DataSource = _HotelNeg.TraerHotelSeleccione();
             cmbHabitaciones.DisplayMember = "DisplayHotel";
             cmbHabitaciones.ValueMember = "id";
         }
@@ -86,16 +86,25 @@ namespace Tp.Hotel.WinForms
         private void _btnGuardarHabitacion_Click(object sender, EventArgs e)
         {
             Alta();
-            Limpiar();
+            LimpiarLista();
         }
-       
+
+        private void LimpiarLista()
+        {
+            _txtCantidadPlazas.Clear();
+            _txtPrecio.Clear();
+            _cmbCategoria.SelectedIndex = 0;
+            _cmbCancelable.SelectedIndex = 0;
+            _lstHabitaciones.DataSource = _HabitacionNegocio.TraerHabitacionesPorHotel(((Hotel1)cmbHabitaciones.SelectedItem).id);
+        }
+
         private List<Habitacion> ListarHabitaciones(int hotelid)
         {
             return _HabitacionNegocio.TraerHabitacionesPorHotel(hotelid);
         }
         private List<Hotel1> ListaHoteles()
         {
-            return _HotelNeg.TraerHoteles();
+            return _HotelNeg.TraerHotelSeleccione();
         }
         private void Alta()
         {
