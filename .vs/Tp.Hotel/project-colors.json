@@ -20,12 +20,7 @@
       "ProjectGuid": "96e1156e-375a-4659-a4c1-becfa9bf9bdf",
       "DisplayName": "Tp.Hotel.Negocio",
       "ColorIndex": 2
-    },
-    "89f3f0fc-6ba5-4bea-8238-c72238f8eea5": {
-      "ProjectGuid": "89f3f0fc-6ba5-4bea-8238-c72238f8eea5",
-      "DisplayName": "Tp.Hotel.Entidades",
-      "ColorIndex": 3
     }
   },
-  "NextColorIndex": 4
+  "NextColorIndex": 3
 }

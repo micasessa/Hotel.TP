@@ -111,8 +111,8 @@ namespace Tp.Hotel.WinForms
             {
                 string nombre = ValidacionesForm.ValidacionesAlta(_txtNombre.Text, _lblNombre.Text);
                 string direccion = ValidacionesForm.ValidacionesAlta(_txtDireccion.Text, _lblDireccion.Text);
-               ValidacionesForm.ValidarSeleccion(_cmbAmenities.SelectedItem);
-              ValidacionesForm.ValidarSeleccion(_cmbEstrellas.SelectedItem);
+                ValidacionesForm.ValidarSeleccion(_cmbAmenities.SelectedItem);
+                ValidacionesForm.ValidarSeleccion(_cmbEstrellas.SelectedItem);
                 Estrellas EstrellaSelect= (Estrellas)_cmbEstrellas.SelectedItem;
                 Booleano AmenitieSelect = (Booleano)_cmbAmenities.SelectedItem;
                 int estrellas = (int)EstrellaSelect;

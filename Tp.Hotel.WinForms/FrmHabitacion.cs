@@ -50,7 +50,7 @@ namespace Tp.Hotel.WinForms
         private void CargarHoteles()
         {
             cmbHabitaciones.DataSource = null;
-            cmbHabitaciones.DataSource = ListaHoteles();
+            cmbHabitaciones.DataSource = _HotelNeg.TraerHoteles();
             cmbHabitaciones.DisplayMember = "DisplayHotel";
             cmbHabitaciones.ValueMember = "id";
         }
@@ -58,7 +58,7 @@ namespace Tp.Hotel.WinForms
         private void CargarCategorias()
         {
             _cmbCategoria.DataSource = null;
-            _cmbCategoria.DataSource = Categorias.GetValues(typeof(Categorias));
+            _cmbCategoria.DataSource = Enum.GetValues(typeof(Categorias));
             _cmbCategoria.ValueMember = "";
         }
         private void CargarCancelable()
@@ -109,7 +109,7 @@ namespace Tp.Hotel.WinForms
                 ValidacionesForm.ValidarSeleccion(_cmbCategoria.SelectedItem);
                 ValidacionesForm.ValidarSeleccion(_cmbCancelable.SelectedItem);
                 Booleano CancelableSelect = (Booleano)_cmbCancelable.SelectedItem;
-                string categoria = _cmbCategoria.SelectedItem.ToString();
+                string categoria = ((Categorias)_cmbCategoria.SelectedItem).ToString();
                 bool cancelable = false;
                 if (CancelableSelect == Booleano.Si)
                 {
@@ -139,7 +139,7 @@ namespace Tp.Hotel.WinForms
         {
             try
             {
-                int Hotelid = (int)cmbHabitaciones.SelectedIndex;
+                int Hotelid = ((Hotel1)cmbHabitaciones.SelectedItem).id;
                 Hotel1 HotelSelec = (Hotel1)cmbHabitaciones.SelectedItem;
                 ValidacionesForm.ExisteHabitacion(ListarHabitaciones(Hotelid));
                 _lstHabitaciones.DataSource = null;
