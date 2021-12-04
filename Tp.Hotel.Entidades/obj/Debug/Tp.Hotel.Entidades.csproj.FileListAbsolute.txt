@@ -21,3 +21,4 @@ C:\Users\Pesimista\source\repos\Hotel.TP\Tp.Hotel.Entidades\obj\Debug\Tp.Hotel.E
 C:\Users\Pesimista\source\repos\Hotel.TP\Tp.Hotel.Entidades\obj\Debug\Tp.Hotel.Entidades.csproj.CoreCompileInputs.cache
 C:\Users\Pesimista\source\repos\Hotel.TP\Tp.Hotel.Entidades\obj\Debug\Tp.Hotel.Entidades.dll
 C:\Users\Pesimista\source\repos\Hotel.TP\Tp.Hotel.Entidades\obj\Debug\Tp.Hotel.Entidades.pdb
+C:\Users\Florencia\Desktop\EjerciciosCAI\Hotel.TP\Tp.Hotel.Entidades\obj\Debug\Tp.Hotel.Entidades.csproj.AssemblyReference.cache

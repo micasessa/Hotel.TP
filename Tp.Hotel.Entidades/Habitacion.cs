@@ -19,7 +19,7 @@ namespace Tp.Hotel.Entidades
         private double _precio;
         private bool _cancelable;
         private int _usuario;
-        private Hotel1 _Hotel;
+        //private Hotel1 _Hotel;
         
        
         //Creacion de propiedades
@@ -61,7 +61,7 @@ namespace Tp.Hotel.Entidades
             get {  return (" Cantidad de plazas: "+ CantidadPlazas + " Categoría: "+ Categoria + " Precio: $" + Precio); }
         }
 
-        public Hotel1 Hotel { get => Hotel1; set => Hotel1 = value; }
-        public Hotel1 Hotel1 { get => _Hotel; set => _Hotel = value; }
+        //public Hotel1 Hotel { get => Hotel1; set => Hotel1 = value; }
+        //public Hotel1 Hotel1 { get => _Hotel; set => _Hotel = value; }
     }
 }
