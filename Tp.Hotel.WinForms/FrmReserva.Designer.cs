@@ -234,6 +234,7 @@ namespace Tp.Hotel.WinForms
             // 
             // cmbReserva
             // 
+            this.cmbReserva.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbReserva.FormattingEnabled = true;
             this.cmbReserva.Location = new System.Drawing.Point(268, 157);
             this.cmbReserva.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
