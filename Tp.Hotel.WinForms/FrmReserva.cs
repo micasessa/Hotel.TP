@@ -113,9 +113,10 @@ namespace Tp.Hotel.WinForms
                 DateTime fechaegreso = ValidacionesForm.ValidacionFecha(egreso);
                 Cliente ClienteSel = (Cliente)lstClientes.SelectedItem;                
                 TransactionResult operacion = _ReservaNegocio.AltaReserva(IdHabitacion,ClienteSel.id, canthuespedes, fechaingreso, fechaegreso);
-                    if (operacion.IsOk)
+                if (operacion.IsOk)
                 {
                     MessageBox.Show("La reserva se ha registrado exitosamente");
+                    Volver();
                 }
                 else
                 {
@@ -134,7 +135,7 @@ namespace Tp.Hotel.WinForms
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             Alta();
-            Volver();
+            //Volver();
         }
     }
 }

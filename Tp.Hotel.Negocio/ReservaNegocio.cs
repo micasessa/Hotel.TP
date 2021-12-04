@@ -112,18 +112,67 @@ namespace Tp.Hotel.Negocio
 
         public TransactionResult AltaReserva (int idHabitacion, int idCliente, int cantidadHuespedes, DateTime fechaIngreso, DateTime fechaEgreso) // ALTA DE RESERVA
         {
-
-            Reserva reserva = new Reserva(idHabitacion, idCliente, cantidadHuespedes, fechaIngreso, fechaEgreso);
-            TransactionResult resultado = _reservaMapper.Agregar(reserva);
-            if (resultado.IsOk == false)
+            if(ValidacionFechaIngreso(fechaIngreso) == false)
             {
-                throw new Exception("No se pudo realizar la registración de la reserva.");
+                throw new Exception("La fecha de ingreso debe ser superior o igual al día de hoy");
             }
             else
             {
-                return resultado;
+                if(ValidacionFechaEgreso(fechaIngreso, fechaEgreso) == false)
+                {
+                    throw new Exception("La estadía mínima es de 1 noche");
+                }
+                else
+                {
+                    Reserva reserva = new Reserva(idHabitacion, idCliente, cantidadHuespedes, fechaIngreso, fechaEgreso);
+                    TransactionResult resultado = _reservaMapper.Agregar(reserva);
+                    if (resultado.IsOk == false)
+                    {
+                        throw new Exception("No se pudo realizar la registración de la reserva.");
+                    }
+                    else
+                    {
+                        return resultado;
+                    }
+                }
             }
+           
         }
+
+        public bool ValidacionFechaIngreso(DateTime fechaIngreso)
+        {
+            bool valor;
+            if(fechaIngreso < DateTime.Today)
+            {
+                valor = false;
+            }
+            else
+            {
+                valor = true;
+            }
+
+            return valor;
+        }
+
+        public bool ValidacionFechaEgreso(DateTime fechaIngreso, DateTime fechaEgreso)
+        {
+            bool valor;
+            if (fechaEgreso <= fechaIngreso)
+            {
+                valor = false; 
+               
+            }
+            else
+            {
+                valor = true;
+            }
+
+            return valor;
+        }
+
+
+
+
 
 
 

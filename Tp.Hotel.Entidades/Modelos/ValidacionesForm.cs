@@ -63,6 +63,14 @@ namespace Tp.Hotel.Entidades.Modelos
                 throw new Exception("Aún no hay habitaciones ingresadas");
             }
         }
+
+
+
+
+
+
+
+
     }
 }
 
