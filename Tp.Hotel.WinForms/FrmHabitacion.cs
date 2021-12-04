@@ -86,9 +86,18 @@ namespace Tp.Hotel.WinForms
         private void _btnGuardarHabitacion_Click(object sender, EventArgs e)
         {
             Alta();
-            Limpiar();
+            LimpiarLista();
         }
-       
+
+        private void LimpiarLista()
+        {
+            _txtCantidadPlazas.Clear();
+            _txtPrecio.Clear();
+            _cmbCategoria.SelectedIndex = 0;
+            _cmbCancelable.SelectedIndex = 0;
+            _lstHabitaciones.DataSource = _HabitacionNegocio.TraerHabitacionesPorHotel(((Hotel1)cmbHabitaciones.SelectedItem).id);
+        }
+
         private List<Habitacion> ListarHabitaciones(int hotelid)
         {
             return _HabitacionNegocio.TraerHabitacionesPorHotel(hotelid);
