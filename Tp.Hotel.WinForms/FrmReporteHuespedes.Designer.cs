@@ -90,6 +90,7 @@
             // 
             // cboxSelecReserva
             // 
+            this.cboxSelecReserva.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxSelecReserva.FormattingEnabled = true;
             this.cboxSelecReserva.Location = new System.Drawing.Point(220, 55);
             this.cboxSelecReserva.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -106,7 +107,6 @@
             this._lblRepoSeleccioneReserva.Size = new System.Drawing.Size(150, 20);
             this._lblRepoSeleccioneReserva.TabIndex = 14;
             this._lblRepoSeleccioneReserva.Text = "Seleccione Reserva";
-            
             // 
             // FrmReporteHuespedes
             // 
