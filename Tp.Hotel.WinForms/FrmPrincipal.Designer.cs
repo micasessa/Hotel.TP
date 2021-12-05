@@ -89,7 +89,7 @@ namespace Tp.Hotel.WinForms
             this._btnCliente.Location = new System.Drawing.Point(55, 17);
             this._btnCliente.Name = "_btnCliente";
             this._btnCliente.Size = new System.Drawing.Size(210, 35);
-            this._btnCliente.TabIndex = 3;
+            this._btnCliente.TabIndex = 1;
             this._btnCliente.Text = "Cliente";
             this._btnCliente.UseVisualStyleBackColor = true;
             this._btnCliente.Click += new System.EventHandler(this._btnCliente_Click);
@@ -109,7 +109,7 @@ namespace Tp.Hotel.WinForms
             this._btnReserva.Location = new System.Drawing.Point(55, 19);
             this._btnReserva.Name = "_btnReserva";
             this._btnReserva.Size = new System.Drawing.Size(210, 35);
-            this._btnReserva.TabIndex = 9;
+            this._btnReserva.TabIndex = 2;
             this._btnReserva.Text = "Reserva";
             this._btnReserva.UseVisualStyleBackColor = true;
             this._btnReserva.Click += new System.EventHandler(this._btnReserva_Click);
@@ -129,7 +129,7 @@ namespace Tp.Hotel.WinForms
             this._btnHoteles.Location = new System.Drawing.Point(55, 18);
             this._btnHoteles.Name = "_btnHoteles";
             this._btnHoteles.Size = new System.Drawing.Size(210, 35);
-            this._btnHoteles.TabIndex = 10;
+            this._btnHoteles.TabIndex = 3;
             this._btnHoteles.Text = "Hoteles";
             this._btnHoteles.UseVisualStyleBackColor = true;
             this._btnHoteles.Click += new System.EventHandler(this._btnHoteles_Click);
@@ -149,7 +149,7 @@ namespace Tp.Hotel.WinForms
             this._btnHabitaciones.Location = new System.Drawing.Point(57, 17);
             this._btnHabitaciones.Name = "_btnHabitaciones";
             this._btnHabitaciones.Size = new System.Drawing.Size(210, 35);
-            this._btnHabitaciones.TabIndex = 11;
+            this._btnHabitaciones.TabIndex = 4;
             this._btnHabitaciones.Text = "Habitaciones";
             this._btnHabitaciones.UseVisualStyleBackColor = true;
             this._btnHabitaciones.Click += new System.EventHandler(this._btnHabitaciones_Click);
@@ -160,7 +160,7 @@ namespace Tp.Hotel.WinForms
             this._btnReporteHabitaciones.Location = new System.Drawing.Point(47, 101);
             this._btnReporteHabitaciones.Name = "_btnReporteHabitaciones";
             this._btnReporteHabitaciones.Size = new System.Drawing.Size(300, 35);
-            this._btnReporteHabitaciones.TabIndex = 15;
+            this._btnReporteHabitaciones.TabIndex = 6;
             this._btnReporteHabitaciones.Text = "Habitaciones por Hotel";
             this._btnReporteHabitaciones.UseVisualStyleBackColor = true;
             this._btnReporteHabitaciones.Click += new System.EventHandler(this._btnReporteHabitaciones_Click);
@@ -171,7 +171,7 @@ namespace Tp.Hotel.WinForms
             this._btnReporteReservas.Location = new System.Drawing.Point(47, 44);
             this._btnReporteReservas.Name = "_btnReporteReservas";
             this._btnReporteReservas.Size = new System.Drawing.Size(300, 35);
-            this._btnReporteReservas.TabIndex = 14;
+            this._btnReporteReservas.TabIndex = 5;
             this._btnReporteReservas.Text = "Reservas por Cliente";
             this._btnReporteReservas.UseVisualStyleBackColor = true;
             this._btnReporteReservas.Click += new System.EventHandler(this._btnReporteReservas_Click);
@@ -194,7 +194,7 @@ namespace Tp.Hotel.WinForms
             this._btnHuespedesReserva.Location = new System.Drawing.Point(42, 157);
             this._btnHuespedesReserva.Name = "_btnHuespedesReserva";
             this._btnHuespedesReserva.Size = new System.Drawing.Size(300, 35);
-            this._btnHuespedesReserva.TabIndex = 16;
+            this._btnHuespedesReserva.TabIndex = 7;
             this._btnHuespedesReserva.Text = "Huespedes por Reserva";
             this._btnHuespedesReserva.UseVisualStyleBackColor = true;
             this._btnHuespedesReserva.Click += new System.EventHandler(this._btnHuespedesReserva_Click);
