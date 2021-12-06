@@ -47,6 +47,12 @@ namespace Tp.Hotel.WinForms
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cmbReserva = new System.Windows.Forms.ComboBox();
+            this._lblHotelSeleccionado = new System.Windows.Forms.Label();
+            this._lblHabitacionSeleccionada = new System.Windows.Forms.Label();
+            this._lblClienteSeleccionado = new System.Windows.Forms.Label();
+            this._txtHotelSeleccionado = new System.Windows.Forms.TextBox();
+            this._txtHabitacionSeleccionada = new System.Windows.Forms.TextBox();
+            this._txtClienteSeleccionado = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblDatosReserva
@@ -63,7 +69,7 @@ namespace Tp.Hotel.WinForms
             // txtFechaIngreso
             // 
             this.txtFechaIngreso.Location = new System.Drawing.Point(712, 214);
-            this.txtFechaIngreso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFechaIngreso.Margin = new System.Windows.Forms.Padding(4);
             this.txtFechaIngreso.Name = "txtFechaIngreso";
             this.txtFechaIngreso.Size = new System.Drawing.Size(132, 22);
             this.txtFechaIngreso.TabIndex = 4;
@@ -71,7 +77,7 @@ namespace Tp.Hotel.WinForms
             // txtHuespedes
             // 
             this.txtHuespedes.Location = new System.Drawing.Point(712, 322);
-            this.txtHuespedes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtHuespedes.Margin = new System.Windows.Forms.Padding(4);
             this.txtHuespedes.Name = "txtHuespedes";
             this.txtHuespedes.Size = new System.Drawing.Size(132, 22);
             this.txtHuespedes.TabIndex = 6;
@@ -79,7 +85,7 @@ namespace Tp.Hotel.WinForms
             // txtFechaEgreso
             // 
             this.txtFechaEgreso.Location = new System.Drawing.Point(712, 265);
-            this.txtFechaEgreso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFechaEgreso.Margin = new System.Windows.Forms.Padding(4);
             this.txtFechaEgreso.Name = "txtFechaEgreso";
             this.txtFechaEgreso.Size = new System.Drawing.Size(132, 22);
             this.txtFechaEgreso.TabIndex = 5;
@@ -122,7 +128,7 @@ namespace Tp.Hotel.WinForms
             this.btnGuardar.BackColor = System.Drawing.Color.BlueViolet;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Location = new System.Drawing.Point(744, 403);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(100, 62);
             this.btnGuardar.TabIndex = 7;
@@ -135,7 +141,7 @@ namespace Tp.Hotel.WinForms
             this.btnLimpiar.BackColor = System.Drawing.Color.BlueViolet;
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.Location = new System.Drawing.Point(476, 403);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(100, 62);
             this.btnLimpiar.TabIndex = 8;
@@ -147,11 +153,11 @@ namespace Tp.Hotel.WinForms
             // 
             this.btnVolver.BackColor = System.Drawing.Color.BlueViolet;
             this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.Location = new System.Drawing.Point(309, 403);
-            this.btnVolver.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnVolver.Location = new System.Drawing.Point(1393, 403);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(4);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(100, 62);
-            this.btnVolver.TabIndex = 9;
+            this.btnVolver.TabIndex = 12;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
@@ -161,7 +167,7 @@ namespace Tp.Hotel.WinForms
             this.btnCargarCliente.BackColor = System.Drawing.Color.BlueViolet;
             this.btnCargarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCargarCliente.Location = new System.Drawing.Point(32, 403);
-            this.btnCargarCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCargarCliente.Margin = new System.Windows.Forms.Padding(4);
             this.btnCargarCliente.Name = "btnCargarCliente";
             this.btnCargarCliente.Size = new System.Drawing.Size(116, 62);
             this.btnCargarCliente.TabIndex = 2;
@@ -173,7 +179,7 @@ namespace Tp.Hotel.WinForms
             // 
             this.txtNroReserva.Enabled = false;
             this.txtNroReserva.Location = new System.Drawing.Point(712, 162);
-            this.txtNroReserva.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNroReserva.Margin = new System.Windows.Forms.Padding(4);
             this.txtNroReserva.Name = "txtNroReserva";
             this.txtNroReserva.Size = new System.Drawing.Size(132, 22);
             this.txtNroReserva.TabIndex = 3;
@@ -194,10 +200,11 @@ namespace Tp.Hotel.WinForms
             this.lstClientes.FormattingEnabled = true;
             this.lstClientes.ItemHeight = 16;
             this.lstClientes.Location = new System.Drawing.Point(32, 163);
-            this.lstClientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lstClientes.Margin = new System.Windows.Forms.Padding(4);
             this.lstClientes.Name = "lstClientes";
             this.lstClientes.Size = new System.Drawing.Size(377, 212);
             this.lstClientes.TabIndex = 1;
+            this.lstClientes.SelectedIndexChanged += new System.EventHandler(this.lstClientes_SelectedIndexChanged);
             // 
             // lblDatosCliente
             // 
@@ -237,17 +244,86 @@ namespace Tp.Hotel.WinForms
             this.cmbReserva.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbReserva.FormattingEnabled = true;
             this.cmbReserva.Location = new System.Drawing.Point(238, 126);
-            this.cmbReserva.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbReserva.Margin = new System.Windows.Forms.Padding(4);
             this.cmbReserva.Name = "cmbReserva";
             this.cmbReserva.Size = new System.Drawing.Size(171, 24);
             this.cmbReserva.TabIndex = 0;
+            // 
+            // _lblHotelSeleccionado
+            // 
+            this._lblHotelSeleccionado.AutoSize = true;
+            this._lblHotelSeleccionado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblHotelSeleccionado.Location = new System.Drawing.Point(902, 164);
+            this._lblHotelSeleccionado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this._lblHotelSeleccionado.Name = "_lblHotelSeleccionado";
+            this._lblHotelSeleccionado.Size = new System.Drawing.Size(54, 20);
+            this._lblHotelSeleccionado.TabIndex = 45;
+            this._lblHotelSeleccionado.Text = "Hotel ";
+            // 
+            // _lblHabitacionSeleccionada
+            // 
+            this._lblHabitacionSeleccionada.AutoSize = true;
+            this._lblHabitacionSeleccionada.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblHabitacionSeleccionada.Location = new System.Drawing.Point(902, 216);
+            this._lblHabitacionSeleccionada.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this._lblHabitacionSeleccionada.Name = "_lblHabitacionSeleccionada";
+            this._lblHabitacionSeleccionada.Size = new System.Drawing.Size(89, 20);
+            this._lblHabitacionSeleccionada.TabIndex = 46;
+            this._lblHabitacionSeleccionada.Text = "Habitación";
+            // 
+            // _lblClienteSeleccionado
+            // 
+            this._lblClienteSeleccionado.AutoSize = true;
+            this._lblClienteSeleccionado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblClienteSeleccionado.Location = new System.Drawing.Point(902, 267);
+            this._lblClienteSeleccionado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this._lblClienteSeleccionado.Name = "_lblClienteSeleccionado";
+            this._lblClienteSeleccionado.Size = new System.Drawing.Size(66, 20);
+            this._lblClienteSeleccionado.TabIndex = 47;
+            this._lblClienteSeleccionado.Text = "Cliente ";
+            // 
+            // _txtHotelSeleccionado
+            // 
+            this._txtHotelSeleccionado.Enabled = false;
+            this._txtHotelSeleccionado.Location = new System.Drawing.Point(1012, 164);
+            this._txtHotelSeleccionado.Margin = new System.Windows.Forms.Padding(4);
+            this._txtHotelSeleccionado.Name = "_txtHotelSeleccionado";
+            this._txtHotelSeleccionado.ReadOnly = true;
+            this._txtHotelSeleccionado.Size = new System.Drawing.Size(481, 22);
+            this._txtHotelSeleccionado.TabIndex = 9;
+            // 
+            // _txtHabitacionSeleccionada
+            // 
+            this._txtHabitacionSeleccionada.Enabled = false;
+            this._txtHabitacionSeleccionada.Location = new System.Drawing.Point(1012, 216);
+            this._txtHabitacionSeleccionada.Margin = new System.Windows.Forms.Padding(4);
+            this._txtHabitacionSeleccionada.Name = "_txtHabitacionSeleccionada";
+            this._txtHabitacionSeleccionada.ReadOnly = true;
+            this._txtHabitacionSeleccionada.Size = new System.Drawing.Size(481, 22);
+            this._txtHabitacionSeleccionada.TabIndex = 10;
+            // 
+            // _txtClienteSeleccionado
+            // 
+            this._txtClienteSeleccionado.Enabled = false;
+            this._txtClienteSeleccionado.Location = new System.Drawing.Point(1012, 267);
+            this._txtClienteSeleccionado.Margin = new System.Windows.Forms.Padding(4);
+            this._txtClienteSeleccionado.Name = "_txtClienteSeleccionado";
+            this._txtClienteSeleccionado.ReadOnly = true;
+            this._txtClienteSeleccionado.Size = new System.Drawing.Size(481, 22);
+            this._txtClienteSeleccionado.TabIndex = 11;
             // 
             // FrmReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumPurple;
-            this.ClientSize = new System.Drawing.Size(1319, 523);
+            this.ClientSize = new System.Drawing.Size(1532, 523);
+            this.Controls.Add(this._txtClienteSeleccionado);
+            this.Controls.Add(this._txtHabitacionSeleccionada);
+            this.Controls.Add(this._txtHotelSeleccionado);
+            this.Controls.Add(this._lblClienteSeleccionado);
+            this.Controls.Add(this._lblHabitacionSeleccionada);
+            this.Controls.Add(this._lblHotelSeleccionado);
             this.Controls.Add(this.cmbReserva);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -266,7 +342,7 @@ namespace Tp.Hotel.WinForms
             this.Controls.Add(this.lblHuespedes);
             this.Controls.Add(this.lblFechaEgreso);
             this.Controls.Add(this.lblFechaIngreso);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmReserva";
             this.Text = "Reserva";
             this.Load += new System.EventHandler(this.lstClientes_Load);
@@ -294,5 +370,11 @@ namespace Tp.Hotel.WinForms
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbReserva;
+        private System.Windows.Forms.Label _lblHotelSeleccionado;
+        private System.Windows.Forms.Label _lblHabitacionSeleccionada;
+        private System.Windows.Forms.Label _lblClienteSeleccionado;
+        private System.Windows.Forms.TextBox _txtHotelSeleccionado;
+        private System.Windows.Forms.TextBox _txtHabitacionSeleccionada;
+        private System.Windows.Forms.TextBox _txtClienteSeleccionado;
     }
 }

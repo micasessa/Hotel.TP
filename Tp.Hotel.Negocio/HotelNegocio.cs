@@ -40,6 +40,36 @@ namespace Tp.Hotel.Negocio
             }
         }
 
+
+        public Hotel1 TraerHotelxId(int id) ///LISTA DE HOTELES
+        {
+            //list.Find(x => x.GetId() == "xy")
+            //Hotel1 hot = _hotelMapper.TraerTodos().Find(x => x.id == id);
+            Hotel1 hot = new Hotel1();
+            foreach (Hotel1 hotel in _hotelMapper.TraerTodos())
+            {
+                if (hotel.id == id)
+                {
+                    hot = hotel;
+                    break;
+                }
+            }
+
+
+            if (hot == null)
+            {
+                throw new Exception("Hotel no encontrado");
+            }
+            else
+            {
+                return hot;
+            }
+            
+
+        }
+
+
+
         public List<Hotel1> TraerHotelSeleccione()
         {
             List<Hotel1> _listaSeleccione = new List<Hotel1>();
