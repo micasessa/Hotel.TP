@@ -45,6 +45,7 @@
     <Compile Include="Enum\Categorias.cs" />
     <Compile Include="Enum\EstrellasHoteles.cs" />
     <Compile Include="Exceptions\DniRepetidoException.cs" />
+    <Compile Include="Exceptions\NombreRepetidoException.cs" />
     <Compile Include="Habitacion.cs" />
     <Compile Include="Hotel1.cs" />
     <Compile Include="Enum\Estrellas.cs" />
