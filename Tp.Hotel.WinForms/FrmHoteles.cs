@@ -38,8 +38,7 @@ namespace Tp.Hotel.WinForms
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             Alta();
-            Limpiar();
-            Carga();
+
         }
         private void _btnLimpiarHabitacion_Click(object sender, EventArgs e)
         {
@@ -126,6 +125,8 @@ namespace Tp.Hotel.WinForms
                 if (operacion.IsOk)
                 {
                     MessageBox.Show("El hotel ha sido registrado exitosamente");
+                    Limpiar();
+                    Carga();
                 }
                 else
                 {

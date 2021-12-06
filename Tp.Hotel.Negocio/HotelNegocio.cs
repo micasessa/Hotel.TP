@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 using Tp.Hotel.AccesoDatos;
 using Tp.Hotel.Entidades;
 using Tp.Hotel.Entidades.Modelos;
+using Tp.Hotel.Entidades.Exceptions;
+
+
 
 namespace Tp.Hotel.Negocio
 {
@@ -53,17 +56,25 @@ namespace Tp.Hotel.Negocio
 
         public TransactionResult AltaHotel(int estrellas, string nombre, string direccion, bool amenities) // ALTA DE HOTEL
         {
+            if (ValidarNombreHotel(nombre) == true) // SI ENCUENTRA NOMBRE REPETIDO TIRAR EXCEPTION
+            {
+                throw new NombreRepetidoException(nombre);
+            }
+            else//SINO, QUE PASE EL ALTA
+            {
+                Hotel1 hotel = new Hotel1(estrellas, nombre, direccion, amenities);
+                TransactionResult resultado = _hotelMapper.Agregar(hotel);
+                if (resultado.IsOk == false)
+                {
+                    throw new Exception("No se pudo realizar el Alta del Hotel.");
+                }
+                else
+                {
+                    return resultado;
+                }
+            }
 
-            Hotel1 hotel = new Hotel1(estrellas, nombre, direccion, amenities);
-            TransactionResult resultado = _hotelMapper.Agregar(hotel);
-            if (resultado.IsOk == false)
-            {
-                throw new Exception("No se pudo realizar el Alta del Hotel.");
-            }
-            else
-            {
-                return resultado;
-            }
+                
         }
         public List<Hotel1> HotelesxEstrellas(int Estrellas)
         {
@@ -77,6 +88,26 @@ namespace Tp.Hotel.Negocio
                 }
             }
             return _Hoteles;
+        }
+
+
+        public bool ValidarNombreHotel(string nombre)
+        {
+            bool valor = false;
+            foreach (Hotel1 hotel in _hotelMapper.TraerTodos())
+            {
+                if (hotel.Nombre.ToUpper() == nombre.ToUpper())
+                {
+                    valor = true;
+                    break;
+
+                }
+                else
+                {
+                    valor = false;
+                }
+            }
+            return valor;
         }
 
 
