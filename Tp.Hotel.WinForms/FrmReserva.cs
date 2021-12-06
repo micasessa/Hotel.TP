@@ -21,6 +21,8 @@ namespace Tp.Hotel.WinForms
         private ReservaNegocio _ReservaNegocio;
         private Habitacion _Habitacion;
         private int _idHabitacion;
+        private Hotel1 _hotel;
+        private HotelNegocio _HotelNegocio;
 
         public int IdHabitacion { get => _idHabitacion; set => _idHabitacion = value; }
 
@@ -30,8 +32,10 @@ namespace Tp.Hotel.WinForms
             this.Owner = main;
             _ClienteNegocio = new ClienteNegocio();
             _ReservaNegocio = new ReservaNegocio();
+            _HotelNegocio = new HotelNegocio();
             _Habitacion = habitacion;
             IdHabitacion = idHabitacion;
+            
         }
 
 
@@ -58,6 +62,9 @@ namespace Tp.Hotel.WinForms
             txtFechaIngreso.Clear();
             txtFechaEgreso.Clear();
             txtHuespedes.Clear();
+            _txtClienteSeleccionado.Clear();
+            _txtHabitacionSeleccionada.Clear();
+            _txtHotelSeleccionado.Clear();
         }
 
         private void btnCargarCliente_Click(object sender, EventArgs e)
@@ -69,7 +76,18 @@ namespace Tp.Hotel.WinForms
 
         private void lstClientes_Load(object sender, EventArgs e)
         {
-            Carga();
+            try
+            {
+                Carga();
+                _txtHabitacionSeleccionada.Text = _Habitacion.DisplayHabitacion;
+                _txtHotelSeleccionado.Text = _HotelNegocio.TraerHotelxId(_Habitacion.IdHotel).DisplayHotel;
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void Carga()
@@ -80,6 +98,7 @@ namespace Tp.Hotel.WinForms
             lstClientes.ValueMember = "id";
 
             CargaIdReserva();
+            _txtClienteSeleccionado.Text = ((Cliente)lstClientes.SelectedItem).DisplayCliente;
         }
 
         private void CargaIdReserva()
@@ -136,6 +155,11 @@ namespace Tp.Hotel.WinForms
         {
             Alta();
             //Volver();
+        }
+
+        private void lstClientes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            _txtClienteSeleccionado.Text = ((Cliente)lstClientes.SelectedItem).DisplayCliente;
         }
     }
 }

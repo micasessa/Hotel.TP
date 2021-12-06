@@ -39,6 +39,28 @@ namespace Tp.Hotel.AccesoDatos
             return lst;
         }
 
+        //private Hotel1 Map(string json)
+        //{
+        //    List<Hotel1> lista = TraerTodos();
+        //    Hotel1 hot = JsonConvert.DeserializeObject<Hotel1>(json);
+        //    return hot;
+        //}
+
+
+        //public Hotel1 TraerHotelPorId(int id)
+        //{
+        //    //CREAR CODIGO!
+            
+        //    string json2 = WebHelper.Get("Hotel/Hoteles/836465"); //FALTA COMPLETAR TEMA USUARIO/IdHOtel
+        //    Hotel1 hotel = Map(json2);
+
+
+
+
+
+        //    return hotel;
+        //}
+
         private NameValueCollection ReverseMap(Hotel1 hotel)
         {
             NameValueCollection hot = new NameValueCollection();
