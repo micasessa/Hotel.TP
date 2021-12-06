@@ -97,11 +97,20 @@ namespace Tp.Hotel.WinForms
 
         private void btnSeleccionar_click(object sender, EventArgs e)
         {
-            int idHabitacion = _lstHoteles.SelectedIndex;
-            Habitacion habitacionSelec = (Habitacion)_lstHoteles.SelectedItem;
-            FrmReserva Res = new FrmReserva(this.Owner, idHabitacion, habitacionSelec);
-            this.Hide();
-            Res.Show();
+            try
+            {
+                ValidacionesForm.ValidarSeleccion(_lstHoteles.SelectedItem);
+                int idHabitacion = _lstHoteles.SelectedIndex;
+                Habitacion habitacionSelec = (Habitacion)_lstHoteles.SelectedItem;
+                FrmReserva Res = new FrmReserva(this.Owner, idHabitacion, habitacionSelec);
+                this.Hide();
+                Res.Show();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
         }
 
 
