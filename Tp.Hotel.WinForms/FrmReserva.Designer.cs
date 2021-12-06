@@ -238,6 +238,7 @@ namespace Tp.Hotel.WinForms
             this.label2.Size = new System.Drawing.Size(209, 20);
             this.label2.TabIndex = 44;
             this.label2.Text = "Filtrar por numero reserva:";
+            this.label2.Visible = false;
             // 
             // cmbReserva
             // 
@@ -248,6 +249,8 @@ namespace Tp.Hotel.WinForms
             this.cmbReserva.Name = "cmbReserva";
             this.cmbReserva.Size = new System.Drawing.Size(171, 24);
             this.cmbReserva.TabIndex = 0;
+            this.cmbReserva.Visible = false;
+            //this.cmbReserva.SelectedIndexChanged += new System.EventHandler(this.cmbReserva_SelectedIndexChanged);
             // 
             // _lblHotelSeleccionado
             // 

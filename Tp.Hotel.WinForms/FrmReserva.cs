@@ -69,7 +69,7 @@ namespace Tp.Hotel.WinForms
 
         private void btnCargarCliente_Click(object sender, EventArgs e)
         {
-            FrmClientes FormClientes = new FrmClientes(this.Owner);
+            FrmClientes FormClientes = new FrmClientes(this);
             this.Hide();
             FormClientes.Show();
         }
@@ -104,7 +104,8 @@ namespace Tp.Hotel.WinForms
         private void CargaIdReserva()
         {
             cmbReserva.DataSource = null;
-           // cmbReserva.DataSource = ListaReservas();
+            // cmbReserva.DataSource = ListaReservas();
+            //cmbReserva.DataSource = _ReservaNegocio.TraerReservas();
             cmbReserva.DisplayMember = "DisplayReserva";
             cmbReserva.ValueMember = "id";
 
@@ -161,5 +162,18 @@ namespace Tp.Hotel.WinForms
         {
             _txtClienteSeleccionado.Text = ((Cliente)lstClientes.SelectedItem).DisplayCliente;
         }
+
+        //private void cmbReserva_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        lstClientes.DataSource = _ReservaNegocio.TraerClientexReserva(((Reserva)cmbReserva.SelectedItem).IdCliente);
+        //    }
+        //    catch (Exception ex)
+        //    {
+
+        //        MessageBox.Show(ex.Message);
+        //    }
+        //}
     }
 }
