@@ -37,8 +37,8 @@ namespace Tp.Hotel.WinForms
         }
     private void Limpiar()
         {
-            _cbxSelecHotel.Text = "Seleccione";
-            _lstHabitaciones.Text = "Seleccione";
+            _cbxSelecHotel.SelectedIndex = 0;
+            _lstHabitaciones.DataSource = null;
             _txtBoxTotalHabitaciones.Clear();
         
         }
@@ -46,7 +46,7 @@ namespace Tp.Hotel.WinForms
         private void Carga()
         {
             _cbxSelecHotel.DataSource = null;
-            _cbxSelecHotel.DataSource = _HotelNegocio.TraerHoteles();
+            _cbxSelecHotel.DataSource = _HotelNegocio.TraerHotelSeleccione();
             _cbxSelecHotel.DisplayMember = "DisplayHotel";
             _cbxSelecHotel.ValueMember = "id";
         }

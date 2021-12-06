@@ -43,7 +43,7 @@ namespace Tp.Hotel.WinForms
         private void Carga()
         {
             cmbHoteles.DataSource = null;
-            cmbHoteles.DataSource = ListaHoteles();
+            cmbHoteles.DataSource = _HotelNeg.TraerHotelSeleccione();
             cmbHoteles.DisplayMember = "DisplayHotel";
             cmbHoteles.ValueMember = "id";
         }
@@ -62,7 +62,8 @@ namespace Tp.Hotel.WinForms
 
         private void Limpiar()
         {
-            cmbHoteles.Text = "Seleccione";           
+            cmbHoteles.SelectedIndex = 0;
+            _lstHoteles.DataSource = null;
         }
 
 
@@ -81,7 +82,7 @@ namespace Tp.Hotel.WinForms
         {
             try
             {
-                int Hotelid = (int)cmbHoteles.SelectedIndex;
+                int Hotelid = ((Hotel1)cmbHoteles.SelectedItem).id;
                 Hotel1 HotelSelec = (Hotel1)cmbHoteles.SelectedItem;
                 ValidacionesForm.ExisteHabitacion(_HabitacionNegocio.TraerHabitacionesPorHotel(Hotelid));
                 CargaHotelesxid(Hotelid);
@@ -102,6 +103,11 @@ namespace Tp.Hotel.WinForms
             this.Hide();
             Res.Show();
         }
+
+
+
+
+
     }
 }
 
