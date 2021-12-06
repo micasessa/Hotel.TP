@@ -63,10 +63,28 @@ namespace Tp.Hotel.Entidades
                 }
                 else
                 {
-                    return (Nombre + " Estrellas: " + Estrellas);
+                    return (Nombre + "- Estrellas: " + Estrellas + " - Amenities: " + TieneAmenities());
                 }
                 
             }
         }
+
+
+
+
+        public string TieneAmenities()
+        {
+            if (_amenities == true)
+            {
+                return "SI";
+            }
+            else
+            {
+                return "NO";
+            }
+        }
+
+
+
     }
 }

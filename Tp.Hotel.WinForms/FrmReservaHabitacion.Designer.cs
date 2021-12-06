@@ -53,9 +53,9 @@ namespace Tp.Hotel.WinForms
             this.cmbHoteles.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbHoteles.FormattingEnabled = true;
             this.cmbHoteles.Location = new System.Drawing.Point(35, 98);
-            this.cmbHoteles.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbHoteles.Margin = new System.Windows.Forms.Padding(4);
             this.cmbHoteles.Name = "cmbHoteles";
-            this.cmbHoteles.Size = new System.Drawing.Size(257, 24);
+            this.cmbHoteles.Size = new System.Drawing.Size(426, 24);
             this.cmbHoteles.TabIndex = 0;
             this.cmbHoteles.DropDownClosed += new System.EventHandler(this.cmbHabitaciones_Select);
             // 
@@ -131,7 +131,7 @@ namespace Tp.Hotel.WinForms
             this.Controls.Add(this.lblFiltrar);
             this.Controls.Add(this.lblHabitaciones);
             this.Controls.Add(this._btnVolver);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmReservaHabitacion";
             this.Text = "ReservaHabitacion";
             this.Load += new System.EventHandler(this.FrmReservaHabitacion_Load);
