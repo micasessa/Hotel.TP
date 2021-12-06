@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Tp.Hotel.Entidades;
 using Tp.Hotel.AccesoDatos;
 using Tp.Hotel.Entidades.Modelos;
+using Tp.Hotel.Entidades.Exceptions;
 
 namespace Tp.Hotel.Negocio
 {
@@ -39,20 +40,45 @@ namespace Tp.Hotel.Negocio
 
         public TransactionResult AltaCliente(int dni, string nombre, string apellido, string direccion,string email, string telefono, DateTime fechaNacimiento) //ALTA DE CLIENTE
         {
-            Cliente cliente = new Cliente(dni, nombre, apellido, direccion, email, telefono, fechaNacimiento);
-
-            TransactionResult resultado = _clienteMapper.Agregar(cliente);
-            if (resultado.IsOk == false)
+            if(ValidarDniRepetido(dni) == true) // SI ENCUENTRA DNI REPETIDO TIRAR EXCEPTION
             {
-                throw new Exception("No se pudo realizar el Alta del Cliente.");
-                }
-            else
-            {
-                return resultado;
+                throw new DniRepetidoException(dni);
             }
+            else//SINO, QUE PASE
+            {
+                Cliente cliente = new Cliente(dni, nombre, apellido, direccion, email, telefono, fechaNacimiento);
+
+                TransactionResult resultado = _clienteMapper.Agregar(cliente);
+                if (resultado.IsOk == false)
+                {
+                    throw new Exception("No se pudo realizar el Alta del Cliente.");
+                }
+                else
+                {
+                    return resultado;
+                }
+            }
+            
         }
 
-
+        public bool ValidarDniRepetido(int dni)
+        {
+            bool valor = false;
+            foreach(Cliente cli in _clienteMapper.TraerTodos())
+            {
+                if (cli.Dni == dni) 
+                {
+                    valor = true;
+                    break;
+                    
+                }
+                else
+                {
+                    valor= false;
+                }
+            }
+            return valor;
+        }
 
 
 

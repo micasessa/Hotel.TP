@@ -71,8 +71,6 @@ namespace Tp.Hotel.WinForms
         {
          
                 AltaCliente();
-                Limpiar();
-                Carga();
 
         }
 
@@ -120,6 +118,8 @@ namespace Tp.Hotel.WinForms
                 if(operacion.IsOk)
                 {
                     MessageBox.Show("El cliente ha sido registrado exitosamente");
+                    Limpiar();
+                    Carga();
                 }
                 else
                 {
