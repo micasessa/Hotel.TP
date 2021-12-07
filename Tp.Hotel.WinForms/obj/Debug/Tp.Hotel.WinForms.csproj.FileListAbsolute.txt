@@ -139,3 +139,4 @@ C:\Users\Pesimista\source\repos\Hotel.TP\Tp.Hotel.WinForms\bin\Debug\Tp.Hotel.Ac
 C:\Users\Pesimista\source\repos\Hotel.TP\Tp.Hotel.WinForms\obj\Debug\Tp.Hotel.WinForms.csproj.CopyComplete
 C:\Users\micas\GitHubCAI\Hotel.TP\Tp.Hotel.WinForms\obj\Debug\Tp.Hotel.WinForms.csproj.CopyComplete
 C:\Users\Florencia\Desktop\EjerciciosCAI\Hotel.TP\Tp.Hotel.WinForms\obj\Debug\Tp.Hotel.WinForms.FrmReporteTodasReservas.resources
+C:\Users\Romina\source\repos\Mica\Hotel.TP\Tp.Hotel.WinForms\obj\Debug\Tp.Hotel.WinForms.FrmReporteTodasReservas.resources
