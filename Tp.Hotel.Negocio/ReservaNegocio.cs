@@ -170,7 +170,21 @@ namespace Tp.Hotel.Negocio
             return valor;
         }
 
+        public List<Reserva> TraerReservaPorFecha(DateTime fechaDesde)
+        {
+            List<Reserva> lista = new List<Reserva>();
+            foreach(Reserva re in _reservaMapper.TraerTodos())
+            {
+                if(re.FechaIngreso >= fechaDesde)
+                {
+                    lista.Add(re);
+                }
+            }
 
+
+
+            return lista;
+        }
 
 
 
