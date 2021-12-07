@@ -52,5 +52,15 @@ namespace Tp.Hotel.Entidades
             }
         }
 
+        public string Display
+        {
+            get
+            {
+                return $"Cliente: {Apellido.ToUpper()}, {Nombre.ToUpper()} ";
+            }
+        }
+
+
+
     }
 }

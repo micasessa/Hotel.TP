@@ -71,5 +71,12 @@ namespace Tp.Hotel.WinForms
         {
             _txtUsuario.Text = "836465";
         }
+
+        private void _btnReporteTodasReservas_Click(object sender, EventArgs e)
+        {
+            FrmReporteTodasReservas repTodasRes = new FrmReporteTodasReservas(this);
+            repTodasRes.Show();
+            this.Hide();
+        }
     }
 }

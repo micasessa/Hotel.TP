@@ -45,6 +45,7 @@ namespace Tp.Hotel.WinForms
             this.panel5 = new System.Windows.Forms.Panel();
             this._btnHuespedesReserva = new System.Windows.Forms.Button();
             this._txtUsuario = new System.Windows.Forms.TextBox();
+            this._btnReporteTodasReservas = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -179,6 +180,7 @@ namespace Tp.Hotel.WinForms
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Turquoise;
+            this.panel5.Controls.Add(this._btnReporteTodasReservas);
             this.panel5.Controls.Add(this._btnHuespedesReserva);
             this.panel5.Controls.Add(this._btnReporteHabitaciones);
             this.panel5.Controls.Add(this._btnReporteReservas);
@@ -206,6 +208,17 @@ namespace Tp.Hotel.WinForms
             this._txtUsuario.Name = "_txtUsuario";
             this._txtUsuario.Size = new System.Drawing.Size(108, 22);
             this._txtUsuario.TabIndex = 24;
+            // 
+            // _btnReporteTodasReservas
+            // 
+            this._btnReporteTodasReservas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._btnReporteTodasReservas.Location = new System.Drawing.Point(42, 211);
+            this._btnReporteTodasReservas.Name = "_btnReporteTodasReservas";
+            this._btnReporteTodasReservas.Size = new System.Drawing.Size(300, 35);
+            this._btnReporteTodasReservas.TabIndex = 8;
+            this._btnReporteTodasReservas.Text = "Todas las Reservas";
+            this._btnReporteTodasReservas.UseVisualStyleBackColor = true;
+            this._btnReporteTodasReservas.Click += new System.EventHandler(this._btnReporteTodasReservas_Click);
             // 
             // FrmPrincipal
             // 
@@ -264,6 +277,7 @@ namespace Tp.Hotel.WinForms
         private System.Windows.Forms.Button _btnHabitaciones;
         private System.Windows.Forms.TextBox _txtUsuario;
         private System.Windows.Forms.Button _btnHuespedesReserva;
+        private System.Windows.Forms.Button _btnReporteTodasReservas;
     }
 }
 

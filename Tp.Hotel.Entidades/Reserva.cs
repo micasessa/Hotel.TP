@@ -66,6 +66,23 @@ namespace Tp.Hotel.Entidades
             }
         }
 
+        // todas las reservas existentes en una lista con código de reserva, fechas, nombre y apellido del cliente, cantidad de huéspedes y nombre del hotel
+
+        public string Display
+        {
+            get
+            {
+                return $"Reserva n°: {id} - Ingreso: {FechaIngreso.ToString("dd-MM-yyyy")} - Egreso: {FechaEgreso.ToString("dd-MM-yyyy")} - Cant. Huéspedes: {CantidadHuespedes} Cliente n°: {IdCliente} ";
+
+            }
+
+
+        }
+
+
+
+
+
 
     }
 }
