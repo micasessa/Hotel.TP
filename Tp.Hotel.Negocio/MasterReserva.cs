@@ -37,13 +37,41 @@ namespace Tp.Hotel.Negocio
                     lista.Add(re);
                 }
             }
-
-
-
             return lista;
         }
 
+        public Cliente ClienteDeReserva(Reserva reserva, List<Cliente> clientes)
+        {
+            int idCliente = reserva.IdCliente;
+            Cliente cliente = new Cliente();
+            foreach (Cliente cli in clientes)
+            {
+                if (cli.id == idCliente)
+                {
+                    cliente = cli;
+                    break;
+                }
+            }
+            return cliente;
+        }
 
+        public string HotelDeReserva(Reserva reserva, List<Hotel1> hoteles)
+        {
+            int idHabitacion = reserva.IdHabitacion;
+            Hotel1 hotel = new Hotel1();
+            foreach (Hotel1 ho in hoteles)
+            {
+                foreach (Habitacion hab in _habitacionMapper.Traerxhotel(ho.id))
+                {
+                    if (hab.id == idHabitacion)
+                    {
+                        hotel = ho;
+                        break;
+                    }
+                }
+            }
+            return hotel.Nombre;
+        }
 
         public string Display(Reserva reserva)
         {
