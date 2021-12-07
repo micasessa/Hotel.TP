@@ -102,6 +102,7 @@ namespace Tp.Hotel.WinForms
             }
         }
 
+
         private void Limpiar()
         {
             //
