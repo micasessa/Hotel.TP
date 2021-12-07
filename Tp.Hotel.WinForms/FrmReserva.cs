@@ -63,8 +63,8 @@ namespace Tp.Hotel.WinForms
             txtFechaEgreso.Clear();
             txtHuespedes.Clear();
             _txtClienteSeleccionado.Clear();
-            _txtHabitacionSeleccionada.Clear();
-            _txtHotelSeleccionado.Clear();
+            //_txtHabitacionSeleccionada.Clear();
+            //_txtHotelSeleccionado.Clear();
         }
 
         private void btnCargarCliente_Click(object sender, EventArgs e)
@@ -132,10 +132,10 @@ namespace Tp.Hotel.WinForms
                 DateTime fechaingreso = ValidacionesForm.ValidacionFecha(ingreso);
                 DateTime fechaegreso = ValidacionesForm.ValidacionFecha(egreso);
                 Cliente ClienteSel = (Cliente)lstClientes.SelectedItem;                
-                TransactionResult operacion = _ReservaNegocio.AltaReserva(IdHabitacion,ClienteSel.id, canthuespedes, fechaingreso, fechaegreso);
+                TransactionResult operacion = _ReservaNegocio.AltaReserva(IdHabitacion,ClienteSel.id, canthuespedes, fechaingreso, fechaegreso, ClienteSel.Email, ClienteSel.Apellido, _HotelNegocio.TraerHotelxId(_Habitacion.IdHotel).Nombre);
                 if (operacion.IsOk)
                 {
-                    MessageBox.Show("La reserva se ha registrado exitosamente");
+                    MessageBox.Show("La reserva se ha registrado exitosamente. Revise su casilla de correo.");
                     Volver();
                 }
                 else
@@ -161,6 +161,26 @@ namespace Tp.Hotel.WinForms
         private void lstClientes_SelectedIndexChanged(object sender, EventArgs e)
         {
             _txtClienteSeleccionado.Text = ((Cliente)lstClientes.SelectedItem).DisplayCliente;
+        }
+
+        private void _btnRefrescar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                lstClientes.DataSource = _ClienteNegocio.TraerClientes();
+                lstClientes.DisplayMember = "DisplayCliente";
+                lstClientes.ValueMember = "id";
+
+                //CargaIdReserva();
+                //_txtClienteSeleccionado.Text = ((Cliente)lstClientes.SelectedItem).DisplayCliente;
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
         }
 
         //private void cmbReserva_SelectedIndexChanged(object sender, EventArgs e)

@@ -51,5 +51,30 @@ namespace Tp.Hotel.AccesoDatos
             return res;
         }
 
+        //Para enviar mails (Con un post)
+        public TransactionResult EnviarMail(string para, string asunto, string mensaje)
+        {
+            NameValueCollection obj = ReverseMap(para, asunto, mensaje);
+            string json = WebHelper.Post("Utilidades", obj);
+            TransactionResult lst = JsonConvert.DeserializeObject<TransactionResult>(json);
+            // _reserva.Add(reserva);
+            return lst;
+        }
+
+        private NameValueCollection ReverseMap(string para, string asunto, string mensaje)
+        {
+            NameValueCollection res = new NameValueCollection();
+            res.Add("Para", para);
+            res.Add("Asunto", asunto);
+            res.Add("Mensaje", mensaje);
+
+            return res;
+        }
+
+
+
+
+
+
     }
 }

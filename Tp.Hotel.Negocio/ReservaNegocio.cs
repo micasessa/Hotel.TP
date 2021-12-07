@@ -110,8 +110,20 @@ namespace Tp.Hotel.Negocio
 
         }
 
-        public TransactionResult AltaReserva (int idHabitacion, int idCliente, int cantidadHuespedes, DateTime fechaIngreso, DateTime fechaEgreso) // ALTA DE RESERVA
+        public TransactionResult AltaReserva (int idHabitacion, int idCliente, int cantidadHuespedes, DateTime fechaIngreso, DateTime fechaEgreso, string clienteMail, string clienteApellido, string nombreHotel) // ALTA DE RESERVA
         {
+            string asunto = "Reserva Creada con Exito";
+            string mensaje = $"Sr {clienteApellido.ToUpper()}, le confirmamos que su reserva en el Hotel {nombreHotel} para la fecha {fechaIngreso.ToString("dd-MM-yyyy")} hasta {fechaEgreso.ToString("dd-MM-yyyy")} para {cantidadHuespedes} huespedes, se ha creado con exito. Lo esperamos para disfrutar su merecido descanso en nuestras instalaciones.";
+            
+            
+            ////
+            
+            //VALIDAR CANTHUESPEDES contra habitaicon. 
+
+            ////
+            ///
+
+
             if(ValidacionFechaIngreso(fechaIngreso) == false)
             {
                 throw new Exception("La fecha de ingreso debe ser superior o igual al día de hoy");
@@ -124,6 +136,7 @@ namespace Tp.Hotel.Negocio
                 }
                 else
                 {
+
                     Reserva reserva = new Reserva(idHabitacion, idCliente, cantidadHuespedes, fechaIngreso, fechaEgreso);
                     TransactionResult resultado = _reservaMapper.Agregar(reserva);
                     if (resultado.IsOk == false)
@@ -132,6 +145,9 @@ namespace Tp.Hotel.Negocio
                     }
                     else
                     {
+                        //ENVIAR MAIL AL CLIENTE
+                        _reservaMapper.EnviarMail(clienteMail, asunto, mensaje);
+
                         return resultado;
                     }
                 }
