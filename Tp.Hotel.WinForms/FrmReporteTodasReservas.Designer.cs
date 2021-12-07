@@ -35,6 +35,14 @@
             this._lstReservas = new System.Windows.Forms.ListBox();
             this._lblRepoSeleccioneCliente = new System.Windows.Forms.Label();
             this._dateTimeFechaDesde = new System.Windows.Forms.DateTimePicker();
+            this._lstViewReservas = new System.Windows.Forms.ListView();
+            this.CodigoReserva = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.FechaIngreso = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.FechaEgreso = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ApellidoCliente = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.NombreCliente = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Hotel = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.CantHuespedes = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // _btnLimpiar
@@ -77,12 +85,14 @@
             // 
             // _lstReservas
             // 
+            this._lstReservas.Enabled = false;
             this._lstReservas.FormattingEnabled = true;
             this._lstReservas.ItemHeight = 16;
-            this._lstReservas.Location = new System.Drawing.Point(58, 108);
+            this._lstReservas.Location = new System.Drawing.Point(401, 108);
             this._lstReservas.Name = "_lstReservas";
             this._lstReservas.Size = new System.Drawing.Size(686, 244);
             this._lstReservas.TabIndex = 2;
+            this._lstReservas.Visible = false;
             // 
             // _lblRepoSeleccioneCliente
             // 
@@ -101,18 +111,73 @@
             this._dateTimeFechaDesde.TabIndex = 0;
             this._dateTimeFechaDesde.ValueChanged += new System.EventHandler(this._dateTimeFechaDesde_ValueChanged);
             // 
+            // _lstViewReservas
+            // 
+            this._lstViewReservas.AllowColumnReorder = true;
+            this._lstViewReservas.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.CodigoReserva,
+            this.FechaIngreso,
+            this.FechaEgreso,
+            this.ApellidoCliente,
+            this.NombreCliente,
+            this.Hotel,
+            this.CantHuespedes});
+            this._lstViewReservas.FullRowSelect = true;
+            this._lstViewReservas.HideSelection = false;
+            this._lstViewReservas.Location = new System.Drawing.Point(60, 108);
+            this._lstViewReservas.Name = "_lstViewReservas";
+            this._lstViewReservas.Size = new System.Drawing.Size(683, 244);
+            this._lstViewReservas.TabIndex = 2;
+            this._lstViewReservas.UseCompatibleStateImageBehavior = false;
+            // 
+            // CodigoReserva
+            // 
+            this.CodigoReserva.Tag = "CodigoRes";
+            this.CodigoReserva.Text = "Numero Reserva";
+            // 
+            // FechaIngreso
+            // 
+            this.FechaIngreso.Tag = "FechaIngreso";
+            this.FechaIngreso.Text = "Fecha Ingreso";
+            // 
+            // FechaEgreso
+            // 
+            this.FechaEgreso.Tag = "FechaEgreso";
+            this.FechaEgreso.Text = "Fecha Egreso";
+            // 
+            // ApellidoCliente
+            // 
+            this.ApellidoCliente.Tag = "ApellidoClient";
+            this.ApellidoCliente.Text = "Apellido Cliente";
+            // 
+            // NombreCliente
+            // 
+            this.NombreCliente.Tag = "NombreClient";
+            this.NombreCliente.Text = "Nombre Cliente";
+            // 
+            // Hotel
+            // 
+            this.Hotel.Tag = "Hotel";
+            this.Hotel.Text = "Hotel";
+            // 
+            // CantHuespedes
+            // 
+            this.CantHuespedes.Tag = "CantHuesped";
+            this.CantHuespedes.Text = "Huespedes";
+            // 
             // FrmReporteTodasReservas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkCyan;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this._lstReservas);
+            this.Controls.Add(this._lstViewReservas);
             this.Controls.Add(this._dateTimeFechaDesde);
             this.Controls.Add(this._btnLimpiar);
             this.Controls.Add(this._txtBoxTotalReservas);
             this.Controls.Add(this._btnVolver);
             this.Controls.Add(this._lblTotalHabitaciones);
-            this.Controls.Add(this._lstReservas);
             this.Controls.Add(this._lblRepoSeleccioneCliente);
             this.Name = "FrmReporteTodasReservas";
             this.Text = "Reporte de Reservas";
@@ -131,5 +196,13 @@
         private System.Windows.Forms.ListBox _lstReservas;
         private System.Windows.Forms.Label _lblRepoSeleccioneCliente;
         private System.Windows.Forms.DateTimePicker _dateTimeFechaDesde;
+        private System.Windows.Forms.ListView _lstViewReservas;
+        private System.Windows.Forms.ColumnHeader CodigoReserva;
+        private System.Windows.Forms.ColumnHeader FechaIngreso;
+        private System.Windows.Forms.ColumnHeader FechaEgreso;
+        private System.Windows.Forms.ColumnHeader ApellidoCliente;
+        private System.Windows.Forms.ColumnHeader NombreCliente;
+        private System.Windows.Forms.ColumnHeader Hotel;
+        private System.Windows.Forms.ColumnHeader CantHuespedes;
     }
 }
