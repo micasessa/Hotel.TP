@@ -53,6 +53,7 @@ namespace Tp.Hotel.WinForms
             this._txtHotelSeleccionado = new System.Windows.Forms.TextBox();
             this._txtHabitacionSeleccionada = new System.Windows.Forms.TextBox();
             this._txtClienteSeleccionado = new System.Windows.Forms.TextBox();
+            this._btnRefrescar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblDatosReserva
@@ -250,7 +251,6 @@ namespace Tp.Hotel.WinForms
             this.cmbReserva.Size = new System.Drawing.Size(171, 24);
             this.cmbReserva.TabIndex = 0;
             this.cmbReserva.Visible = false;
-            //this.cmbReserva.SelectedIndexChanged += new System.EventHandler(this.cmbReserva_SelectedIndexChanged);
             // 
             // _lblHotelSeleccionado
             // 
@@ -315,12 +315,26 @@ namespace Tp.Hotel.WinForms
             this._txtClienteSeleccionado.Size = new System.Drawing.Size(481, 22);
             this._txtClienteSeleccionado.TabIndex = 11;
             // 
+            // _btnRefrescar
+            // 
+            this._btnRefrescar.BackColor = System.Drawing.Color.BlueViolet;
+            this._btnRefrescar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._btnRefrescar.Location = new System.Drawing.Point(293, 403);
+            this._btnRefrescar.Margin = new System.Windows.Forms.Padding(4);
+            this._btnRefrescar.Name = "_btnRefrescar";
+            this._btnRefrescar.Size = new System.Drawing.Size(116, 62);
+            this._btnRefrescar.TabIndex = 48;
+            this._btnRefrescar.Text = "Refrescar";
+            this._btnRefrescar.UseVisualStyleBackColor = false;
+            this._btnRefrescar.Click += new System.EventHandler(this._btnRefrescar_Click);
+            // 
             // FrmReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumPurple;
             this.ClientSize = new System.Drawing.Size(1532, 523);
+            this.Controls.Add(this._btnRefrescar);
             this.Controls.Add(this._txtClienteSeleccionado);
             this.Controls.Add(this._txtHabitacionSeleccionada);
             this.Controls.Add(this._txtHotelSeleccionado);
@@ -379,5 +393,6 @@ namespace Tp.Hotel.WinForms
         private System.Windows.Forms.TextBox _txtHotelSeleccionado;
         private System.Windows.Forms.TextBox _txtHabitacionSeleccionada;
         private System.Windows.Forms.TextBox _txtClienteSeleccionado;
+        private System.Windows.Forms.Button _btnRefrescar;
     }
 }
