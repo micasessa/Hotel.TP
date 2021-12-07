@@ -38,7 +38,7 @@ namespace Tp.Hotel.Negocio
         }
 
 
-        public TransactionResult AltaCliente(int dni, string nombre, string apellido, string direccion,string email, string telefono, DateTime fechaNacimiento, int idHotel) //ALTA DE CLIENTE
+        public TransactionResult AltaCliente(int dni, string nombre, string apellido, string direccion,string email, string telefono, DateTime fechaNacimiento) //ALTA DE CLIENTE
         {
            
             if(ValidarDniRepetido(dni) == true) // SI ENCUENTRA DNI REPETIDO TIRAR EXCEPTION

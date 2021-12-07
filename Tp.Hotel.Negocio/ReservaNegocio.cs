@@ -116,17 +116,21 @@ namespace Tp.Hotel.Negocio
         {
             string asunto = "Reserva Creada con Exito";
             string mensaje = $"Sr {clienteApellido.ToUpper()}, le confirmamos que su reserva en el Hotel {nombreHotel} para la fecha {fechaIngreso.ToString("dd-MM-yyyy")} hasta {fechaEgreso.ToString("dd-MM-yyyy")} para {cantidadHuespedes} huespedes, se ha creado con exito. Lo esperamos para disfrutar su merecido descanso en nuestras instalaciones.";
-            
-            
+
+
             ////
-            
+
             //VALIDAR CANTHUESPEDES contra habitaicon. 
 
             ////
             ///
+            if (ValidarCantHuespedes(cantidadHuespedes,idHabitacion,idHotel)==false)
+            {
+                throw new Exception("La cantidad de huespedes no puede superar las plazas de la habitación");
+            }
+            else { 
 
-
-            if(ValidacionFechaIngreso(fechaIngreso) == false)
+            if (ValidacionFechaIngreso(fechaIngreso) == false)
             {
                 throw new Exception("La fecha de ingreso debe ser superior o igual al día de hoy");
             }
@@ -138,11 +142,7 @@ namespace Tp.Hotel.Negocio
                 }
                 else
                 {
-                    if (ValidarCantHuespedes(idHabitacion, cantidadHuespedes,idHotel) == false)
-                    {
-                        throw new Exception("La cantidad de huespedes no puede superar las plazas de la habitación");
-                    }
-                    else {
+                    
                         Reserva reserva = new Reserva(idHabitacion, idCliente, cantidadHuespedes, fechaIngreso, fechaEgreso);
                         TransactionResult resultado = _reservaMapper.Agregar(reserva);
                         if (resultado.IsOk == false)
