@@ -49,6 +49,7 @@ namespace Tp.Hotel.WinForms
             _dateTimeFechaDesde.Value = DateTime.Today.AddDays(-366);
             _txtBoxTotalReservas.Text = ReservasPorFecha(DateTime.Today.AddDays(-366)).Count.ToString();
             _lstViewReservas.View = View.Details;
+            this.firstRender = false;
         }
 
         private void Carga()

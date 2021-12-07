@@ -32,7 +32,6 @@
             this._txtBoxTotalReservas = new System.Windows.Forms.TextBox();
             this._btnVolver = new System.Windows.Forms.Button();
             this._lblTotalHabitaciones = new System.Windows.Forms.Label();
-            this._lstReservas = new System.Windows.Forms.ListBox();
             this._lblRepoSeleccioneCliente = new System.Windows.Forms.Label();
             this._dateTimeFechaDesde = new System.Windows.Forms.DateTimePicker();
             this._lstViewReservas = new System.Windows.Forms.ListView();
@@ -47,7 +46,7 @@
             // 
             // _btnLimpiar
             // 
-            this._btnLimpiar.Location = new System.Drawing.Point(648, 43);
+            this._btnLimpiar.Location = new System.Drawing.Point(633, 44);
             this._btnLimpiar.Name = "_btnLimpiar";
             this._btnLimpiar.Size = new System.Drawing.Size(74, 24);
             this._btnLimpiar.TabIndex = 1;
@@ -66,7 +65,7 @@
             // 
             // _btnVolver
             // 
-            this._btnVolver.Location = new System.Drawing.Point(607, 375);
+            this._btnVolver.Location = new System.Drawing.Point(836, 371);
             this._btnVolver.Name = "_btnVolver";
             this._btnVolver.Size = new System.Drawing.Size(136, 32);
             this._btnVolver.TabIndex = 3;
@@ -83,17 +82,6 @@
             this._lblTotalHabitaciones.TabIndex = 18;
             this._lblTotalHabitaciones.Text = "Total Reservas: ";
             // 
-            // _lstReservas
-            // 
-            this._lstReservas.Enabled = false;
-            this._lstReservas.FormattingEnabled = true;
-            this._lstReservas.ItemHeight = 16;
-            this._lstReservas.Location = new System.Drawing.Point(401, 108);
-            this._lstReservas.Name = "_lstReservas";
-            this._lstReservas.Size = new System.Drawing.Size(686, 244);
-            this._lstReservas.TabIndex = 2;
-            this._lstReservas.Visible = false;
-            // 
             // _lblRepoSeleccioneCliente
             // 
             this._lblRepoSeleccioneCliente.AutoSize = true;
@@ -107,7 +95,7 @@
             // 
             this._dateTimeFechaDesde.Location = new System.Drawing.Point(249, 46);
             this._dateTimeFechaDesde.Name = "_dateTimeFechaDesde";
-            this._dateTimeFechaDesde.Size = new System.Drawing.Size(279, 22);
+            this._dateTimeFechaDesde.Size = new System.Drawing.Size(341, 22);
             this._dateTimeFechaDesde.TabIndex = 0;
             this._dateTimeFechaDesde.ValueChanged += new System.EventHandler(this._dateTimeFechaDesde_ValueChanged);
             // 
@@ -126,7 +114,7 @@
             this._lstViewReservas.HideSelection = false;
             this._lstViewReservas.Location = new System.Drawing.Point(60, 108);
             this._lstViewReservas.Name = "_lstViewReservas";
-            this._lstViewReservas.Size = new System.Drawing.Size(683, 244);
+            this._lstViewReservas.Size = new System.Drawing.Size(912, 244);
             this._lstViewReservas.TabIndex = 2;
             this._lstViewReservas.UseCompatibleStateImageBehavior = false;
             // 
@@ -139,26 +127,31 @@
             // 
             this.FechaIngreso.Tag = "FechaIngreso";
             this.FechaIngreso.Text = "Fecha Ingreso";
+            this.FechaIngreso.Width = 70;
             // 
             // FechaEgreso
             // 
             this.FechaEgreso.Tag = "FechaEgreso";
             this.FechaEgreso.Text = "Fecha Egreso";
+            this.FechaEgreso.Width = 70;
             // 
             // ApellidoCliente
             // 
             this.ApellidoCliente.Tag = "ApellidoClient";
             this.ApellidoCliente.Text = "Apellido Cliente";
+            this.ApellidoCliente.Width = 100;
             // 
             // NombreCliente
             // 
             this.NombreCliente.Tag = "NombreClient";
             this.NombreCliente.Text = "Nombre Cliente";
+            this.NombreCliente.Width = 100;
             // 
             // Hotel
             // 
             this.Hotel.Tag = "Hotel";
             this.Hotel.Text = "Hotel";
+            this.Hotel.Width = 100;
             // 
             // CantHuespedes
             // 
@@ -170,8 +163,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkCyan;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this._lstReservas);
+            this.ClientSize = new System.Drawing.Size(1050, 450);
             this.Controls.Add(this._lstViewReservas);
             this.Controls.Add(this._dateTimeFechaDesde);
             this.Controls.Add(this._btnLimpiar);
@@ -193,7 +185,6 @@
         private System.Windows.Forms.TextBox _txtBoxTotalReservas;
         private System.Windows.Forms.Button _btnVolver;
         private System.Windows.Forms.Label _lblTotalHabitaciones;
-        private System.Windows.Forms.ListBox _lstReservas;
         private System.Windows.Forms.Label _lblRepoSeleccioneCliente;
         private System.Windows.Forms.DateTimePicker _dateTimeFechaDesde;
         private System.Windows.Forms.ListView _lstViewReservas;
