@@ -15,6 +15,7 @@ namespace Tp.Hotel.Negocio
         private List<Reserva> _reservas;
         private ReservaMapper _reservaMapper;
         private ClienteMapper _clienteMapper;
+        private HabitacionMapper _habitacionMapper;
 
 
         public ReservaNegocio()
@@ -22,6 +23,7 @@ namespace Tp.Hotel.Negocio
             //_reservas = new List<Reserva>();
             _reservaMapper = new ReservaMapper();
             _clienteMapper = new ClienteMapper();
+            _habitacionMapper = new HabitacionMapper();
             
         }
 
@@ -110,21 +112,25 @@ namespace Tp.Hotel.Negocio
 
         }
 
-        public TransactionResult AltaReserva (int idHabitacion, int idCliente, int cantidadHuespedes, DateTime fechaIngreso, DateTime fechaEgreso, string clienteMail, string clienteApellido, string nombreHotel) // ALTA DE RESERVA
+        public TransactionResult AltaReserva (int idHabitacion, int idCliente, int cantidadHuespedes, DateTime fechaIngreso, DateTime fechaEgreso, string clienteMail, string clienteApellido, string nombreHotel, int idHotel) // ALTA DE RESERVA
         {
             string asunto = "Reserva Creada con Exito";
             string mensaje = $"Sr {clienteApellido.ToUpper()}, le confirmamos que su reserva en el Hotel {nombreHotel} para la fecha {fechaIngreso.ToString("dd-MM-yyyy")} hasta {fechaEgreso.ToString("dd-MM-yyyy")} para {cantidadHuespedes} huespedes, se ha creado con exito. Lo esperamos para disfrutar su merecido descanso en nuestras instalaciones.";
-            
-            
+
+
             ////
-            
+
             //VALIDAR CANTHUESPEDES contra habitaicon. 
 
             ////
             ///
+            if (ValidarCantHuespedes(cantidadHuespedes,idHabitacion,idHotel)==false)
+            {
+                throw new Exception("La cantidad de huespedes no puede superar las plazas de la habitación");
+            }
+            else { 
 
-
-            if(ValidacionFechaIngreso(fechaIngreso) == false)
+            if (ValidacionFechaIngreso(fechaIngreso) == false)
             {
                 throw new Exception("La fecha de ingreso debe ser superior o igual al día de hoy");
             }
@@ -136,19 +142,20 @@ namespace Tp.Hotel.Negocio
                 }
                 else
                 {
+                    
+                        Reserva reserva = new Reserva(idHabitacion, idCliente, cantidadHuespedes, fechaIngreso, fechaEgreso);
+                        TransactionResult resultado = _reservaMapper.Agregar(reserva);
+                        if (resultado.IsOk == false)
+                        {
+                            throw new Exception("No se pudo realizar la registración de la reserva.");
+                        }
+                        else
+                        {
+                            //ENVIAR MAIL AL CLIENTE
+                            _reservaMapper.EnviarMail(clienteMail, asunto, mensaje);
 
-                    Reserva reserva = new Reserva(idHabitacion, idCliente, cantidadHuespedes, fechaIngreso, fechaEgreso);
-                    TransactionResult resultado = _reservaMapper.Agregar(reserva);
-                    if (resultado.IsOk == false)
-                    {
-                        throw new Exception("No se pudo realizar la registración de la reserva.");
-                    }
-                    else
-                    {
-                        //ENVIAR MAIL AL CLIENTE
-                        _reservaMapper.EnviarMail(clienteMail, asunto, mensaje);
-
-                        return resultado;
+                            return resultado;
+                        }
                     }
                 }
             }
@@ -200,6 +207,29 @@ namespace Tp.Hotel.Negocio
 
 
             return lista;
+        }
+        public bool ValidarCantHuespedes(int cantHuespedes, int IdHabitacion, int idHotel)
+        {
+            Habitacion habitacionSel = new Habitacion();
+
+            foreach (Habitacion habitacion in _habitacionMapper.Traerxhotel(idHotel))
+            {
+
+                if (habitacion.id == IdHabitacion)
+                {
+                    habitacionSel = habitacion;
+                }
+            }
+            if (habitacionSel.CantidadPlazas >= cantHuespedes)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+
         }
 
 

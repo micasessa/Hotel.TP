@@ -40,22 +40,32 @@ namespace Tp.Hotel.Negocio
 
         public TransactionResult AltaCliente(int dni, string nombre, string apellido, string direccion,string email, string telefono, DateTime fechaNacimiento) //ALTA DE CLIENTE
         {
+           
             if(ValidarDniRepetido(dni) == true) // SI ENCUENTRA DNI REPETIDO TIRAR EXCEPTION
             {
                 throw new DniRepetidoException(dni);
             }
             else//SINO, QUE PASE
             {
-                Cliente cliente = new Cliente(dni, nombre, apellido, direccion, email, telefono, fechaNacimiento);
-
-                TransactionResult resultado = _clienteMapper.Agregar(cliente);
-                if (resultado.IsOk == false)
+                if (ValidarEdad(fechaNacimiento) == false)
                 {
-                    throw new Exception("No se pudo realizar el Alta del Cliente.");
+                    throw new Exception("Debe ser mayor de edad");
+
                 }
                 else
                 {
-                    return resultado;
+               
+                    Cliente cliente = new Cliente(dni, nombre, apellido, direccion, email, telefono, fechaNacimiento);
+
+                    TransactionResult resultado = _clienteMapper.Agregar(cliente);
+                    if (resultado.IsOk == false)
+                    {
+                        throw new Exception("No se pudo realizar el Alta del Cliente.");
+                    }
+                    else
+                    {
+                        return resultado;
+                    }
                 }
             }
             
@@ -80,6 +90,31 @@ namespace Tp.Hotel.Negocio
             return valor;
         }
 
+        public bool ValidarEdad(DateTime fechanac)
+        {
+            int edad = 0;
+            if(fechanac> DateTime.Now)
+            {
+                throw new Exception("Debe ingresar una fecha anterior a la actual");
+            }
+            else
+            {
+                edad = DateTime.Now.Year - fechanac.Year;
+                if (fechanac.Month > DateTime.Now.Month || fechanac.Month == DateTime.Now.Month && fechanac.Day > DateTime.Now.Day)
+                {
+                    --edad;
+                }
+                if(edad <18)
+                {
+                    return false;
+                }
+                else { return true; }
+
+            }
+
+
+        }
+        
 
 
 
