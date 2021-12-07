@@ -38,7 +38,7 @@ namespace Tp.Hotel.Negocio
         }
 
 
-        public TransactionResult AltaCliente(int dni, string nombre, string apellido, string direccion,string email, string telefono, DateTime fechaNacimiento) //ALTA DE CLIENTE
+        public TransactionResult AltaCliente(int dni, string nombre, string apellido, string direccion,string email, string telefono, DateTime fechaNacimiento, int idHotel) //ALTA DE CLIENTE
         {
            
             if(ValidarDniRepetido(dni) == true) // SI ENCUENTRA DNI REPETIDO TIRAR EXCEPTION
@@ -54,6 +54,7 @@ namespace Tp.Hotel.Negocio
                 }
                 else
                 {
+               
                     Cliente cliente = new Cliente(dni, nombre, apellido, direccion, email, telefono, fechaNacimiento);
 
                     TransactionResult resultado = _clienteMapper.Agregar(cliente);
@@ -113,6 +114,7 @@ namespace Tp.Hotel.Negocio
 
 
         }
+        
 
 
 

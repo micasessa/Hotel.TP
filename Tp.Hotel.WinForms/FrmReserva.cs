@@ -132,7 +132,7 @@ namespace Tp.Hotel.WinForms
                 DateTime fechaingreso = ValidacionesForm.ValidacionFecha(ingreso);
                 DateTime fechaegreso = ValidacionesForm.ValidacionFecha(egreso);
                 Cliente ClienteSel = (Cliente)lstClientes.SelectedItem;                
-                TransactionResult operacion = _ReservaNegocio.AltaReserva(IdHabitacion,ClienteSel.id, canthuespedes, fechaingreso, fechaegreso, ClienteSel.Email, ClienteSel.Apellido, _HotelNegocio.TraerHotelxId(_Habitacion.IdHotel).Nombre);
+                TransactionResult operacion = _ReservaNegocio.AltaReserva(_Habitacion.id,ClienteSel.id, canthuespedes, fechaingreso, fechaegreso, ClienteSel.Email, ClienteSel.Apellido, _HotelNegocio.TraerHotelxId(_Habitacion.IdHotel).Nombre, _Habitacion.IdHotel);
                 if (operacion.IsOk)
                 {
                     MessageBox.Show("La reserva se ha registrado exitosamente. Revise su casilla de correo.");
